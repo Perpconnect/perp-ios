@@ -8,8 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var privateKey = UserDefaults.standard.string(forKey: "privateKey")
+    @State private var publicKey = UserDefaults.standard.string(forKey: "publicKey")
+    
     var body: some View {
-        LoginView()
+        if (privateKey != nil)  {
+            LoginView()
+        } else {
+            Tab()
+        }
     }
 }
 
