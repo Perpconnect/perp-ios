@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct LoginView: View {
+    
+    @ObservedObject var loginVM: LoginViewModel
+    
     var body: some View {
         GeometryReader { geo in
             ZStack {
@@ -45,60 +48,40 @@ struct LoginView: View {
                     }
                     .padding(.top, geo.size.width * 0.08)
                     
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color(#colorLiteral(red: 0.6480259299, green: 0.6540077329, blue: 0.6690028906, alpha: 1)), lineWidth: 0.5)
-                            .foregroundColor(.white)
-                            .background(Color(#colorLiteral(red: 0.08807069808, green: 0.08914270252, blue: 0.1188395992, alpha: 1)))
-                            .frame(width: geo.size.width * 0.90, height: 55)
+                    Button(action: { loginVM.googleLogin() }) {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color(#colorLiteral(red: 0.6480259299, green: 0.6540077329, blue: 0.6690028906, alpha: 1)), lineWidth: 0.5)
+                                .foregroundColor(.white)
+                                .background(Color(#colorLiteral(red: 0.08807069808, green: 0.08914270252, blue: 0.1188395992, alpha: 1)))
+                                .frame(width: geo.size.width * 0.90, height: 55)
+                                
+                            HStack {
+                                Image("google")
+                                    .resizable()
+                                    .frame(width: 25, height: 25)
+                                Text("Continue with Google")
+                                    .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+                            }
                             
-                        HStack {
-                            Image("google")
-                                .resizable()
-                                .frame(width: 25, height: 25)
-                            Text("Continue with Google")
-                                .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
                         }
-                        
                     }
                     
+                    
                     HStack {
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color(#colorLiteral(red: 0.6480259299, green: 0.6540077329, blue: 0.6690028906, alpha: 1)), lineWidth: 0.5)
-                                .foregroundColor(.white)
-                                .background(Color(#colorLiteral(red: 0.08807069808, green: 0.08914270252, blue: 0.1188395992, alpha: 1)))
-                                .frame(height: 55)
-                            
-                            Image(systemName: "applelogo")
-                                .resizable()
-                                .frame(width: 25, height: 30)
-                                .foregroundColor(.white)
+                        
+                        Button(action: { loginVM.appleLogin() }) {
+                            SocialButton(image: "applelogo", height: 30, width: 25, systemImage: true)
                         }
                         
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color(#colorLiteral(red: 0.6480259299, green: 0.6540077329, blue: 0.6690028906, alpha: 1)), lineWidth: 0.5)
-                                .foregroundColor(.white)
-                                .background(Color(#colorLiteral(red: 0.08807069808, green: 0.08914270252, blue: 0.1188395992, alpha: 1)))
-                                .frame(height: 55)
-                            
-                            Image("twitter")
-                                .resizable()
-                                .frame(width: 40, height: 25)
+                        Button(action: { loginVM.twitterLogin() }) {
+                            SocialButton(image: "twitter", height: 25, width: 40)
                         }
                         
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color(#colorLiteral(red: 0.6480259299, green: 0.6540077329, blue: 0.6690028906, alpha: 1)), lineWidth: 0.5)
-                                .foregroundColor(.white)
-                                .background(Color(#colorLiteral(red: 0.08807069808, green: 0.08914270252, blue: 0.1188395992, alpha: 1)))
-                                .frame(height: 55)
-                            
-                            Image("discord")
-                                .resizable()
-                                .frame(width: 40, height: 25)
+                        Button(action: { loginVM.discordLogin() }) {
+                            SocialButton(image: "discord", height: 25, width: 40)
                         }
+                    
                     }
                     .frame(width: geo.size.width * 0.90)
                     
@@ -123,7 +106,6 @@ struct LoginView: View {
                             .stroke(Color(#colorLiteral(red: 0.6480259299, green: 0.6540077329, blue: 0.6690028906, alpha: 1)), lineWidth: 0.5)
                             .foregroundColor(.white)
                             .frame(width: geo.size.width * 0.90, height: 55)
-                        
                         Text("Continue with private key")
                             .foregroundColor(.white)
                     }
@@ -136,8 +118,30 @@ struct LoginView: View {
     }
 }
 
-struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView()
+struct SocialButton: View {
+    var image: String
+    var height: CGFloat
+    var width: CGFloat
+    var systemImage: Bool?
+    
+    var body: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(Color(#colorLiteral(red: 0.6480259299, green: 0.6540077329, blue: 0.6690028906, alpha: 1)), lineWidth: 0.5)
+                .foregroundColor(.white)
+                .background(Color(#colorLiteral(red: 0.08807069808, green: 0.08914270252, blue: 0.1188395992, alpha: 1)))
+                .frame(height: 55)
+            
+            if (systemImage ?? false) {
+                Image(systemName: image)
+                    .resizable()
+                    .frame(width: width, height: height)
+                    .accentColor(.white)
+            } else {
+                Image(image)
+                    .resizable()
+                    .frame(width: width, height: height)
+            }
+        }
     }
 }

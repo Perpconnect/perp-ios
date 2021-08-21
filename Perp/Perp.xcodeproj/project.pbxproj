@@ -3,26 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		BC2FFE6E26C4166B0001FDD4 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2FFE6D26C4166B0001FDD4 /* Tab.swift */; };
 		BC2FFE7126C416B10001FDD4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2FFE7026C416B10001FDD4 /* LoginViewModel.swift */; };
-		BC7363CF26C0EF2600C9E753 /* PerpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7363CE26C0EF2600C9E753 /* PerpApp.swift */; };
 		BC7363D126C0EF2600C9E753 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7363D026C0EF2600C9E753 /* ContentView.swift */; };
 		BC7363D326C0EF2F00C9E753 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC7363D226C0EF2F00C9E753 /* Assets.xcassets */; };
 		BC7363D626C0EF2F00C9E753 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC7363D526C0EF2F00C9E753 /* Preview Assets.xcassets */; };
 		BC7363E426C0FD8F00C9E753 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7363E326C0FD8F00C9E753 /* LoginView.swift */; };
 		BC9AF4E926C7B95B006D8887 /* MarketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9AF4E826C7B95B006D8887 /* MarketView.swift */; };
 		BC9AF4EF26C7C777006D8887 /* MarketListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9AF4EE26C7C777006D8887 /* MarketListItem.swift */; };
+		BCD07E3C26D14E3500781E28 /* TorusSwiftDirectSDK in Frameworks */ = {isa = PBXBuildFile; productRef = BCD07E3B26D14E3500781E28 /* TorusSwiftDirectSDK */; };
+		BCD07E5126D18E8200781E28 /* PerpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD07E5026D18E8200781E28 /* PerpApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BC2FFE6D26C4166B0001FDD4 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		BC2FFE7026C416B10001FDD4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		BC7363CB26C0EF2600C9E753 /* Perp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Perp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BC7363CE26C0EF2600C9E753 /* PerpApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerpApp.swift; sourceTree = "<group>"; };
 		BC7363D026C0EF2600C9E753 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BC7363D226C0EF2F00C9E753 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC7363D526C0EF2F00C9E753 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -30,6 +30,7 @@
 		BC7363E326C0FD8F00C9E753 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		BC9AF4E826C7B95B006D8887 /* MarketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketView.swift; sourceTree = "<group>"; };
 		BC9AF4EE26C7C777006D8887 /* MarketListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketListItem.swift; sourceTree = "<group>"; };
+		BCD07E5026D18E8200781E28 /* PerpApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerpApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCD07E3C26D14E3500781E28 /* TorusSwiftDirectSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,8 +67,8 @@
 				BC7363E126C0FBA300C9E753 /* Models */,
 				BC7363E026C0FB9B00C9E753 /* ViewModels */,
 				BC7363DE26C0FB9500C9E753 /* Views */,
-				BC7363CE26C0EF2600C9E753 /* PerpApp.swift */,
 				BC7363D026C0EF2600C9E753 /* ContentView.swift */,
+				BCD07E5026D18E8200781E28 /* PerpApp.swift */,
 				BC7363D226C0EF2F00C9E753 /* Assets.xcassets */,
 				BC7363D726C0EF2F00C9E753 /* Info.plist */,
 				BC7363D426C0EF2F00C9E753 /* Preview Content */,
@@ -140,6 +142,9 @@
 			dependencies = (
 			);
 			name = Perp;
+			packageProductDependencies = (
+				BCD07E3B26D14E3500781E28 /* TorusSwiftDirectSDK */,
+			);
 			productName = Perp;
 			productReference = BC7363CB26C0EF2600C9E753 /* Perp.app */;
 			productType = "com.apple.product-type.application";
@@ -167,6 +172,9 @@
 				Base,
 			);
 			mainGroup = BC7363C226C0EF2600C9E753;
+			packageReferences = (
+				BCD07E3A26D14E3500781E28 /* XCRemoteSwiftPackageReference "torus-direct-swift-sdk" */,
+			);
 			productRefGroup = BC7363CC26C0EF2600C9E753 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -197,9 +205,9 @@
 				BC7363E426C0FD8F00C9E753 /* LoginView.swift in Sources */,
 				BC7363D126C0EF2600C9E753 /* ContentView.swift in Sources */,
 				BC9AF4E926C7B95B006D8887 /* MarketView.swift in Sources */,
+				BCD07E5126D18E8200781E28 /* PerpApp.swift in Sources */,
 				BC2FFE6E26C4166B0001FDD4 /* Tab.swift in Sources */,
 				BC2FFE7126C416B10001FDD4 /* LoginViewModel.swift in Sources */,
-				BC7363CF26C0EF2600C9E753 /* PerpApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +396,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BCD07E3A26D14E3500781E28 /* XCRemoteSwiftPackageReference "torus-direct-swift-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/torusresearch/torus-direct-swift-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BCD07E3B26D14E3500781E28 /* TorusSwiftDirectSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BCD07E3A26D14E3500781E28 /* XCRemoteSwiftPackageReference "torus-direct-swift-sdk" */;
+			productName = TorusSwiftDirectSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BC7363C326C0EF2600C9E753 /* Project object */;
 }
