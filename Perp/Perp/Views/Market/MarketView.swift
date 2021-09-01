@@ -55,6 +55,7 @@ struct MarketView: View {
                         Image(systemName: "person")
                             .foregroundColor(.white)
                             .background(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
+                            .font(.body)
                     }
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -62,6 +63,7 @@ struct MarketView: View {
                         Image(systemName: "magnifyingglass")
                             .foregroundColor(.white)
                             .background(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
+                            .font(.body)
                     }
                 }
             }

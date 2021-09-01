@@ -25,11 +25,17 @@ class LoginViewModel: ObservableObject {
     func login(privateKey: String, publicKey: String) {
         self.privateKey = privateKey
         self.publicKey = publicKey
+        
+        UserDefaults.standard.set(privateKey, forKey: "privateKey")
+        UserDefaults.standard.set(privateKey, forKey: "publicKey")
     }
     
     func logout() {
         self.privateKey = ""
         self.publicKey = ""
+        
+        UserDefaults.standard.set("", forKey: "privateKey")
+        UserDefaults.standard.set("", forKey: "publicKey")
     }
     
     func googleLogin() {
