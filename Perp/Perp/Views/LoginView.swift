@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import TorusSwiftDirectSDK
 
 struct LoginView: View {
     
@@ -113,6 +114,9 @@ struct LoginView: View {
                     
                     Spacer()
                 }
+            }
+            .onOpenURL { url in
+                TorusSwiftDirectSDK.handle(url: url)
             }
         }
     }

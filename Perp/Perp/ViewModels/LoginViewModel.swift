@@ -19,11 +19,11 @@ class LoginViewModel: ObservableObject {
     func googleLogin() {
         let sub = SubVerifierDetails(loginType: .installed,
                                      loginProvider: .google,
-                                     clientId: "221898609709-obfn3p63741l5333093430j3qeiinaa8.apps.googleusercontent.com",
-                                     verifierName: "google-lrc",
-                                     redirectURL: "com.googleusercontent.apps.238941746713-vfap8uumijal4ump28p9jd3lbe6onqt4:/oauthredirect",
-                                     browserRedirectURL: "https://scripts.toruswallet.io/redirect.html")
-        let tdsdk = TorusSwiftDirectSDK(aggregateVerifierType: .singleLogin, aggregateVerifierName: "google-lrc", subVerifierDetails: [sub], loglevel: .trace)
+                                     clientId: "309493952136-ite5em9m18qtf26mmjfadt7rvmoetpqk.apps.googleusercontent.com",
+                                     verifierName: "perp-google-testnet",       // mainnet - perp-google, testnet - perp-google-testnet
+                                     redirectURL: "com.googleusercontent.apps.309493952136-ite5em9m18qtf26mmjfadt7rvmoetpqk:/oauthredirect",
+                                     jwtParams: ["domain":"dev-gqod-vvp.eu.auth0.com"])
+        let tdsdk = TorusSwiftDirectSDK(aggregateVerifierType: .singleLogin, aggregateVerifierName: "perp-google-testnet", subVerifierDetails: [sub], loglevel: .trace)
         tdsdk.triggerLogin(browserType: .external).done { data in
             print("private key rebuild", data)
         }.catch{ err in
@@ -34,12 +34,12 @@ class LoginViewModel: ObservableObject {
     func twitterLogin() {
         let sub = SubVerifierDetails(loginType: .web,
                                      loginProvider: .twitter,
-                                     clientId: "A7H8kkcmyFRlusJQ9dZiqBLraG2yWIsO",
-                                     verifierName: "torus-auth0-twitter-lrc",
+                                     clientId: "oUGRbIVvlttagYICChPVYfx3uTgTV6o3",
+                                     verifierName: "perp-auth0-twitter",            // mainnet - perp-auth0-twitter, testnet - perp-auth0-twitter-testnet
                                      redirectURL: "perp://tdsdk/oauthCallback",
-                                     jwtParams: ["domain":"torus-test.auth0.com"])
+                                     jwtParams: ["domain":"dev-gqod-vvp.eu.auth0.com"])
         
-        let tdsdk = TorusSwiftDirectSDK(aggregateVerifierType: .singleLogin, aggregateVerifierName: "torus-auth0-twitter-lrc", subVerifierDetails: [sub])
+        let tdsdk = TorusSwiftDirectSDK(aggregateVerifierType: .singleLogin, aggregateVerifierName: "perp-auth0-twitter", subVerifierDetails: [sub])
         tdsdk.triggerLogin(browserType: .external).done { data in
             print("private key rebuild", data)
         }.catch{ err in
@@ -50,10 +50,10 @@ class LoginViewModel: ObservableObject {
     func discordLogin() {
         let sub = SubVerifierDetails(loginType: .web,
                                      loginProvider: .discord,
-                                     clientId: "700259843063152661",
-                                     verifierName: "discord-shubs",
+                                     clientId: "882187894482173962",
+                                     verifierName: "perp-discord",       // mainnet - perp-discord, testnet - perp-discord-testnet
                                      redirectURL: "perp://tdsdk/oauthCallback")
-        let tdsdk = TorusSwiftDirectSDK(aggregateVerifierType: .singleLogin, aggregateVerifierName: "discord-shubs", subVerifierDetails: [sub])
+        let tdsdk = TorusSwiftDirectSDK(aggregateVerifierType: .singleLogin, aggregateVerifierName: "perp-discord-testnet", subVerifierDetails: [sub])
         tdsdk.triggerLogin(browserType: .external).done{ data in
             print("private key rebuild", data)
         }.catch{ err in
@@ -64,12 +64,12 @@ class LoginViewModel: ObservableObject {
     func appleLogin() {
         let sub = SubVerifierDetails(loginType: .web,
                                      loginProvider: .apple,
-                                     clientId: "m1Q0gvDfOyZsJCZ3cucSQEe9XMvl9d9L",
-                                     verifierName: "torus-auth0-apple-lrc",
+                                     clientId: "oUGRbIVvlttagYICChPVYfx3uTgTV6o3",
+                                     verifierName: "perp-auth0-apple-testnet",
                                      redirectURL: "perp://tdsdk/oauthCallback",
-                                     jwtParams: ["domain":"torus-test.auth0.com"])
+                                     jwtParams: ["domain":"dev-gqod-vvp.eu.auth0.com"])
         
-        let tdsdk = TorusSwiftDirectSDK(aggregateVerifierType: .singleLogin, aggregateVerifierName: "torus-auth0-apple-lrc", subVerifierDetails: [sub], loglevel: .trace)
+        let tdsdk = TorusSwiftDirectSDK(aggregateVerifierType: .singleLogin, aggregateVerifierName: "perp-auth0-apple-testnet", subVerifierDetails: [sub], loglevel: .trace)
         tdsdk.triggerLogin(browserType: .external).done { data in
             print("private key rebuild", data)
         }.catch{ err in
