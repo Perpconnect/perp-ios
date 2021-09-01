@@ -9,11 +9,15 @@ import SwiftUI
 
 struct MarketView: View {
     init() {
-        UINavigationBar.appearance().barTintColor = UIColor(Color(#colorLiteral(red: 0.06283180416, green: 0.0625443086, blue: 0.07983870059, alpha: 1)))
+        let appearance = UINavigationBarAppearance()
+        appearance.shadowColor = .clear
+        appearance.backgroundColor = UIColor(Color(#colorLiteral(red: 0.06283180416, green: 0.0625443086, blue: 0.07983870059, alpha: 1)))
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        
         UINavigationBar.appearance().isTranslucent = false
-        
-        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
-        
     }
     var body: some View {
         NavigationView {
@@ -30,7 +34,8 @@ struct MarketView: View {
                     }
                     .foregroundColor(Color(#colorLiteral(red: 0.482352972, green: 0.482286036, blue: 0.4909058213, alpha: 1)))
                     .font(.system(size: 12))
-                    .padding()
+                    .padding(.horizontal)
+                    .padding(.top, 5)
 
                     ScrollView {
                         MarketListItem()

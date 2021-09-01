@@ -7,16 +7,19 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
-    @State private var privateKey = UserDefaults.standard.string(forKey: "privateKey")
-    @State private var publicKey = UserDefaults.standard.string(forKey: "publicKey")
+    @ObservedObject var session = LoginViewModel()
     
     var body: some View {
-        if (privateKey == nil)  {
-            LoginView(loginVM: LoginViewModel())
-        } else {
-            Tab()
+        ZStack {
+            if (session.privateKey == nil || session.privateKey == "")  {
+                LoginView()
+            } else {
+                Tab()
+            }
         }
+        .environmentObject(session)
     }
 }
 
