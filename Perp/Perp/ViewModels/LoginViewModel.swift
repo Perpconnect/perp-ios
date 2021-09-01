@@ -65,7 +65,7 @@ class LoginViewModel: ObservableObject {
         let sub = SubVerifierDetails(loginType: .web,
                                      loginProvider: .apple,
                                      clientId: "oUGRbIVvlttagYICChPVYfx3uTgTV6o3",
-                                     verifierName: "perp-auth0-apple-testnet",
+                                     verifierName: "perp-auth0-apple",       // mainnet - perp-auth0-apple, testnet - perp-auth0-apple-testnet
                                      redirectURL: "perp://tdsdk/oauthCallback",
                                      jwtParams: ["domain":"dev-gqod-vvp.eu.auth0.com"])
         
