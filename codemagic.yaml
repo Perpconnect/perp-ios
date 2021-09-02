@@ -3,7 +3,7 @@ workflows:
       name: iOS Workflow
       environment:
         vars:
-          XCODE_WORKSPACE: "Perp.xcodeproj" # <-- Put the name of your workspace here.
+          XCODE_PROJECT: "Perp.xcodeproj" # <-- Put the name of your workspace here.
           XCODE_SCHEME: "Perp" # <-- Put the name of your scheme here.
           BUNDLE_ID: "com.beauth.perpetual" # <-- Put your Bundle Id here.
           # https://docs.codemagic.io/code-signing-yaml/signing-ios/
