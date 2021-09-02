@@ -48,7 +48,7 @@ workflows:
             agvtool new-version -all $(($(app-store-connect get-latest-testflight-build-number "$APP_STORE_APP_ID") + 1))
         - name: Build ipa for distribution
           script: |
-            xcode-project build-ipa --porject "$XCODE_PROJECT" --scheme "$XCODE_SCHEME" --verbose
+            xcode-project build-ipa --project "$XCODE_PROJECT" --scheme "$XCODE_SCHEME" --verbose
       artifacts:
         - build/ios/ipa/*.ipa
         - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
