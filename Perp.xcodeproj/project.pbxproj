@@ -13,6 +13,7 @@
 		BC7363D326C0EF2F00C9E753 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC7363D226C0EF2F00C9E753 /* Assets.xcassets */; };
 		BC7363D626C0EF2F00C9E753 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC7363D526C0EF2F00C9E753 /* Preview Assets.xcassets */; };
 		BC7363E426C0FD8F00C9E753 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7363E326C0FD8F00C9E753 /* LoginView.swift */; };
+		BC7477D526DFD2650028CA71 /* AssetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7477D426DFD2650028CA71 /* AssetsView.swift */; };
 		BC9AF4E926C7B95B006D8887 /* MarketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9AF4E826C7B95B006D8887 /* MarketView.swift */; };
 		BC9AF4EF26C7C777006D8887 /* MarketListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9AF4EE26C7C777006D8887 /* MarketListItem.swift */; };
 		BCD07E3C26D14E3500781E28 /* TorusSwiftDirectSDK in Frameworks */ = {isa = PBXBuildFile; productRef = BCD07E3B26D14E3500781E28 /* TorusSwiftDirectSDK */; };
@@ -28,6 +29,7 @@
 		BC7363D526C0EF2F00C9E753 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BC7363D726C0EF2F00C9E753 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC7363E326C0FD8F00C9E753 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		BC7477D426DFD2650028CA71 /* AssetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsView.swift; sourceTree = "<group>"; };
 		BC9AF4E826C7B95B006D8887 /* MarketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketView.swift; sourceTree = "<group>"; };
 		BC9AF4EE26C7C777006D8887 /* MarketListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketListItem.swift; sourceTree = "<group>"; };
 		BCD07E5026D18E8200781E28 /* PerpApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerpApp.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 		BC7363DE26C0FB9500C9E753 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BC7477D326DFD2530028CA71 /* Assets */,
 				BC9AF4EB26C7C2F3006D8887 /* Market */,
 				BC7363E326C0FD8F00C9E753 /* LoginView.swift */,
 				BC2FFE6D26C4166B0001FDD4 /* Tab.swift */,
@@ -107,6 +110,14 @@
 			children = (
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		BC7477D326DFD2530028CA71 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				BC7477D426DFD2650028CA71 /* AssetsView.swift */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		BC9AF4EB26C7C2F3006D8887 /* Market */ = {
@@ -202,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC9AF4EF26C7C777006D8887 /* MarketListItem.swift in Sources */,
+				BC7477D526DFD2650028CA71 /* AssetsView.swift in Sources */,
 				BC7363E426C0FD8F00C9E753 /* LoginView.swift in Sources */,
 				BC7363D126C0EF2600C9E753 /* ContentView.swift in Sources */,
 				BC9AF4E926C7B95B006D8887 /* MarketView.swift in Sources */,
@@ -265,7 +277,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -320,7 +332,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -336,6 +348,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Perp/Preview Content\"";
 				DEVELOPMENT_TEAM = FYS9RNAGTV;
 				ENABLE_PREVIEWS = YES;
@@ -345,6 +358,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.beauth.perpetual;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -358,6 +372,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Perp/Preview Content\"";
 				DEVELOPMENT_TEAM = FYS9RNAGTV;
 				ENABLE_PREVIEWS = YES;
@@ -367,6 +382,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.beauth.perpetual;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

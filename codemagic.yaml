@@ -1,0 +1,69 @@
+workflows:
+    ios-workflow:
+      name: iOS Workflow
+      environment:
+        vars:
+          XCODE_PROJECT: "Perp.xcodeproj" # <-- Put the name of your workspace here.
+          XCODE_SCHEME: "Perp" # <-- Put the name of your scheme here.
+          BUNDLE_ID: "com.beauth.perpetual" # <-- Put your Bundle Id here.
+          # https://docs.codemagic.io/code-signing-yaml/signing-ios/
+          APP_STORE_CONNECT_ISSUER_ID: Encrypted(Z0FBQUFBQmhNS2pUaFh3dUpDUWV0anJRNkwwNUE5SzAwemFlaHBJNThHSmlmTTNFNkVFNU5VcGpQMEJucnhIZTFXaW1Bd0FXSllVYkNkVlpmNUFiZ0JFWjNETmZTd2VmQ1FjUGpyVkJmeHdxY2VlT2RweFlQbzg3eWpELUhNT01fd3ZjNmotdjRxZzc=) # <-- Put your encrypted App Store Connect Issuer Id here 
+          APP_STORE_CONNECT_KEY_IDENTIFIER: Encrypted(Z0FBQUFBQmhNS2t5Y2hSRVlkem4wZmlwY3J6SFVjYmVTMGd2M3RpMExtUmVQdkhQM3FWblp2TWQ1U2ZqSU5USDlqamN3cXdYeTBhT01BRV9UU0NXNE1sT1AwejBxVlJRZEE9PQ==) # <-- Put your encrypted App Store Connect Key Identifier here 
+          APP_STORE_CONNECT_PRIVATE_KEY: Encrypted(Z0FBQUFBQmhNS21UWjY0MHBxYjVSWUZSeUNrdFU4WG10RElVb0ZIajU0aG55T2J0bVlZX1JOOGhFckxnMmhtX0JPXzhwa2Z5QUpDU0RhOGpheWtJR0NBTTczTmFPaXFTdWFUcTg2VVhrZjdqQWNaTVdLN19kbnkzNHBXUkhFOUVjczBSZmZmT1hjQWNtRmdRRy1ELVQxZVlsTlVBdDlXV3ExeTVpNnllZUF0MGt4TmJxTk1lYWNCQUlKWU5jbGlmaFc2RXNzOW11dzFiSmEtNHBlRWRuOU9DWUxqeU1uUHJSdWdJVU96MXo3MVFhUGo3aUp1VGt6R2VsMktxMklqdHkxRi1HZGhoVGtLM1FKOExoTlV3eXViaGUxa1lzOENQRjlJZDliMzlhY3htczJ1dlBRbENBbWhXbWNMcTNXMk5lRVNRNTA2akl0QUxRd0xZT1pPQVl1ck80dWhIdVY1cEYzRlI4M0UwQmNxSVFhdlRRUjNzNTlhNDRPRjNZdGRNejVCd1hNNGNYVUFkMnVicEtoWkJNY0hoLXhTcy1lME9RLTFCSjF0U2ZPMU5ETTNFbl9Gcmxnbz0=) # <-- Put your encrypted App Store Connect Private Key here 
+          CERTIFICATE_PRIVATE_KEY: Encrypted(Z0FBQUFBQmhNS29CMEIzOVB3N2FCeUVPRXk1S2JqRW92NVdCcGtvZlZnYkxyOWs1VjAyWU5pMDVVckJyTnhtZlhLYWk4eng0MGdKdl9Da0V5TjhfSk85dXBPUElCMU40UHNOS2J4WW9TRHJ3VHpubXpPZHQzQW5ESXFhN3VLdEZodHlKX192ZTdHV1BoWVpPR1ZMUC1GY0h0UkJoTEhsVkJac2ZoZng3UlJpcVM2bkNKTEJCcXAtNXBBYjhxdTBKM0RmTmJIdFAyX3hkc3UySjZDVUFvMzhNck1TdmhObERhTDhWM2M0NVlfMndTemRCS0NybFY4ZHNNb2tTNHFkUkdLaE5VdjhFNDIxQW9hNm9pcGNNQk1QcHFuT1d2VTJiajQ0dGNXVTQwR2xrNzVWdlU2c2o0N1BXdnBMQW1zVHRsWFlOdXNLbW1CT3AzNnF1S1JRQ2I2eGd2LUdfeFRYTmRhSTZVbGdsNWZQczJ5V3VMU2tUUG42MHVEcDlnLTRzQ1RIczdIcFlLcDFneXVkNy02X1J4T3ZHRFB1SkRaNFAxNEhlQ1Uwd0pCMnFTdDlQLV9Sa0EwN1dndkhzYmE4Sy1hS2EtRGJLd3NDeUNYVGJHQlZBOXV4REsxM1JSYzdoVzlyUUJQd3dQVUtLNC1KUTluWjYxS2VaUVV3NVJ2UDNYRFd5QmdWZGI4NlctR2t4aXRCTEoxTW5ndExPUnV3RmhFXzc2NjZTYjRfNFRrajkyTzlCNTE5ZDN2djBtVy11SEdQQ0FXZW5BYzhiZFdHRnJFR1pzeVJBS1hwTDV5bEpCZFJwWWpaanM2ZTlTUzhkVXBtNUdZeWEyeXVPM3c1YjdOYWVScld5NTdkY0RRZm5CZER5NnAtOVB6ZmpfMl9PMFdULVFDMW1iM2xLeWhtOTh2M2tKbWRJZmdLRVo1S3RVeFAtS0ZLNHFHeWdSVzZvUFlmUVd4U0F0dFhSUENQTTlQM2g2c1hITW1KYWNJQ1JJeVplcTVCTV82Z0Mzd29uUWpWa1VwbUFSOWFXbTBiMGY4dGFhb3VhSnFaaGtnQWkxanVQRnRwb2dnOGd6MmRwX1pjY0RiaTZ6WXl0akZGdkY1MzJYblR5TnJlSjc2TUo1UzhPdU80OXhmZ1ItYlJkWlJtZkw4bW9sZTVJOXg5ZXc5Q3hyaXd3Umw3VXV5cjZKam5BX0NmTjhCamhGOTZoMnNra2xLcWVzVHQteDAtOWhqdDI1SDZKbTVqRHNJSDV2ZEx3cDRTMkoyVVFwMkNDQTFRMG5kcTd1ODBwSmJaNElVNVo0WWlxd05MRy1QMVJrYnhsN2dIWmYySVJVTndpT0ZldVFGNzdJZkpfbWpSVEVGdTluMWZiWDQ4YzI2bHVLWlZQckhBZXptbHI2ckhXUG1tOGhnRFBnOU1HZDVFWE5EekI1SVRiZGxYREJFSllaclI3V180dEZMeXNWeTdEczRUT0stYVZGam1mMy1YVEFwZW50ZHVUd00tTzBkVTdWaXIyS3JDNG8wSE0zb0NwQlZYNDA1LTZmTWYwajJ6Ym1QcHpuLXQ4YzNfXzl6YjNDWmhiSm5mV0htcVJ1Wmp2aUxQdnYwMEs2Wnowd2xXLVlkR0Q3enpOYzBvbnNiWGRqTVZOa1RaV1hVd09aQnF6WWpnY2xBbEQ3V0wzTnZfS3FJYkQ4TWtxd0xYTFQ0aDhKQloxWEthNHhNX1JRZm1GWlQtMl9JMjF6NUg1TGt6WkRNZW93Q3VNd1lyMEUwOFdzTEplc3Vyc0hGMThTa29MUHAwc1NlQWFTZW1DUGVJOWRrczZwZDQtc2RGaFVWai1yMXA3VnZ0S3laNUxvRzlvWEl1YkNKODdFckJqZ3NNLUNJVmlyQnJNMjJXWG1iMGptSHFFMUtkZ3FfSnJ2VE1aaFRYdlVtNDkwUHFEVlhMMnB0MnFvTXNkdlRtNDJibE95RmI2elpIS3JCMXotdFFsd2tuRWJCX3RNNU5Wdm5FVlpRSkxJZXF3aEd6RkNaUEpvMmFISldJNmtrdEE2cERjbHRjYm9rX25sOFkzNU1teE5XNFFGWnhCWW56U0kwMDBidzVlUWFyM0l6ZnhrVVNYVEw3cndSTXF3a2JXZGQwSXhQQWVnN0FRX0l0YzJEYkxiLWU1b2tyY08zZEVEOG9sMG8yWXNlS1lmNTliQ2diYWtfQUVfWndZYVB2N21nXzV3S1h2eldIRzJkbnZtUE1pRXRoYjVWUUlIeGFOS2xEaUItcUNBZWhJdGRnSWhPRGltZmRiNXQ0djhtbmFrbDRIbWdLaFJlWndCRmxvcTFDVkFDMHVXLWx6cWZMaGMyaS1MX1FoQ2xPUlNWdUIwTVFCQkRrYmlSb3phTHFLYklQZGpTNDZqQzczRzlUcmpXckZqZW9XaXFnTWFMVjFHUm5ISUNrcWxiTjh1OHN4aEN6S2xfWTkxQUlyS05ia01ZczA2bnFsN3MtWlBIcG9YME5iM3AwaGY4VmE4QXdmWEt3OTk3bU5majlaRDItaXhfSHp4VjlQeWFMWFluWnBaVlFQa2pJZWpNRTdKQUVfeUhwMjFKVDRuRWRJT1Jtem1USW5xcmMxblpZbU1VOGZWRHUwZ0RVcXZsTzloeVV6Nmp0NXI0N0JJS1haV3RKZ200cnpCV0JNV2pnV3BaNXkyYjlhMWRzTjZ6SGpJOERhV19OVjdqV2JudEFJeENRVE84UlpRYnVQekw3bGJPYVZueDRUVUFfeTZ3ZGhUR1BPOUpUbzRlWW1IOXphV192OGFRVHdsUFBlVTZtUndhT3lMdTFxbVdmaUYycEhPdk1ncWk3WTBKb21pOWRxR3BOSkxSNEpXVVNGWjlmQmI5UTNYMlJwMW5SelpUOW81V2wtVmJCdERxblMycUxkbVBlcnluRlBYWjJyY3BxTkZNWTBhQXgyYmhXWmw2WWhVSnJMc0FZRTZQcl9qeXhMOVRGRllKQjB3MFRfTWJsbjcwSmYyUWhSWnBGTWlaekRYQ0xaRWlES0FhcXdlamRFZk5LaDZ4LVVmV21KbDAyejFPN3JIWm83ejFOYVcyWlQ2Y1BN) # <-- Put your encrypted Certificate Private Key here 
+          APP_STORE_APP_ID: 1583770606 # <-- Put the app id number here. This is found in App Store Connect > App > General > App Information
+        xcode: latest
+      triggering:
+        events:
+          - push
+          # - tag
+          # - pull_request
+        branch_patterns:
+          - pattern: 'dev'
+            include: true
+            source: true
+          - pattern: 'main'
+            include: true
+            source: true
+      scripts:
+        - name: Set up keychain to be used for codesigning using Codemagic CLI 'keychain' command
+          script: |
+            keychain initialize
+        - name: Fetch signing files
+          script: |
+            app-store-connect fetch-signing-files $BUNDLE_ID --type IOS_APP_STORE --create --verbose
+        - name: Use system default keychain
+          script: |
+            keychain add-certificates
+        - name: Set up code signing settings on Xcode project
+          script: |
+            xcode-project use-profiles
+        - name: Increment build number
+          script: |
+            #!/bin/sh
+            set -e
+            set -x
+            cd $FCI_BUILD_DIR
+            # agvtool new-version -all $(($BUILD_NUMBER + 1))
+            agvtool new-version -all $(($(app-store-connect get-latest-testflight-build-number "$APP_STORE_APP_ID") + 1))
+        - name: Build ipa for distribution
+          script: |
+            xcode-project build-ipa --project "$XCODE_PROJECT" --scheme "$XCODE_SCHEME" --verbose
+      artifacts:
+        - build/ios/ipa/*.ipa
+        - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
+      publishing:
+        app_store_connect:   # https://docs.codemagic.io/publishing-yaml/distribution              
+            api_key: $APP_STORE_CONNECT_PRIVATE_KEY         # Contents of the API key, can also reference environment variable such as $APP_STORE_CONNECT_PRIVATE_KEY
+            key_id: $APP_STORE_CONNECT_KEY_IDENTIFIER       # Alphanumeric value that identifies the API key, can also reference environment variable such as $APP_STORE_CONNECT_KEY_IDENTIFIER
+            issuer_id: $APP_STORE_CONNECT_ISSUER_ID         # Alphanumeric value that identifies who created the API key, can also reference environment variable such as $APP_STORE_CONNECT_ISSUER_ID
+            submit_to_testflight: true                     # Optional boolean, defaults to false. Whether or not to submit the uploaded build to TestFlight beta review. Required for distributing to beta groups. Note: This action is performed during post-processing.
+            beta_groups:                                    # Specify the names of beta tester groups that will get access to the build once it has passed beta review. 
+                  - public
+                  - insider
+        email:
+            recipients:
+              - spapinwar@gmail.com
+            notify:
+              success: true
+              failure: true

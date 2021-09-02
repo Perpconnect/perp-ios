@@ -10,13 +10,17 @@ import TorusSwiftDirectSDK
 
 struct LoginView: View {
     
-    @ObservedObject var loginVM: LoginViewModel
+    @EnvironmentObject var session: LoginViewModel
     
     var body: some View {
         GeometryReader { geo in
             ZStack {
                 Color(#colorLiteral(red: 0.06283180416, green: 0.0625443086, blue: 0.07983870059, alpha: 1))
                     .ignoresSafeArea()
+                ProgressView()
+                    .opacity(!session.isLoading ? 0 : 1)
+                    .scaleEffect(2)
+                    .progressViewStyle(CircularProgressViewStyle(tint: Color(#colorLiteral(red: 0.9977523685, green: 0.6921175718, blue: 0.09948458523, alpha: 1))))
                 VStack {
                     HStack {
                         Image("perp_logo")
@@ -49,7 +53,7 @@ struct LoginView: View {
                     }
                     .padding(.top, geo.size.width * 0.08)
                     
-                    Button(action: { loginVM.googleLogin() }) {
+                    Button(action: { session.googleLogin() }) {
                         ZStack {
                             RoundedRectangle(cornerRadius: 10)
                                 .stroke(Color(#colorLiteral(red: 0.6480259299, green: 0.6540077329, blue: 0.6690028906, alpha: 1)), lineWidth: 0.5)
@@ -71,15 +75,15 @@ struct LoginView: View {
                     
                     HStack {
                         
-                        Button(action: { loginVM.appleLogin() }) {
+                        Button(action: { session.appleLogin() }) {
                             SocialButton(image: "applelogo", height: 30, width: 25, systemImage: true)
                         }
                         
-                        Button(action: { loginVM.twitterLogin() }) {
+                        Button(action: { session.twitterLogin() }) {
                             SocialButton(image: "twitter", height: 25, width: 40)
                         }
                         
-                        Button(action: { loginVM.discordLogin() }) {
+                        Button(action: { session.discordLogin() }) {
                             SocialButton(image: "discord", height: 25, width: 40)
                         }
                     
@@ -114,6 +118,7 @@ struct LoginView: View {
                     
                     Spacer()
                 }
+                .opacity(session.isLoading ? 0.1 : 1)
             }
             .onOpenURL { url in
                 TorusSwiftDirectSDK.handle(url: url)
