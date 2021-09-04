@@ -15,7 +15,7 @@ struct LoginView: View {
     var body: some View {
         GeometryReader { geo in
             ZStack {
-                Color(#colorLiteral(red: 0.06283180416, green: 0.0625443086, blue: 0.07983870059, alpha: 1))
+                backgroundColor
                     .ignoresSafeArea()
                 ProgressView()
                     .opacity(!session.isLoading ? 0 : 1)
@@ -72,7 +72,6 @@ struct LoginView: View {
                         }
                     }
                     
-                    
                     HStack {
                         
                         Button(action: { session.appleLogin() }) {
@@ -113,6 +112,9 @@ struct LoginView: View {
                             .frame(width: geo.size.width * 0.90, height: 55)
                         Text("Continue with private key")
                             .foregroundColor(.white)
+                            .onTapGesture(perform: {
+                                session.login(privateKey: "some", publicKey: "some")
+                            })
                     }
                     .padding()
                     
