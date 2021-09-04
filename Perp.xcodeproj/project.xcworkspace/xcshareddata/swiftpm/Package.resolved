@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "Apollo",
+        "repositoryURL": "https://github.com/apollographql/apollo-ios.git",
+        "state": {
+          "branch": null,
+          "revision": "6aea4edfc40e8a81beae182656c83ac99584af9f",
+          "version": "0.48.0"
+        }
+      },
+      {
         "package": "BigInt",
         "repositoryURL": "https://github.com/attaswift/BigInt.git",
         "state": {
@@ -62,6 +71,15 @@
           "branch": null,
           "revision": "d2f7ba14bcdc45e18f4f60ad9df883fb9055f081",
           "version": "6.15.3"
+        }
+      },
+      {
+        "package": "SQLite.swift",
+        "repositoryURL": "https://github.com/stephencelis/SQLite.swift.git",
+        "state": {
+          "branch": null,
+          "revision": "0a9893ec030501a3956bee572d6b4fdd3ae158a1",
+          "version": "0.12.2"
         }
       },
       {
