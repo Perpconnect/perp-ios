@@ -7,13 +7,15 @@
 
 import SwiftUI
 
-
 struct ContentView: View {
     @ObservedObject var session = LoginViewModel()
+    @State var showOnboarding = true
     
     var body: some View {
         ZStack {
-            if (session.privateKey == nil || session.privateKey == "")  {
+            if (showOnboarding == true && (session.privateKey == nil || session.privateKey == "")) {
+                OnboardingView(showOnboarding: $showOnboarding)
+            } else if (session.privateKey == nil || session.privateKey == "")  {
                 LoginView()
             } else {
                 Tab()

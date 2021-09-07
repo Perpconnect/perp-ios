@@ -7,8 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC036F9726E4B78B0028E590 /* ApolloWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = BC036F9626E4B78B0028E590 /* ApolloWebSocket */; };
+		BC036F9926E4B78B0028E590 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = BC036F9826E4B78B0028E590 /* Apollo */; };
+		BC036F9B26E4B78B0028E590 /* ApolloUtils in Frameworks */ = {isa = PBXBuildFile; productRef = BC036F9A26E4B78B0028E590 /* ApolloUtils */; };
+		BC036F9D26E4B78B0028E590 /* ApolloAPI in Frameworks */ = {isa = PBXBuildFile; productRef = BC036F9C26E4B78B0028E590 /* ApolloAPI */; };
 		BC2FFE6E26C4166B0001FDD4 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2FFE6D26C4166B0001FDD4 /* Tab.swift */; };
 		BC2FFE7126C416B10001FDD4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2FFE7026C416B10001FDD4 /* LoginViewModel.swift */; };
+		BC447FF826E429E200F6357A /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = BC447FF726E429E200F6357A /* schema.json */; };
+		BC447FFA26E42A5800F6357A /* MarketRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC447FF926E42A5800F6357A /* MarketRepository.swift */; };
+		BC447FFC26E42A8200F6357A /* Queries.graphql in Resources */ = {isa = PBXBuildFile; fileRef = BC447FFB26E42A8200F6357A /* Queries.graphql */; };
+		BC447FFF26E42B5200F6357A /* Apollo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC447FFE26E42B5200F6357A /* Apollo.swift */; };
+		BC56E96626E4B63300703C64 /* SetorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC56E96526E4B63300703C64 /* SetorderView.swift */; };
 		BC7363D126C0EF2600C9E753 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7363D026C0EF2600C9E753 /* ContentView.swift */; };
 		BC7363D326C0EF2F00C9E753 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC7363D226C0EF2F00C9E753 /* Assets.xcassets */; };
 		BC7363D626C0EF2F00C9E753 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC7363D526C0EF2F00C9E753 /* Preview Assets.xcassets */; };
@@ -16,13 +25,38 @@
 		BC7477D526DFD2650028CA71 /* AssetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7477D426DFD2650028CA71 /* AssetsView.swift */; };
 		BC9AF4E926C7B95B006D8887 /* MarketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9AF4E826C7B95B006D8887 /* MarketView.swift */; };
 		BC9AF4EF26C7C777006D8887 /* MarketListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9AF4EE26C7C777006D8887 /* MarketListItem.swift */; };
+		BCB4F8CA26E16CD5006DB5AD /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB4F8C926E16CD5006DB5AD /* OnboardingView.swift */; };
+		BCCCB2AA26E2628000B26878 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = BCCCB2A926E2628000B26878 /* Lottie */; };
+		BCCCB2B026E2640200B26878 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = BCCCB2AF26E2640200B26878 /* .swiftlint.yml */; };
+		BCCCB2B226E26D1500B26878 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCB2B126E26D1500B26878 /* LottieView.swift */; };
+		BCCCB2B526E2754900B26878 /* stake.json in Resources */ = {isa = PBXBuildFile; fileRef = BCCCB2B426E2754900B26878 /* stake.json */; };
+		BCCCB2B726E2759C00B26878 /* leverage.json in Resources */ = {isa = PBXBuildFile; fileRef = BCCCB2B626E2759B00B26878 /* leverage.json */; };
 		BCD07E3C26D14E3500781E28 /* TorusSwiftDirectSDK in Frameworks */ = {isa = PBXBuildFile; productRef = BCD07E3B26D14E3500781E28 /* TorusSwiftDirectSDK */; };
 		BCD07E5126D18E8200781E28 /* PerpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD07E5026D18E8200781E28 /* PerpApp.swift */; };
+		BCD323F126E1652F00B25C4A /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD323F026E1652F00B25C4A /* Globals.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BC447FF626E427A900F6357A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		BC2FFE6D26C4166B0001FDD4 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		BC2FFE7026C416B10001FDD4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		BC447FF726E429E200F6357A /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		BC447FF926E42A5800F6357A /* MarketRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketRepository.swift; sourceTree = "<group>"; };
+		BC447FFB26E42A8200F6357A /* Queries.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Queries.graphql; sourceTree = "<group>"; };
+		BC447FFE26E42B5200F6357A /* Apollo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apollo.swift; sourceTree = "<group>"; };
+		BC56E96526E4B63300703C64 /* SetorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetorderView.swift; sourceTree = "<group>"; };
 		BC7363CB26C0EF2600C9E753 /* Perp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Perp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC7363D026C0EF2600C9E753 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BC7363D226C0EF2F00C9E753 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -32,7 +66,13 @@
 		BC7477D426DFD2650028CA71 /* AssetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsView.swift; sourceTree = "<group>"; };
 		BC9AF4E826C7B95B006D8887 /* MarketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketView.swift; sourceTree = "<group>"; };
 		BC9AF4EE26C7C777006D8887 /* MarketListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketListItem.swift; sourceTree = "<group>"; };
+		BCB4F8C926E16CD5006DB5AD /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		BCCCB2AF26E2640200B26878 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		BCCCB2B126E26D1500B26878 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		BCCCB2B426E2754900B26878 /* stake.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stake.json; sourceTree = "<group>"; };
+		BCCCB2B626E2759B00B26878 /* leverage.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = leverage.json; sourceTree = "<group>"; };
 		BCD07E5026D18E8200781E28 /* PerpApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerpApp.swift; sourceTree = "<group>"; };
+		BCD323F026E1652F00B25C4A /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,16 +80,47 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC036F9D26E4B78B0028E590 /* ApolloAPI in Frameworks */,
 				BCD07E3C26D14E3500781E28 /* TorusSwiftDirectSDK in Frameworks */,
+				BC036F9B26E4B78B0028E590 /* ApolloUtils in Frameworks */,
+				BC036F9926E4B78B0028E590 /* Apollo in Frameworks */,
+				BC036F9726E4B78B0028E590 /* ApolloWebSocket in Frameworks */,
+				BCCCB2AA26E2628000B26878 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC06D42C26E39DE300169502 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				BC447FF926E42A5800F6357A /* MarketRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		BC447FFD26E42B3C00F6357A /* Graphql */ = {
+			isa = PBXGroup;
+			children = (
+				BC447FFB26E42A8200F6357A /* Queries.graphql */,
+				BC447FFE26E42B5200F6357A /* Apollo.swift */,
+			);
+			path = Graphql;
+			sourceTree = "<group>";
+		};
+		BC56E96426E4B61700703C64 /* Orders */ = {
+			isa = PBXGroup;
+			children = (
+				BC56E96526E4B63300703C64 /* SetorderView.swift */,
+			);
+			path = Orders;
+			sourceTree = "<group>";
+		};
 		BC7363C226C0EF2600C9E753 = {
 			isa = PBXGroup;
 			children = (
+				BCCCB2AF26E2640200B26878 /* .swiftlint.yml */,
 				BC7363CD26C0EF2600C9E753 /* Perp */,
 				BC7363CC26C0EF2600C9E753 /* Products */,
 			);
@@ -66,10 +137,15 @@
 		BC7363CD26C0EF2600C9E753 /* Perp */ = {
 			isa = PBXGroup;
 			children = (
+				BC447FF726E429E200F6357A /* schema.json */,
+				BC447FFD26E42B3C00F6357A /* Graphql */,
+				BC06D42C26E39DE300169502 /* Repository */,
+				BCCCB2B326E2754000B26878 /* Lottie */,
 				BC7363E126C0FBA300C9E753 /* Models */,
 				BC7363E026C0FB9B00C9E753 /* ViewModels */,
 				BC7363DE26C0FB9500C9E753 /* Views */,
 				BC7363D026C0EF2600C9E753 /* ContentView.swift */,
+				BCD323F026E1652F00B25C4A /* Globals.swift */,
 				BCD07E5026D18E8200781E28 /* PerpApp.swift */,
 				BC7363D226C0EF2F00C9E753 /* Assets.xcassets */,
 				BC7363D726C0EF2F00C9E753 /* Info.plist */,
@@ -89,10 +165,13 @@
 		BC7363DE26C0FB9500C9E753 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BCCCB2B126E26D1500B26878 /* LottieView.swift */,
+				BC56E96426E4B61700703C64 /* Orders */,
 				BC7477D326DFD2530028CA71 /* Assets */,
 				BC9AF4EB26C7C2F3006D8887 /* Market */,
 				BC7363E326C0FD8F00C9E753 /* LoginView.swift */,
 				BC2FFE6D26C4166B0001FDD4 /* Tab.swift */,
+				BCB4F8C926E16CD5006DB5AD /* OnboardingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -137,6 +216,15 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		BCCCB2B326E2754000B26878 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				BCCCB2B426E2754900B26878 /* stake.json */,
+				BCCCB2B626E2759B00B26878 /* leverage.json */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,6 +235,8 @@
 				BC7363C726C0EF2600C9E753 /* Sources */,
 				BC7363C826C0EF2600C9E753 /* Frameworks */,
 				BC7363C926C0EF2600C9E753 /* Resources */,
+				BCCCB2AB26E2639000B26878 /* ShellScript */,
+				BC447FF626E427A900F6357A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,6 +245,11 @@
 			name = Perp;
 			packageProductDependencies = (
 				BCD07E3B26D14E3500781E28 /* TorusSwiftDirectSDK */,
+				BCCCB2A926E2628000B26878 /* Lottie */,
+				BC036F9626E4B78B0028E590 /* ApolloWebSocket */,
+				BC036F9826E4B78B0028E590 /* Apollo */,
+				BC036F9A26E4B78B0028E590 /* ApolloUtils */,
+				BC036F9C26E4B78B0028E590 /* ApolloAPI */,
 			);
 			productName = Perp;
 			productReference = BC7363CB26C0EF2600C9E753 /* Perp.app */;
@@ -185,6 +280,8 @@
 			mainGroup = BC7363C226C0EF2600C9E753;
 			packageReferences = (
 				BCD07E3A26D14E3500781E28 /* XCRemoteSwiftPackageReference "torus-direct-swift-sdk" */,
+				BCCCB2A826E2628000B26878 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				BC036F9526E4B78B0028E590 /* XCRemoteSwiftPackageReference "apollo-ios" */,
 			);
 			productRefGroup = BC7363CC26C0EF2600C9E753 /* Products */;
 			projectDirPath = "";
@@ -200,12 +297,37 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCCCB2B726E2759C00B26878 /* leverage.json in Resources */,
+				BC447FFC26E42A8200F6357A /* Queries.graphql in Resources */,
+				BCCCB2B026E2640200B26878 /* .swiftlint.yml in Resources */,
 				BC7363D626C0EF2F00C9E753 /* Preview Assets.xcassets in Resources */,
 				BC7363D326C0EF2F00C9E753 /* Assets.xcassets in Resources */,
+				BC447FF826E429E200F6357A /* schema.json in Resources */,
+				BCCCB2B526E2754900B26878 /* stake.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BCCCB2AB26E2639000B26878 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BC7363C726C0EF2600C9E753 /* Sources */ = {
@@ -214,12 +336,18 @@
 			files = (
 				BC9AF4EF26C7C777006D8887 /* MarketListItem.swift in Sources */,
 				BC7477D526DFD2650028CA71 /* AssetsView.swift in Sources */,
+				BCB4F8CA26E16CD5006DB5AD /* OnboardingView.swift in Sources */,
 				BC7363E426C0FD8F00C9E753 /* LoginView.swift in Sources */,
+				BC56E96626E4B63300703C64 /* SetorderView.swift in Sources */,
 				BC7363D126C0EF2600C9E753 /* ContentView.swift in Sources */,
+				BC447FFF26E42B5200F6357A /* Apollo.swift in Sources */,
 				BC9AF4E926C7B95B006D8887 /* MarketView.swift in Sources */,
 				BCD07E5126D18E8200781E28 /* PerpApp.swift in Sources */,
 				BC2FFE6E26C4166B0001FDD4 /* Tab.swift in Sources */,
 				BC2FFE7126C416B10001FDD4 /* LoginViewModel.swift in Sources */,
+				BC447FFA26E42A5800F6357A /* MarketRepository.swift in Sources */,
+				BCCCB2B226E26D1500B26878 /* LottieView.swift in Sources */,
+				BCD323F126E1652F00B25C4A /* Globals.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +388,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -321,6 +450,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -414,6 +544,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		BC036F9526E4B78B0028E590 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.48.0;
+			};
+		};
+		BCCCB2A826E2628000B26878 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.2.3;
+			};
+		};
 		BCD07E3A26D14E3500781E28 /* XCRemoteSwiftPackageReference "torus-direct-swift-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/torusresearch/torus-direct-swift-sdk";
@@ -425,6 +571,31 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		BC036F9626E4B78B0028E590 /* ApolloWebSocket */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC036F9526E4B78B0028E590 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloWebSocket;
+		};
+		BC036F9826E4B78B0028E590 /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC036F9526E4B78B0028E590 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+		BC036F9A26E4B78B0028E590 /* ApolloUtils */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC036F9526E4B78B0028E590 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloUtils;
+		};
+		BC036F9C26E4B78B0028E590 /* ApolloAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC036F9526E4B78B0028E590 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloAPI;
+		};
+		BCCCB2A926E2628000B26878 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BCCCB2A826E2628000B26878 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
 		BCD07E3B26D14E3500781E28 /* TorusSwiftDirectSDK */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BCD07E3A26D14E3500781E28 /* XCRemoteSwiftPackageReference "torus-direct-swift-sdk" */;

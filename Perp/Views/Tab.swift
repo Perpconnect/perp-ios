@@ -9,8 +9,8 @@ import SwiftUI
 
 struct Tab: View {
     init() {
-        UITabBar.appearance().backgroundColor = UIColor(Color(#colorLiteral(red: 0.06283180416, green: 0.0625443086, blue: 0.07983870059, alpha: 1)))
-        UITabBar.appearance().barTintColor = UIColor(Color(#colorLiteral(red: 0.06283180416, green: 0.0625443086, blue: 0.07983870059, alpha: 1)))
+        UITabBar.appearance().backgroundColor = UIColor(backgroundColor)
+        UITabBar.appearance().barTintColor = UIColor(backgroundColor)
         UITabBar.appearance().isTranslucent = true
         
     }

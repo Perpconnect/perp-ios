@@ -11,7 +11,7 @@ struct MarketView: View {
     init() {
         let appearance = UINavigationBarAppearance()
         appearance.shadowColor = .clear
-        appearance.backgroundColor = UIColor(Color(#colorLiteral(red: 0.06283180416, green: 0.0625443086, blue: 0.07983870059, alpha: 1)))
+        appearance.backgroundColor = UIColor(backgroundColor)
         appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
         
         UINavigationBar.appearance().standardAppearance = appearance
@@ -22,7 +22,7 @@ struct MarketView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color(#colorLiteral(red: 0.06283180416, green: 0.0625443086, blue: 0.07983870059, alpha: 1))
+                backgroundColor
                     .ignoresSafeArea()
                 VStack {
                     HStack {
@@ -38,7 +38,9 @@ struct MarketView: View {
                     .padding(.top, 5)
 
                     ScrollView {
-                        MarketListItem()
+                        NavigationLink(destination: SetorderView()) {
+                            MarketListItem()
+                        }
                         MarketListItem()
                         MarketListItem()
                         MarketListItem()
@@ -53,17 +55,16 @@ struct MarketView: View {
                 ToolbarItem(placement: .navigationBarLeading) {
                     NavigationLink(destination: MarketView()) {
                         Image(systemName: "person")
+                            .resizable()
                             .foregroundColor(.white)
-                            .background(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
-                            .font(.body)
+                            .frame(width: 30, height: 30)
                     }
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     NavigationLink(destination: MarketView()) {
-                        Image(systemName: "magnifyingglass")
+                        Image(systemName: "envelope")
                             .foregroundColor(.white)
-                            .background(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
-                            .font(.body)
+                            .frame(width: 30, height: 30)
                     }
                 }
             }
