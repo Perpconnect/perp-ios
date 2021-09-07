@@ -38,7 +38,9 @@ struct MarketView: View {
                     .padding(.top, 5)
 
                     ScrollView {
-                        MarketListItem()
+                        NavigationLink(destination: SetorderView()) {
+                            MarketListItem()
+                        }
                         MarketListItem()
                         MarketListItem()
                         MarketListItem()
