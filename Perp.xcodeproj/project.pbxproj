@@ -11,6 +11,7 @@
 		BC036F9926E4B78B0028E590 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = BC036F9826E4B78B0028E590 /* Apollo */; };
 		BC036F9B26E4B78B0028E590 /* ApolloUtils in Frameworks */ = {isa = PBXBuildFile; productRef = BC036F9A26E4B78B0028E590 /* ApolloUtils */; };
 		BC036F9D26E4B78B0028E590 /* ApolloAPI in Frameworks */ = {isa = PBXBuildFile; productRef = BC036F9C26E4B78B0028E590 /* ApolloAPI */; };
+		BC1EC81C26E8D05200F28F2D /* AmmInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1EC81B26E8D05200F28F2D /* AmmInfo.swift */; };
 		BC2FFE6E26C4166B0001FDD4 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2FFE6D26C4166B0001FDD4 /* Tab.swift */; };
 		BC2FFE7126C416B10001FDD4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2FFE7026C416B10001FDD4 /* LoginViewModel.swift */; };
 		BC447FF826E429E200F6357A /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = BC447FF726E429E200F6357A /* schema.json */; };
@@ -23,6 +24,8 @@
 		BC7363D626C0EF2F00C9E753 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC7363D526C0EF2F00C9E753 /* Preview Assets.xcassets */; };
 		BC7363E426C0FD8F00C9E753 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7363E326C0FD8F00C9E753 /* LoginView.swift */; };
 		BC7477D526DFD2650028CA71 /* AssetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7477D426DFD2650028CA71 /* AssetsView.swift */; };
+		BC96A4DD26ECAF9F00F8B8B9 /* Market.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC96A4DC26ECAF9F00F8B8B9 /* Market.swift */; };
+		BC96A4DF26ECB41700F8B8B9 /* MarketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC96A4DE26ECB41700F8B8B9 /* MarketViewModel.swift */; };
 		BC9AF4E926C7B95B006D8887 /* MarketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9AF4E826C7B95B006D8887 /* MarketView.swift */; };
 		BC9AF4EF26C7C777006D8887 /* MarketListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9AF4EE26C7C777006D8887 /* MarketListItem.swift */; };
 		BCB4F8CA26E16CD5006DB5AD /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB4F8C926E16CD5006DB5AD /* OnboardingView.swift */; };
@@ -50,6 +53,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BC1EC81B26E8D05200F28F2D /* AmmInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmmInfo.swift; sourceTree = "<group>"; };
 		BC2FFE6D26C4166B0001FDD4 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		BC2FFE7026C416B10001FDD4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		BC447FF726E429E200F6357A /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
@@ -64,6 +68,8 @@
 		BC7363D726C0EF2F00C9E753 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC7363E326C0FD8F00C9E753 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		BC7477D426DFD2650028CA71 /* AssetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsView.swift; sourceTree = "<group>"; };
+		BC96A4DC26ECAF9F00F8B8B9 /* Market.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Market.swift; sourceTree = "<group>"; };
+		BC96A4DE26ECB41700F8B8B9 /* MarketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketViewModel.swift; sourceTree = "<group>"; };
 		BC9AF4E826C7B95B006D8887 /* MarketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketView.swift; sourceTree = "<group>"; };
 		BC9AF4EE26C7C777006D8887 /* MarketListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketListItem.swift; sourceTree = "<group>"; };
 		BCB4F8C926E16CD5006DB5AD /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -180,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				BC2FFE7026C416B10001FDD4 /* LoginViewModel.swift */,
+				BC96A4DE26ECB41700F8B8B9 /* MarketViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -187,6 +194,8 @@
 		BC7363E126C0FBA300C9E753 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BC1EC81B26E8D05200F28F2D /* AmmInfo.swift */,
+				BC96A4DC26ECAF9F00F8B8B9 /* Market.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -337,6 +346,7 @@
 				BC9AF4EF26C7C777006D8887 /* MarketListItem.swift in Sources */,
 				BC7477D526DFD2650028CA71 /* AssetsView.swift in Sources */,
 				BCB4F8CA26E16CD5006DB5AD /* OnboardingView.swift in Sources */,
+				BC96A4DF26ECB41700F8B8B9 /* MarketViewModel.swift in Sources */,
 				BC7363E426C0FD8F00C9E753 /* LoginView.swift in Sources */,
 				BC56E96626E4B63300703C64 /* SetorderView.swift in Sources */,
 				BC7363D126C0EF2600C9E753 /* ContentView.swift in Sources */,
@@ -345,8 +355,10 @@
 				BCD07E5126D18E8200781E28 /* PerpApp.swift in Sources */,
 				BC2FFE6E26C4166B0001FDD4 /* Tab.swift in Sources */,
 				BC2FFE7126C416B10001FDD4 /* LoginViewModel.swift in Sources */,
+				BC96A4DD26ECAF9F00F8B8B9 /* Market.swift in Sources */,
 				BC447FFA26E42A5800F6357A /* MarketRepository.swift in Sources */,
 				BCCCB2B226E26D1500B26878 /* LottieView.swift in Sources */,
+				BC1EC81C26E8D05200F28F2D /* AmmInfo.swift in Sources */,
 				BCD323F126E1652F00B25C4A /* Globals.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
