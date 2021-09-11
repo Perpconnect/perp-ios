@@ -29,6 +29,11 @@
 		BC96A4E126ECC7FC00F8B8B9 /* MarketDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC96A4E026ECC7FC00F8B8B9 /* MarketDataViewModel.swift */; };
 		BC96A4E726ECCA4000F8B8B9 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = BC96A4E626ECCA4000F8B8B9 /* Resolver */; };
 		BC96A4E926ECCA4000F8B8B9 /* Resolver-Static in Frameworks */ = {isa = PBXBuildFile; productRef = BC96A4E826ECCA4000F8B8B9 /* Resolver-Static */; };
+		BC96A4EB26ECF01800F8B8B9 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC96A4EA26ECF01800F8B8B9 /* AccountView.swift */; };
+		BC96A4F026ECF14000F8B8B9 /* RewardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC96A4EF26ECF14000F8B8B9 /* RewardsView.swift */; };
+		BC96A4F226ECF19B00F8B8B9 /* StakingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC96A4F126ECF19B00F8B8B9 /* StakingView.swift */; };
+		BC96A4F526ED19EE00F8B8B9 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BC96A4F426ED19EE00F8B8B9 /* CryptoSwift */; };
+		BC96A4F826ED1C0700F8B8B9 /* SwiftKeccak in Frameworks */ = {isa = PBXBuildFile; productRef = BC96A4F726ED1C0700F8B8B9 /* SwiftKeccak */; };
 		BC9AF4E926C7B95B006D8887 /* MarketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9AF4E826C7B95B006D8887 /* MarketView.swift */; };
 		BC9AF4EF26C7C777006D8887 /* MarketListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9AF4EE26C7C777006D8887 /* MarketListItem.swift */; };
 		BCB4F8CA26E16CD5006DB5AD /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB4F8C926E16CD5006DB5AD /* OnboardingView.swift */; };
@@ -74,6 +79,9 @@
 		BC96A4DC26ECAF9F00F8B8B9 /* Market.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Market.swift; sourceTree = "<group>"; };
 		BC96A4DE26ECB41700F8B8B9 /* MarketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketViewModel.swift; sourceTree = "<group>"; };
 		BC96A4E026ECC7FC00F8B8B9 /* MarketDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDataViewModel.swift; sourceTree = "<group>"; };
+		BC96A4EA26ECF01800F8B8B9 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		BC96A4EF26ECF14000F8B8B9 /* RewardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsView.swift; sourceTree = "<group>"; };
+		BC96A4F126ECF19B00F8B8B9 /* StakingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StakingView.swift; sourceTree = "<group>"; };
 		BC9AF4E826C7B95B006D8887 /* MarketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketView.swift; sourceTree = "<group>"; };
 		BC9AF4EE26C7C777006D8887 /* MarketListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketListItem.swift; sourceTree = "<group>"; };
 		BCB4F8C926E16CD5006DB5AD /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -92,6 +100,8 @@
 			files = (
 				BC036F9D26E4B78B0028E590 /* ApolloAPI in Frameworks */,
 				BCD07E3C26D14E3500781E28 /* TorusSwiftDirectSDK in Frameworks */,
+				BC96A4F826ED1C0700F8B8B9 /* SwiftKeccak in Frameworks */,
+				BC96A4F526ED19EE00F8B8B9 /* CryptoSwift in Frameworks */,
 				BC96A4E726ECCA4000F8B8B9 /* Resolver in Frameworks */,
 				BC036F9B26E4B78B0028E590 /* ApolloUtils in Frameworks */,
 				BC036F9926E4B78B0028E590 /* Apollo in Frameworks */,
@@ -177,6 +187,8 @@
 		BC7363DE26C0FB9500C9E753 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BC96A4EE26ECF13100F8B8B9 /* Rewards */,
+				BC96A4ED26ECF12B00F8B8B9 /* Staking */,
 				BCCCB2B126E26D1500B26878 /* LottieView.swift */,
 				BC7477D326DFD2530028CA71 /* Assets */,
 				BC9AF4EB26C7C2F3006D8887 /* Market */,
@@ -214,9 +226,34 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		BC96A4EC26ECF02000F8B8B9 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				BC96A4EA26ECF01800F8B8B9 /* AccountView.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		BC96A4ED26ECF12B00F8B8B9 /* Staking */ = {
+			isa = PBXGroup;
+			children = (
+				BC96A4F126ECF19B00F8B8B9 /* StakingView.swift */,
+			);
+			path = Staking;
+			sourceTree = "<group>";
+		};
+		BC96A4EE26ECF13100F8B8B9 /* Rewards */ = {
+			isa = PBXGroup;
+			children = (
+				BC96A4EF26ECF14000F8B8B9 /* RewardsView.swift */,
+			);
+			path = Rewards;
+			sourceTree = "<group>";
+		};
 		BC9AF4EB26C7C2F3006D8887 /* Market */ = {
 			isa = PBXGroup;
 			children = (
+				BC96A4EC26ECF02000F8B8B9 /* Account */,
 				BC56E96426E4B61700703C64 /* Orders */,
 				BC9AF4EC26C7C301006D8887 /* Helpers */,
 				BC9AF4E826C7B95B006D8887 /* MarketView.swift */,
@@ -268,6 +305,8 @@
 				BC036F9C26E4B78B0028E590 /* ApolloAPI */,
 				BC96A4E626ECCA4000F8B8B9 /* Resolver */,
 				BC96A4E826ECCA4000F8B8B9 /* Resolver-Static */,
+				BC96A4F426ED19EE00F8B8B9 /* CryptoSwift */,
+				BC96A4F726ED1C0700F8B8B9 /* SwiftKeccak */,
 			);
 			productName = Perp;
 			productReference = BC7363CB26C0EF2600C9E753 /* Perp.app */;
@@ -301,6 +340,8 @@
 				BCCCB2A826E2628000B26878 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				BC036F9526E4B78B0028E590 /* XCRemoteSwiftPackageReference "apollo-ios" */,
 				BC96A4E226ECCA3F00F8B8B9 /* XCRemoteSwiftPackageReference "Resolver" */,
+				BC96A4F326ED19EE00F8B8B9 /* XCRemoteSwiftPackageReference "CryptoSwift" */,
+				BC96A4F626ED1C0700F8B8B9 /* XCRemoteSwiftPackageReference "SwiftKeccak" */,
 			);
 			productRefGroup = BC7363CC26C0EF2600C9E753 /* Products */;
 			projectDirPath = "";
@@ -356,6 +397,8 @@
 				BC9AF4EF26C7C777006D8887 /* MarketListItem.swift in Sources */,
 				BC7477D526DFD2650028CA71 /* AssetsView.swift in Sources */,
 				BCB4F8CA26E16CD5006DB5AD /* OnboardingView.swift in Sources */,
+				BC96A4F026ECF14000F8B8B9 /* RewardsView.swift in Sources */,
+				BC96A4F226ECF19B00F8B8B9 /* StakingView.swift in Sources */,
 				BC96A4DF26ECB41700F8B8B9 /* MarketViewModel.swift in Sources */,
 				BC7363E426C0FD8F00C9E753 /* LoginView.swift in Sources */,
 				BC56E96626E4B63300703C64 /* SetorderView.swift in Sources */,
@@ -366,6 +409,7 @@
 				BC2FFE6E26C4166B0001FDD4 /* Tab.swift in Sources */,
 				BC2FFE7126C416B10001FDD4 /* LoginViewModel.swift in Sources */,
 				BC96A4E126ECC7FC00F8B8B9 /* MarketDataViewModel.swift in Sources */,
+				BC96A4EB26ECF01800F8B8B9 /* AccountView.swift in Sources */,
 				BC96A4DD26ECAF9F00F8B8B9 /* Market.swift in Sources */,
 				BC447FFA26E42A5800F6357A /* MarketRepository.swift in Sources */,
 				BCCCB2B226E26D1500B26878 /* LottieView.swift in Sources */,
@@ -583,6 +627,22 @@
 				minimumVersion = 1.4.4;
 			};
 		};
+		BC96A4F326ED19EE00F8B8B9 /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.1;
+			};
+		};
+		BC96A4F626ED1C0700F8B8B9 /* XCRemoteSwiftPackageReference "SwiftKeccak" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/bitflying/SwiftKeccak.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.2;
+			};
+		};
 		BCCCB2A826E2628000B26878 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
@@ -631,6 +691,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BC96A4E226ECCA3F00F8B8B9 /* XCRemoteSwiftPackageReference "Resolver" */;
 			productName = "Resolver-Static";
+		};
+		BC96A4F426ED19EE00F8B8B9 /* CryptoSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC96A4F326ED19EE00F8B8B9 /* XCRemoteSwiftPackageReference "CryptoSwift" */;
+			productName = CryptoSwift;
+		};
+		BC96A4F726ED1C0700F8B8B9 /* SwiftKeccak */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC96A4F626ED1C0700F8B8B9 /* XCRemoteSwiftPackageReference "SwiftKeccak" */;
+			productName = SwiftKeccak;
 		};
 		BCCCB2A926E2628000B26878 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;

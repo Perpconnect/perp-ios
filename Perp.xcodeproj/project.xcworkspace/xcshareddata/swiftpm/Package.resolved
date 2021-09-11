@@ -119,6 +119,15 @@
         }
       },
       {
+        "package": "SwiftKeccak",
+        "repositoryURL": "https://github.com/bitflying/SwiftKeccak.git",
+        "state": {
+          "branch": null,
+          "revision": "5fc323d4b08a8c77cbb690505445b32a3b5a8aff",
+          "version": "0.1.2"
+        }
+      },
+      {
         "package": "TorusSwiftDirectSDK",
         "repositoryURL": "https://github.com/torusresearch/torus-direct-swift-sdk",
         "state": {

@@ -8,12 +8,13 @@
 import Foundation
 import Combine
 import SwiftUI
+import Resolver
 
 class MarketDataViewModel: ObservableObject, Identifiable  {
+    @Injected var marketRepository: MarketRepository
     @Published var market: Market
     
     init(market: Market) {
         self.market = market
-        
     }
 }

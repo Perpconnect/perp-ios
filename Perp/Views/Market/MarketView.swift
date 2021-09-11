@@ -53,7 +53,7 @@ struct MarketView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    NavigationLink(destination: MarketView()) {
+                    NavigationLink(destination: AccountView()) {
                         Image(systemName: "person")
                             .resizable()
                             .foregroundColor(.white)
@@ -61,7 +61,7 @@ struct MarketView: View {
                     }
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    NavigationLink(destination: MarketView()) {
+                    NavigationLink(destination: AccountView()) {
                         Image(systemName: "envelope")
                             .foregroundColor(.white)
                             .frame(width: 30, height: 30)

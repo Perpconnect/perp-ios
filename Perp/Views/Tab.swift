@@ -15,6 +15,10 @@ struct Tab: View {
         
     }
     
+    @State var selection = 0
+    
+    let impact = UIImpactFeedbackGenerator(style: .medium)
+    
     var body: some View {
         TabView {
             MarketView()
@@ -22,15 +26,15 @@ struct Tab: View {
                     Label("Markets", systemImage: "bitcoinsign.circle.fill")
                 }
             
-            Text("Staking")
-                .tabItem {
-                    Label("Staking", systemImage: "infinity.circle.fill")
-                }
-            
-            Text("Rewards")
-                .tabItem {
-                    Label("Rewards", systemImage: "gift.fill")
-                }
+//            StakingView()
+//                .tabItem {
+//                    Label("Staking", systemImage: "infinity.circle.fill")
+//                }
+//
+//            RewardsView()
+//                .tabItem {
+//                    Label("Rewards", systemImage: "gift.fill")
+//                }
             
             AssetsView()
                 .tabItem {
