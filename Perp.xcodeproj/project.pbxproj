@@ -26,6 +26,9 @@
 		BC7477D526DFD2650028CA71 /* AssetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7477D426DFD2650028CA71 /* AssetsView.swift */; };
 		BC96A4DD26ECAF9F00F8B8B9 /* Market.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC96A4DC26ECAF9F00F8B8B9 /* Market.swift */; };
 		BC96A4DF26ECB41700F8B8B9 /* MarketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC96A4DE26ECB41700F8B8B9 /* MarketViewModel.swift */; };
+		BC96A4E126ECC7FC00F8B8B9 /* MarketDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC96A4E026ECC7FC00F8B8B9 /* MarketDataViewModel.swift */; };
+		BC96A4E726ECCA4000F8B8B9 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = BC96A4E626ECCA4000F8B8B9 /* Resolver */; };
+		BC96A4E926ECCA4000F8B8B9 /* Resolver-Static in Frameworks */ = {isa = PBXBuildFile; productRef = BC96A4E826ECCA4000F8B8B9 /* Resolver-Static */; };
 		BC9AF4E926C7B95B006D8887 /* MarketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9AF4E826C7B95B006D8887 /* MarketView.swift */; };
 		BC9AF4EF26C7C777006D8887 /* MarketListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9AF4EE26C7C777006D8887 /* MarketListItem.swift */; };
 		BCB4F8CA26E16CD5006DB5AD /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB4F8C926E16CD5006DB5AD /* OnboardingView.swift */; };
@@ -70,6 +73,7 @@
 		BC7477D426DFD2650028CA71 /* AssetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsView.swift; sourceTree = "<group>"; };
 		BC96A4DC26ECAF9F00F8B8B9 /* Market.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Market.swift; sourceTree = "<group>"; };
 		BC96A4DE26ECB41700F8B8B9 /* MarketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketViewModel.swift; sourceTree = "<group>"; };
+		BC96A4E026ECC7FC00F8B8B9 /* MarketDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDataViewModel.swift; sourceTree = "<group>"; };
 		BC9AF4E826C7B95B006D8887 /* MarketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketView.swift; sourceTree = "<group>"; };
 		BC9AF4EE26C7C777006D8887 /* MarketListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketListItem.swift; sourceTree = "<group>"; };
 		BCB4F8C926E16CD5006DB5AD /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -88,9 +92,11 @@
 			files = (
 				BC036F9D26E4B78B0028E590 /* ApolloAPI in Frameworks */,
 				BCD07E3C26D14E3500781E28 /* TorusSwiftDirectSDK in Frameworks */,
+				BC96A4E726ECCA4000F8B8B9 /* Resolver in Frameworks */,
 				BC036F9B26E4B78B0028E590 /* ApolloUtils in Frameworks */,
 				BC036F9926E4B78B0028E590 /* Apollo in Frameworks */,
 				BC036F9726E4B78B0028E590 /* ApolloWebSocket in Frameworks */,
+				BC96A4E926ECCA4000F8B8B9 /* Resolver-Static in Frameworks */,
 				BCCCB2AA26E2628000B26878 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -172,7 +178,6 @@
 			isa = PBXGroup;
 			children = (
 				BCCCB2B126E26D1500B26878 /* LottieView.swift */,
-				BC56E96426E4B61700703C64 /* Orders */,
 				BC7477D326DFD2530028CA71 /* Assets */,
 				BC9AF4EB26C7C2F3006D8887 /* Market */,
 				BC7363E326C0FD8F00C9E753 /* LoginView.swift */,
@@ -187,6 +192,7 @@
 			children = (
 				BC2FFE7026C416B10001FDD4 /* LoginViewModel.swift */,
 				BC96A4DE26ECB41700F8B8B9 /* MarketViewModel.swift */,
+				BC96A4E026ECC7FC00F8B8B9 /* MarketDataViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -211,6 +217,7 @@
 		BC9AF4EB26C7C2F3006D8887 /* Market */ = {
 			isa = PBXGroup;
 			children = (
+				BC56E96426E4B61700703C64 /* Orders */,
 				BC9AF4EC26C7C301006D8887 /* Helpers */,
 				BC9AF4E826C7B95B006D8887 /* MarketView.swift */,
 			);
@@ -259,6 +266,8 @@
 				BC036F9826E4B78B0028E590 /* Apollo */,
 				BC036F9A26E4B78B0028E590 /* ApolloUtils */,
 				BC036F9C26E4B78B0028E590 /* ApolloAPI */,
+				BC96A4E626ECCA4000F8B8B9 /* Resolver */,
+				BC96A4E826ECCA4000F8B8B9 /* Resolver-Static */,
 			);
 			productName = Perp;
 			productReference = BC7363CB26C0EF2600C9E753 /* Perp.app */;
@@ -291,6 +300,7 @@
 				BCD07E3A26D14E3500781E28 /* XCRemoteSwiftPackageReference "torus-direct-swift-sdk" */,
 				BCCCB2A826E2628000B26878 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				BC036F9526E4B78B0028E590 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				BC96A4E226ECCA3F00F8B8B9 /* XCRemoteSwiftPackageReference "Resolver" */,
 			);
 			productRefGroup = BC7363CC26C0EF2600C9E753 /* Products */;
 			projectDirPath = "";
@@ -355,6 +365,7 @@
 				BCD07E5126D18E8200781E28 /* PerpApp.swift in Sources */,
 				BC2FFE6E26C4166B0001FDD4 /* Tab.swift in Sources */,
 				BC2FFE7126C416B10001FDD4 /* LoginViewModel.swift in Sources */,
+				BC96A4E126ECC7FC00F8B8B9 /* MarketDataViewModel.swift in Sources */,
 				BC96A4DD26ECAF9F00F8B8B9 /* Market.swift in Sources */,
 				BC447FFA26E42A5800F6357A /* MarketRepository.swift in Sources */,
 				BCCCB2B226E26D1500B26878 /* LottieView.swift in Sources */,
@@ -564,6 +575,14 @@
 				minimumVersion = 0.48.0;
 			};
 		};
+		BC96A4E226ECCA3F00F8B8B9 /* XCRemoteSwiftPackageReference "Resolver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Resolver.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.4;
+			};
+		};
 		BCCCB2A826E2628000B26878 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
@@ -602,6 +621,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BC036F9526E4B78B0028E590 /* XCRemoteSwiftPackageReference "apollo-ios" */;
 			productName = ApolloAPI;
+		};
+		BC96A4E626ECCA4000F8B8B9 /* Resolver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC96A4E226ECCA3F00F8B8B9 /* XCRemoteSwiftPackageReference "Resolver" */;
+			productName = Resolver;
+		};
+		BC96A4E826ECCA4000F8B8B9 /* Resolver-Static */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC96A4E226ECCA3F00F8B8B9 /* XCRemoteSwiftPackageReference "Resolver" */;
+			productName = "Resolver-Static";
 		};
 		BCCCB2A926E2628000B26878 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;

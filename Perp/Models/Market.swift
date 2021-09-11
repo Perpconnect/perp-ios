@@ -13,4 +13,3 @@ struct Market: Identifiable {
     var currentPrice: String
     var markPrice: String
 }
-

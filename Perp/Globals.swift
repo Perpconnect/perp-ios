@@ -28,5 +28,5 @@ let amms = [
     AmmInfo(symbol: "CREAM", name: "Ceam", pair: "CREAM/USDC", address: "0x7B479a0a816ca33F8EB5A3312d1705a34d2d4C82"),
     AmmInfo(symbol: "GRT", name: "The Graph", pair: "GRT/USDC", address: "0x187C938543f2BDE09Fe39034Fe3Ff797A3D35cA0"),
     AmmInfo(symbol: "ALPHA", name: "Alpha Finance", pair: "ALPHA/USDC", address: "0x26789518695b56e16F14008c35Dc1b281Bd5fc0E"),
-    AmmInfo(symbol: "FTT", name: "FTX Token", pair: "FTT/USDC", address: "0x838B322610BD99a449091D3bF3FBA60D794909a9"),
+    AmmInfo(symbol: "FTT", name: "FTX Token", pair: "FTT/USDC", address: "0x838B322610BD99a449091D3bF3FBA60D794909a9")
 ]
