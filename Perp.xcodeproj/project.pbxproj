@@ -11,6 +11,10 @@
 		BC036F9926E4B78B0028E590 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = BC036F9826E4B78B0028E590 /* Apollo */; };
 		BC036F9B26E4B78B0028E590 /* ApolloUtils in Frameworks */ = {isa = PBXBuildFile; productRef = BC036F9A26E4B78B0028E590 /* ApolloUtils */; };
 		BC036F9D26E4B78B0028E590 /* ApolloAPI in Frameworks */ = {isa = PBXBuildFile; productRef = BC036F9C26E4B78B0028E590 /* ApolloAPI */; };
+		BC06C12626F61D3500A47812 /* TokenBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC06C12526F61D3500A47812 /* TokenBalance.swift */; };
+		BC06C12826F61D7A00A47812 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC06C12726F61D7A00A47812 /* AccountViewModel.swift */; };
+		BC06C12B26F61F0C00A47812 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BC06C12A26F61F0C00A47812 /* Alamofire */; };
+		BC06C12D26F6203200A47812 /* xDaiTokenBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC06C12C26F6203200A47812 /* xDaiTokenBalance.swift */; };
 		BC1EC81C26E8D05200F28F2D /* AmmInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1EC81B26E8D05200F28F2D /* AmmInfo.swift */; };
 		BC2FFE6E26C4166B0001FDD4 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2FFE6D26C4166B0001FDD4 /* Tab.swift */; };
 		BC2FFE7126C416B10001FDD4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2FFE7026C416B10001FDD4 /* LoginViewModel.swift */; };
@@ -45,6 +49,7 @@
 		BCD07E3C26D14E3500781E28 /* TorusSwiftDirectSDK in Frameworks */ = {isa = PBXBuildFile; productRef = BCD07E3B26D14E3500781E28 /* TorusSwiftDirectSDK */; };
 		BCD07E5126D18E8200781E28 /* PerpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD07E5026D18E8200781E28 /* PerpApp.swift */; };
 		BCD323F126E1652F00B25C4A /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD323F026E1652F00B25C4A /* Globals.swift */; };
+		BCEB911E26FF9E1E00B07936 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = BCEB911D26FF9E1E00B07936 /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -61,6 +66,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BC06C12526F61D3500A47812 /* TokenBalance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenBalance.swift; sourceTree = "<group>"; };
+		BC06C12726F61D7A00A47812 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		BC06C12C26F6203200A47812 /* xDaiTokenBalance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xDaiTokenBalance.swift; sourceTree = "<group>"; };
 		BC1EC81B26E8D05200F28F2D /* AmmInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmmInfo.swift; sourceTree = "<group>"; };
 		BC2FFE6D26C4166B0001FDD4 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		BC2FFE7026C416B10001FDD4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -98,11 +106,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCEB911E26FF9E1E00B07936 /* SDWebImageSwiftUI in Frameworks */,
 				BC036F9D26E4B78B0028E590 /* ApolloAPI in Frameworks */,
 				BCD07E3C26D14E3500781E28 /* TorusSwiftDirectSDK in Frameworks */,
 				BC96A4F826ED1C0700F8B8B9 /* SwiftKeccak in Frameworks */,
 				BC96A4F526ED19EE00F8B8B9 /* CryptoSwift in Frameworks */,
 				BC96A4E726ECCA4000F8B8B9 /* Resolver in Frameworks */,
+				BC06C12B26F61F0C00A47812 /* Alamofire in Frameworks */,
 				BC036F9B26E4B78B0028E590 /* ApolloUtils in Frameworks */,
 				BC036F9926E4B78B0028E590 /* Apollo in Frameworks */,
 				BC036F9726E4B78B0028E590 /* ApolloWebSocket in Frameworks */,
@@ -205,6 +215,7 @@
 				BC2FFE7026C416B10001FDD4 /* LoginViewModel.swift */,
 				BC96A4DE26ECB41700F8B8B9 /* MarketViewModel.swift */,
 				BC96A4E026ECC7FC00F8B8B9 /* MarketDataViewModel.swift */,
+				BC06C12726F61D7A00A47812 /* AccountViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -214,6 +225,8 @@
 			children = (
 				BC1EC81B26E8D05200F28F2D /* AmmInfo.swift */,
 				BC96A4DC26ECAF9F00F8B8B9 /* Market.swift */,
+				BC06C12526F61D3500A47812 /* TokenBalance.swift */,
+				BC06C12C26F6203200A47812 /* xDaiTokenBalance.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -307,6 +320,8 @@
 				BC96A4E826ECCA4000F8B8B9 /* Resolver-Static */,
 				BC96A4F426ED19EE00F8B8B9 /* CryptoSwift */,
 				BC96A4F726ED1C0700F8B8B9 /* SwiftKeccak */,
+				BC06C12A26F61F0C00A47812 /* Alamofire */,
+				BCEB911D26FF9E1E00B07936 /* SDWebImageSwiftUI */,
 			);
 			productName = Perp;
 			productReference = BC7363CB26C0EF2600C9E753 /* Perp.app */;
@@ -342,6 +357,8 @@
 				BC96A4E226ECCA3F00F8B8B9 /* XCRemoteSwiftPackageReference "Resolver" */,
 				BC96A4F326ED19EE00F8B8B9 /* XCRemoteSwiftPackageReference "CryptoSwift" */,
 				BC96A4F626ED1C0700F8B8B9 /* XCRemoteSwiftPackageReference "SwiftKeccak" */,
+				BC06C12926F61F0C00A47812 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				BCEB911C26FF9E1E00B07936 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = BC7363CC26C0EF2600C9E753 /* Products */;
 			projectDirPath = "";
@@ -400,11 +417,13 @@
 				BC96A4F026ECF14000F8B8B9 /* RewardsView.swift in Sources */,
 				BC96A4F226ECF19B00F8B8B9 /* StakingView.swift in Sources */,
 				BC96A4DF26ECB41700F8B8B9 /* MarketViewModel.swift in Sources */,
+				BC06C12D26F6203200A47812 /* xDaiTokenBalance.swift in Sources */,
 				BC7363E426C0FD8F00C9E753 /* LoginView.swift in Sources */,
 				BC56E96626E4B63300703C64 /* SetorderView.swift in Sources */,
 				BC7363D126C0EF2600C9E753 /* ContentView.swift in Sources */,
 				BC447FFF26E42B5200F6357A /* Apollo.swift in Sources */,
 				BC9AF4E926C7B95B006D8887 /* MarketView.swift in Sources */,
+				BC06C12826F61D7A00A47812 /* AccountViewModel.swift in Sources */,
 				BCD07E5126D18E8200781E28 /* PerpApp.swift in Sources */,
 				BC2FFE6E26C4166B0001FDD4 /* Tab.swift in Sources */,
 				BC2FFE7126C416B10001FDD4 /* LoginViewModel.swift in Sources */,
@@ -412,6 +431,7 @@
 				BC96A4EB26ECF01800F8B8B9 /* AccountView.swift in Sources */,
 				BC96A4DD26ECAF9F00F8B8B9 /* Market.swift in Sources */,
 				BC447FFA26E42A5800F6357A /* MarketRepository.swift in Sources */,
+				BC06C12626F61D3500A47812 /* TokenBalance.swift in Sources */,
 				BCCCB2B226E26D1500B26878 /* LottieView.swift in Sources */,
 				BC1EC81C26E8D05200F28F2D /* AmmInfo.swift in Sources */,
 				BCD323F126E1652F00B25C4A /* Globals.swift in Sources */,
@@ -619,6 +639,14 @@
 				minimumVersion = 0.48.0;
 			};
 		};
+		BC06C12926F61F0C00A47812 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.3;
+			};
+		};
 		BC96A4E226ECCA3F00F8B8B9 /* XCRemoteSwiftPackageReference "Resolver" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hmlongco/Resolver.git";
@@ -659,6 +687,14 @@
 				minimumVersion = 0.3.1;
 			};
 		};
+		BCEB911C26FF9E1E00B07936 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -681,6 +717,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BC036F9526E4B78B0028E590 /* XCRemoteSwiftPackageReference "apollo-ios" */;
 			productName = ApolloAPI;
+		};
+		BC06C12A26F61F0C00A47812 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC06C12926F61F0C00A47812 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 		BC96A4E626ECCA4000F8B8B9 /* Resolver */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -711,6 +752,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BCD07E3A26D14E3500781E28 /* XCRemoteSwiftPackageReference "torus-direct-swift-sdk" */;
 			productName = TorusSwiftDirectSDK;
+		};
+		BCEB911D26FF9E1E00B07936 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BCEB911C26FF9E1E00B07936 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

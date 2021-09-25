@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct AssetsView: View {
     
     @EnvironmentObject var session: LoginViewModel
     
     @State var networkSwitch: Network = .mainnet
+    
+    @ObservedObject var tokenVM: TokenViewModel
     
     var body: some View {
         ZStack {
@@ -52,24 +55,44 @@ struct AssetsView: View {
                     }
                     
                     VStack {
-                        ForEach(0...5, id: \.self) { _ in
+                        ForEach(tokenVM.tokens) { token in
                             HStack {
-                                Text("BTC")
-                                    .fontWeight(.bold)
+                                WebImage(url: URL(string: token.logo_url ?? ""))
+                                    .resizable()
+                                    .frame(width: 35, height: 35)
+                                    .clipShape(Circle())
+                                
+                                VStack(alignment: .leading) {
+                                    Text(token.contract_ticker_symbol!)
+                                        .fontWeight(.semibold)
+                                        .padding(.bottom, 4)
+                                    
+                                    Text(token.contract_name!)
+                                        .fontWeight(.medium)
+                                        .font(.system(size: 14))
+                                        .foregroundColor(Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)))
+                                    
+                                }
+                                .padding()
+                                
                                 Spacer()
                                 VStack {
-                                    Text("0.000000")
-                                    Text("= 0.00 USD")
+                                    Text("\(String(format: "%.2f", token.balance!))")
+                                        .padding(.bottom, 4)
+                                    Text("\(String(format: "%.2f", token.amount!)) USD")
                                         .foregroundColor(.gray)
                                         .font(.system(size: 12))
                                 }
                             }
-                            .padding()
+                            .padding(.horizontal)
                         }
                     }
                 }
             }
         }
+        .onAppear(perform: {
+            tokenVM.getAddressBalance(chainID: "1", address: "0x5a858FDFeb85d800753cB35b7ed254eFa7d1F8f2", currency: "USD")
+        })
     }
 }
 
@@ -103,11 +126,5 @@ struct HeadingButtons: View {
             
         }
         
-    }
-}
-
-struct AssetsView_Previews: PreviewProvider {
-    static var previews: some View {
-        AssetsView()
     }
 }

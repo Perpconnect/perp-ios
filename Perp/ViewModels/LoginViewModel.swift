@@ -27,7 +27,7 @@ class LoginViewModel: ObservableObject {
         self.publicKey = publicKey
         
         UserDefaults.standard.set(privateKey, forKey: "privateKey")
-        UserDefaults.standard.set(privateKey, forKey: "publicKey")
+        UserDefaults.standard.set(publicKey, forKey: "publicKey")
     }
     
     func logout() {
@@ -52,7 +52,7 @@ class LoginViewModel: ObservableObject {
         tdsdk.triggerLogin(browserType: .external).done { data in
             print("private key rebuild", data)
             let privateKey: String = data["privateKey"] as? String ?? ""
-            let publicKey: String = data["publicKey"] as? String ?? ""
+            let publicKey: String = data["publicAddress"] as? String ?? ""
             
             print(privateKey, publicKey)
             
@@ -82,7 +82,7 @@ class LoginViewModel: ObservableObject {
         tdsdk.triggerLogin(browserType: .external).done { data in
             print("private key rebuild", data)
             let privateKey: String = data["privateKey"] as? String ?? ""
-            let publicKey: String = data["publicKey"] as? String ?? ""
+            let publicKey: String = data["publicAddress"] as? String ?? ""
             
             print(privateKey, publicKey)
             
@@ -102,11 +102,11 @@ class LoginViewModel: ObservableObject {
                                      clientId: "882187894482173962",
                                      verifierName: "perp-discord",       // mainnet - perp-discord, testnet - perp-discord-testnet
                                      redirectURL: "perp://tdsdk/oauthCallback")
-        let tdsdk = TorusSwiftDirectSDK(aggregateVerifierType: .singleLogin, aggregateVerifierName: "perp-discord-testnet", subVerifierDetails: [sub])
+        let tdsdk = TorusSwiftDirectSDK(aggregateVerifierType: .singleLogin, aggregateVerifierName: "perp-discord", subVerifierDetails: [sub])
         tdsdk.triggerLogin(browserType: .external).done{ data in
             print("private key rebuild", data)
             let privateKey: String = data["privateKey"] as? String ?? ""
-            let publicKey: String = data["publicKey"] as? String ?? ""
+            let publicKey: String = data["publicAddress"] as? String ?? ""
             
             print(privateKey, publicKey)
             
@@ -130,11 +130,11 @@ class LoginViewModel: ObservableObject {
                                      redirectURL: "perp://tdsdk/oauthCallback",
                                      jwtParams: ["domain":"dev-gqod-vvp.eu.auth0.com"])
         
-        let tdsdk = TorusSwiftDirectSDK(aggregateVerifierType: .singleLogin, aggregateVerifierName: "perp-auth0-apple-testnet", subVerifierDetails: [sub], loglevel: .trace)
+        let tdsdk = TorusSwiftDirectSDK(aggregateVerifierType: .singleLogin, aggregateVerifierName: "perp-auth0-apple", subVerifierDetails: [sub], loglevel: .trace)
         tdsdk.triggerLogin(browserType: .external).done { data in
             print("private key rebuild", data)
             let privateKey: String = data["privateKey"] as? String ?? ""
-            let publicKey: String = data["publicKey"] as? String ?? ""
+            let publicKey: String = data["publicAddress"] as? String ?? ""
             
             print(privateKey, publicKey)
             

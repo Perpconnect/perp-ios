@@ -36,7 +36,7 @@ struct Tab: View {
 //                    Label("Rewards", systemImage: "gift.fill")
 //                }
             
-            AssetsView()
+            AssetsView(tokenVM: TokenViewModel())
                 .tabItem {
                     Label("Assets", systemImage: "creditcard.fill")
                 }

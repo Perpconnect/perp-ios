@@ -6,8 +6,7 @@
 //
 
 import SwiftUI
-import CryptoSwift
-import SwiftKeccak
+import MobileCoreServices
 
 struct AccountView: View {
     
@@ -34,15 +33,20 @@ struct AccountView: View {
                     Text("\(publicKey)")
                         .fontWeight(.semibold)
                         .padding(.leading)
-                        .font(.system(size: 22))
+                        .font(.system(size: 18))
                     Image(systemName: "doc.on.doc")
                         .font(.system(size: 10))
                         
                     Spacer()
                 }
                 .onTapGesture {
-                    UIPasteboard.general.string = publicKey
+                    UIPasteboard.general.setValue(publicKey, forPasteboardType: "public.plain-text")
                 }
+                
+                Button(action: { }) {
+                    CellView(image: "key", text: "Private key")
+                }
+                .padding(.top, 30)
                 
                 Button(action: { }) {
                     CellView(image: "eyedropper", text: "Color Theme")
@@ -75,6 +79,9 @@ struct AccountView: View {
                 
             }
         }
+        .onAppear(perform: {
+            
+        })
     }
 }
 
