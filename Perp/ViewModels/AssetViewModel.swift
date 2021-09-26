@@ -9,7 +9,7 @@ import Foundation
 import Combine
 import Alamofire
 
-class AccountViewModel: ObservableObject {
+class AssetViewModel: ObservableObject {
     @Published var tokens = [TokenBalance]()
     @Published var xDaiTokens = [xDaiTokenBalance]()
     

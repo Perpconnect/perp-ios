@@ -14,7 +14,11 @@ struct AssetsView: View {
     
     @State var networkSwitch: Network = .mainnet
     
-    @ObservedObject var tokenVM: TokenViewModel
+    @ObservedObject var tokenVM: AssetViewModel
+    
+    func getData() {
+        tokenVM.getAddressBalance(chainID: "1", address: "0x5a858FDFeb85d800753cB35b7ed254eFa7d1F8f2", currency: "USD")
+    }
     
     var body: some View {
         ZStack {
@@ -42,10 +46,15 @@ struct AssetsView: View {
                                 .padding(.horizontal)
                                 .padding(.bottom, 1)
                             Spacer()
+                            
+                            Button(action: {getData()}) {
+                                Image(systemName: "goforward")
+                            }
+                            .padding(.trailing)
                         }
                         
                         HStack {
-                            Text("= 0.00 USD")
+                            Text("= \(tokenVM.totalBalanceEth) USD")
                                 .foregroundColor(.white)
                                 .font(.system(size: 12))
                                 .fontWeight(.light)
@@ -88,10 +97,11 @@ struct AssetsView: View {
                         }
                     }
                 }
+                
             }
         }
         .onAppear(perform: {
-            tokenVM.getAddressBalance(chainID: "1", address: "0x5a858FDFeb85d800753cB35b7ed254eFa7d1F8f2", currency: "USD")
+            getData()
         })
     }
 }

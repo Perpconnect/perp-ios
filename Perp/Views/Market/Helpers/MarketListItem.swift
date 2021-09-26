@@ -9,20 +9,22 @@ import SwiftUI
 
 struct MarketListItem: View {
     
+    var market: Market
+    
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
-                Text("BTCUSDT")
+                Text(market.amm.pair)
                     .font(.system(size: 16))
                     .fontWeight(.semibold)
                     .foregroundColor(.white)
-                Text("Bitcoin")
+                Text(market.amm.name)
                     .font(.system(size: 12))
                     .foregroundColor(Color(#colorLiteral(red: 0.482352972, green: 0.482286036, blue: 0.4909058213, alpha: 1)))
             }
             Spacer()
             VStack(alignment: .leading) {
-                Text("47672.50")
+                Text(market.markPrice)
                     .font(.system(size: 16))
                     .fontWeight(.semibold)
                     .foregroundColor(.white)
@@ -44,11 +46,5 @@ struct MarketListItem: View {
         }
         .padding(.horizontal)
         .padding(.vertical, 8)
-    }
-}
-
-struct MarketListItem_Previews: PreviewProvider {
-    static var previews: some View {
-        MarketListItem()
     }
 }

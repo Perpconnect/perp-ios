@@ -10,7 +10,7 @@ import Combine
 import Resolver
 
 class MarketViewModel: ObservableObject {
-    @Published var marketRepository: MarketRepository = Resolver.resolve()
+    @Published var marketRepository: MarketRepository = MarketRepository()
     @Published var marketDataViewModels = [MarketDataViewModel]()
     
     private var cancellables = Set<AnyCancellable>()

@@ -25,6 +25,7 @@ class MarketRepository {
         for item in amms {
             tempArray.append(Market(amm: item, currentPrice: "0", markPrice: "0"))
         }
+        markets = tempArray
     }
     
 }

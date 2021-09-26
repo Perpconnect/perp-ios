@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct MarketView: View {
-    init() {
+    
+    @ObservedObject var marketVM: MarketViewModel
+    
+    func dataInit() {
         let appearance = UINavigationBarAppearance()
         appearance.shadowColor = .clear
         appearance.backgroundColor = UIColor(backgroundColor)
@@ -19,6 +22,7 @@ struct MarketView: View {
         
         UINavigationBar.appearance().isTranslucent = false
     }
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -38,6 +42,9 @@ struct MarketView: View {
                     .padding(.top, 5)
 
                     ScrollView {
+                        ForEach(marketVM.marketDataViewModels, id: /.self) { market in
+                            MarketListItem(market: Market)
+                        }
                         NavigationLink(destination: SetorderView()) {
                             MarketListItem()
                         }
@@ -70,11 +77,9 @@ struct MarketView: View {
             }
         }
         .accentColor(.white)
+        .onAppear(perform: {
+            dataInit()
+        })
     }
 }
 
-struct MarketView_Previews: PreviewProvider {
-    static var previews: some View {
-        MarketView()
-    }
-}

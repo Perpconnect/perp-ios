@@ -21,7 +21,7 @@ struct Tab: View {
     
     var body: some View {
         TabView {
-            MarketView()
+            MarketView(marketVM: MarketViewModel())
                 .tabItem {
                     Label("Markets", systemImage: "bitcoinsign.circle.fill")
                 }
@@ -36,7 +36,7 @@ struct Tab: View {
 //                    Label("Rewards", systemImage: "gift.fill")
 //                }
             
-            AssetsView(tokenVM: TokenViewModel())
+            AssetsView(tokenVM: AssetViewModel())
                 .tabItem {
                     Label("Assets", systemImage: "creditcard.fill")
                 }

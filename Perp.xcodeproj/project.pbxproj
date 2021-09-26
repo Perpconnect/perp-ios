@@ -50,6 +50,7 @@
 		BCD07E5126D18E8200781E28 /* PerpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD07E5026D18E8200781E28 /* PerpApp.swift */; };
 		BCD323F126E1652F00B25C4A /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD323F026E1652F00B25C4A /* Globals.swift */; };
 		BCEB911E26FF9E1E00B07936 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = BCEB911D26FF9E1E00B07936 /* SDWebImageSwiftUI */; };
+		BCF250FE2700FD98006D2465 /* AssetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF250FD2700FD98006D2465 /* AssetViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -99,6 +100,7 @@
 		BCCCB2B626E2759B00B26878 /* leverage.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = leverage.json; sourceTree = "<group>"; };
 		BCD07E5026D18E8200781E28 /* PerpApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerpApp.swift; sourceTree = "<group>"; };
 		BCD323F026E1652F00B25C4A /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		BCF250FD2700FD98006D2465 /* AssetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +218,7 @@
 				BC96A4DE26ECB41700F8B8B9 /* MarketViewModel.swift */,
 				BC96A4E026ECC7FC00F8B8B9 /* MarketDataViewModel.swift */,
 				BC06C12726F61D7A00A47812 /* AccountViewModel.swift */,
+				BCF250FD2700FD98006D2465 /* AssetViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 				BC96A4EB26ECF01800F8B8B9 /* AccountView.swift in Sources */,
 				BC96A4DD26ECAF9F00F8B8B9 /* Market.swift in Sources */,
 				BC447FFA26E42A5800F6357A /* MarketRepository.swift in Sources */,
+				BCF250FE2700FD98006D2465 /* AssetViewModel.swift in Sources */,
 				BC06C12626F61D3500A47812 /* TokenBalance.swift in Sources */,
 				BCCCB2B226E26D1500B26878 /* LottieView.swift in Sources */,
 				BC1EC81C26E8D05200F28F2D /* AmmInfo.swift in Sources */,
