@@ -12,4 +12,5 @@ struct Market: Identifiable {
     var amm: AmmInfo
     var currentPrice: String
     var markPrice: String
+    var dayChange: String
 }

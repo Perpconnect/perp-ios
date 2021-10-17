@@ -12,6 +12,7 @@ let backgroundColor = Color(#colorLiteral(red: 0.04733969271, green: 0.051371686
 
 let covalentAPI = "https://api.covalenthq.com"
 let covalentAPIKey = "ckey_84935203df434b2c99ed14e4d7b"
+let apiURL = "https://lo2iojj675.execute-api.ap-south-1.amazonaws.com/main"
 
 let amms = [
     AmmInfo(symbol: "ETH", name: "Ethereum", pair: "ETH/USDC", address: "0x8d22F1a9dCe724D8c1B4c688D75f17A2fE2D32df"),

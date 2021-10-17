@@ -23,7 +23,7 @@ class MarketRepository {
     private func loadData() {
         var tempArray = [Market]()
         for item in amms {
-            tempArray.append(Market(amm: item, currentPrice: "0", markPrice: "0"))
+            tempArray.append(Market(amm: item, currentPrice: "0", markPrice: "0", dayChange: "0.0"))
         }
         markets = tempArray
     }

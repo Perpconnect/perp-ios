@@ -113,7 +113,7 @@ struct LoginView: View {
                         Text("Continue with private key")
                             .foregroundColor(.white)
                             .onTapGesture(perform: {
-                                session.login(privateKey: "some", publicKey: "some")
+                                session.login(privateKey: "0xfc8b2690f66b46fec8b3ceeb95ff4ac35a0054bc", publicKey: "0xfc8b2690f66b46fec8b3ceeb95ff4ac35a0054bc")
                             })
                     }
                     .padding()

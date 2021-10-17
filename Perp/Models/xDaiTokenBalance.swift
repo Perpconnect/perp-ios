@@ -11,11 +11,12 @@ import SwiftUI
 
 struct xDaiTokenBalance: Hashable, Identifiable {
     var id = UUID()
-    var balance: Int?
+    var balance: String?
     var contractAddress: String?
     var name: String?
     var symbol: String?
     var type: Type?
+    var logo: String?
 }
 
 enum Type {

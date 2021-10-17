@@ -17,7 +17,8 @@ struct AssetsView: View {
     @ObservedObject var tokenVM: AssetViewModel
     
     func getData() {
-        tokenVM.getAddressBalance(chainID: "1", address: "0x5a858FDFeb85d800753cB35b7ed254eFa7d1F8f2", currency: "USD")
+        tokenVM.getAddressBalance(chainID: "1", address: session.publicKey ?? "nil", currency: "USD")
+        tokenVM.getxDaiTokenBalance(address: session.publicKey ?? "nil")
     }
     
     var body: some View {
@@ -27,75 +28,150 @@ struct AssetsView: View {
             VStack {
                 HeadingButtons(networkSwitch: $networkSwitch)
                 
-                ScrollView {
-                    VStack {
-                        HStack {
-                            Text("Equity (ETH)")
-                                .foregroundColor(.gray)
-                                .font(.system(size: 12))
-                                .padding(.horizontal)
-                                .padding(.bottom, 5)
-                            Spacer()
-                        }
-                        
-                        HStack {
-                            Text("0.0000000")
-                                .foregroundColor(Color(#colorLiteral(red: 0.9977523685, green: 0.6921175718, blue: 0.09948458523, alpha: 1)))
-                                .font(.system(size: 26))
-                                .fontWeight(.bold)
-                                .padding(.horizontal)
-                                .padding(.bottom, 1)
-                            Spacer()
-                            
-                            Button(action: {getData()}) {
-                                Image(systemName: "goforward")
+                if networkSwitch == .xdai {
+                    ScrollView {
+                        VStack {
+                            HStack {
+                                Text("Equity (USD)")
+                                    .foregroundColor(.gray)
+                                    .font(.system(size: 12))
+                                    .padding(.horizontal)
+                                    .padding(.bottom, 5)
+                                Spacer()
                             }
-                            .padding(.trailing)
+                            
+                            HStack {
+                                Text("$ \(tokenVM.totalBalanceDai)")
+                                    .foregroundColor(Color(#colorLiteral(red: 0.9977523685, green: 0.6921175718, blue: 0.09948458523, alpha: 1)))
+                                    .font(.system(size: 24))
+                                    .fontWeight(.bold)
+                                    .padding(.horizontal)
+                                    .padding(.bottom, 1)
+                                Spacer()
+                                
+                                Button(action: {getData()}) {
+                                    Image(systemName: "goforward")
+                                }
+                                .padding(.trailing)
+                            }
+                            
+                            HStack {
+                                Text("= \(tokenVM.totalBalanceDai) USD")
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 12))
+                                    .fontWeight(.light)
+                                    .padding(.horizontal)
+                                Spacer()
+                            }
                         }
                         
-                        HStack {
-                            Text("= \(tokenVM.totalBalanceEth) USD")
-                                .foregroundColor(.white)
-                                .font(.system(size: 12))
-                                .fontWeight(.light)
+                        VStack {
+                            ForEach(tokenVM.xDaiTokens) { token in
+                                HStack {
+                                    WebImage(url: URL(string: token.logo ?? ""))
+                                        .resizable()
+                                        .frame(width: 35, height: 35)
+                                        .clipShape(Circle())
+                                    
+                                    VStack(alignment: .leading) {
+                                        Text(token.symbol!)
+                                            .foregroundColor(.white)
+                                            .fontWeight(.semibold)
+                                            .padding(.bottom, 4)
+                                        
+                                        Text(token.name!)
+                                            .fontWeight(.medium)
+                                            .font(.system(size: 14))
+                                            .foregroundColor(Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)))
+                                        
+                                    }
+                                    .padding()
+                                    
+                                    Spacer()
+                                    VStack {
+                                        Text("\(String(format: "%.4f", token.balance!))")
+                                            .foregroundColor(.white)
+                                            .padding(.bottom, 4)
+                                        Text("\(String(format: "%.4f", token.balance!)) USD")
+                                            .foregroundColor(.gray)
+                                            .font(.system(size: 12))
+                                    }
+                                }
                                 .padding(.horizontal)
-                            Spacer()
+                            }
                         }
                     }
-                    
-                    VStack {
-                        ForEach(tokenVM.tokens) { token in
+                } else {
+                    ScrollView {
+                        VStack {
                             HStack {
-                                WebImage(url: URL(string: token.logo_url ?? ""))
-                                    .resizable()
-                                    .frame(width: 35, height: 35)
-                                    .clipShape(Circle())
-                                
-                                VStack(alignment: .leading) {
-                                    Text(token.contract_ticker_symbol!)
-                                        .foregroundColor(.white)
-                                        .fontWeight(.semibold)
-                                        .padding(.bottom, 4)
-                                    
-                                    Text(token.contract_name!)
-                                        .fontWeight(.medium)
-                                        .font(.system(size: 14))
-                                        .foregroundColor(Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)))
-                                    
-                                }
-                                .padding()
-                                
+                                Text("Equity (USD)")
+                                    .foregroundColor(.gray)
+                                    .font(.system(size: 12))
+                                    .padding(.horizontal)
+                                    .padding(.bottom, 5)
                                 Spacer()
-                                VStack {
-                                    Text("\(String(format: "%.2f", token.balance!))")
-                                        .foregroundColor(.white)
-                                        .padding(.bottom, 4)
-                                    Text("\(String(format: "%.2f", token.amount!)) USD")
-                                        .foregroundColor(.gray)
-                                        .font(.system(size: 12))
-                                }
                             }
-                            .padding(.horizontal)
+                            
+                            HStack {
+                                Text("$ \(tokenVM.totalBalanceEth)")
+                                    .foregroundColor(Color(#colorLiteral(red: 0.9977523685, green: 0.6921175718, blue: 0.09948458523, alpha: 1)))
+                                    .font(.system(size: 24))
+                                    .fontWeight(.bold)
+                                    .padding(.horizontal)
+                                    .padding(.bottom, 1)
+                                Spacer()
+                                
+                                Button(action: {getData()}) {
+                                    Image(systemName: "goforward")
+                                }
+                                .padding(.trailing)
+                            }
+                            
+                            HStack {
+                                Text("= \(tokenVM.totalBalanceEth) USD")
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 12))
+                                    .fontWeight(.light)
+                                    .padding(.horizontal)
+                                Spacer()
+                            }
+                        }
+                        
+                        VStack {
+                            ForEach(tokenVM.tokens) { token in
+                                HStack {
+                                    WebImage(url: URL(string: token.logo_url ?? ""))
+                                        .resizable()
+                                        .frame(width: 35, height: 35)
+                                        .clipShape(Circle())
+                                    
+                                    VStack(alignment: .leading) {
+                                        Text(token.contract_ticker_symbol!)
+                                            .foregroundColor(.white)
+                                            .fontWeight(.semibold)
+                                            .padding(.bottom, 4)
+                                        
+                                        Text(token.contract_name!)
+                                            .fontWeight(.medium)
+                                            .font(.system(size: 14))
+                                            .foregroundColor(Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)))
+                                        
+                                    }
+                                    .padding()
+                                    
+                                    Spacer()
+                                    VStack {
+                                        Text("\(String(format: "%.2f", token.balance!))")
+                                            .foregroundColor(.white)
+                                            .padding(.bottom, 4)
+                                        Text("\(String(format: "%.2f", token.amount!)) USD")
+                                            .foregroundColor(.gray)
+                                            .font(.system(size: 12))
+                                    }
+                                }
+                                .padding(.horizontal)
+                            }
                         }
                     }
                 }
