@@ -11,7 +11,6 @@ import TorusSwiftDirectSDK
 import FetchNodeDetails
 import PromiseKit
 import SafariServices
-import web3swift
 import CryptoSwift
 import SwiftUI
 
@@ -45,10 +44,10 @@ class LoginViewModel: ObservableObject {
         let sub = SubVerifierDetails(loginType: .installed,
                                      loginProvider: .google,
                                      clientId: "309493952136-ite5em9m18qtf26mmjfadt7rvmoetpqk.apps.googleusercontent.com",
-                                     verifierName: "perp-google-testnet",       // mainnet - perp-google, testnet - perp-google-testnet
+                                     verifierName: "perp-google",       // mainnet - perp-google, testnet - perp-google-testnet
                                      redirectURL: "com.googleusercontent.apps.309493952136-ite5em9m18qtf26mmjfadt7rvmoetpqk:/oauthredirect",
                                      jwtParams: ["domain":"dev-gqod-vvp.eu.auth0.com"])
-        let tdsdk = TorusSwiftDirectSDK(aggregateVerifierType: .singleLogin, aggregateVerifierName: "perp-google-testnet", subVerifierDetails: [sub], loglevel: .trace)
+        let tdsdk = TorusSwiftDirectSDK(aggregateVerifierType: .singleLogin, aggregateVerifierName: "perp-google", subVerifierDetails: [sub], network: .MAINNET)
         tdsdk.triggerLogin(browserType: .external).done { data in
             print("private key rebuild", data)
             let privateKey: String = data["privateKey"] as? String ?? ""
@@ -130,7 +129,7 @@ class LoginViewModel: ObservableObject {
                                      redirectURL: "perp://tdsdk/oauthCallback",
                                      jwtParams: ["domain":"dev-gqod-vvp.eu.auth0.com"])
         
-        let tdsdk = TorusSwiftDirectSDK(aggregateVerifierType: .singleLogin, aggregateVerifierName: "perp-auth0-apple", subVerifierDetails: [sub], loglevel: .trace)
+        let tdsdk = TorusSwiftDirectSDK(aggregateVerifierType: .singleLogin, aggregateVerifierName: "perp-auth0-apple", subVerifierDetails: [sub], network: .MAINNET)
         tdsdk.triggerLogin(browserType: .external).done { data in
             print("private key rebuild", data)
             let privateKey: String = data["privateKey"] as? String ?? ""

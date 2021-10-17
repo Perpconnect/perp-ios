@@ -12,7 +12,7 @@ struct AssetsView: View {
     
     @EnvironmentObject var session: LoginViewModel
     
-    @State var networkSwitch: Network = .mainnet
+    @State var networkSwitch: Networks = .mainnet
     
     @ObservedObject var tokenVM: AssetViewModel
     
@@ -73,6 +73,7 @@ struct AssetsView: View {
                                 
                                 VStack(alignment: .leading) {
                                     Text(token.contract_ticker_symbol!)
+                                        .foregroundColor(.white)
                                         .fontWeight(.semibold)
                                         .padding(.bottom, 4)
                                     
@@ -87,6 +88,7 @@ struct AssetsView: View {
                                 Spacer()
                                 VStack {
                                     Text("\(String(format: "%.2f", token.balance!))")
+                                        .foregroundColor(.white)
                                         .padding(.bottom, 4)
                                     Text("\(String(format: "%.2f", token.amount!)) USD")
                                         .foregroundColor(.gray)
@@ -106,13 +108,13 @@ struct AssetsView: View {
     }
 }
 
-enum Network {
+enum Networks {
     case mainnet
     case xdai
 }
 
 struct HeadingButtons: View {
-    @Binding var networkSwitch: Network
+    @Binding var networkSwitch: Networks
     
     var body: some View {
         HStack {

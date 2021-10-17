@@ -3,17 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BC036F9726E4B78B0028E590 /* ApolloWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = BC036F9626E4B78B0028E590 /* ApolloWebSocket */; };
-		BC036F9926E4B78B0028E590 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = BC036F9826E4B78B0028E590 /* Apollo */; };
-		BC036F9B26E4B78B0028E590 /* ApolloUtils in Frameworks */ = {isa = PBXBuildFile; productRef = BC036F9A26E4B78B0028E590 /* ApolloUtils */; };
-		BC036F9D26E4B78B0028E590 /* ApolloAPI in Frameworks */ = {isa = PBXBuildFile; productRef = BC036F9C26E4B78B0028E590 /* ApolloAPI */; };
+		3731FD6E71778ED5C74B43BF /* Pods_Perp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A93B030623E7949949B91A0 /* Pods_Perp.framework */; };
 		BC06C12626F61D3500A47812 /* TokenBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC06C12526F61D3500A47812 /* TokenBalance.swift */; };
 		BC06C12826F61D7A00A47812 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC06C12726F61D7A00A47812 /* AccountViewModel.swift */; };
-		BC06C12B26F61F0C00A47812 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BC06C12A26F61F0C00A47812 /* Alamofire */; };
 		BC06C12D26F6203200A47812 /* xDaiTokenBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC06C12C26F6203200A47812 /* xDaiTokenBalance.swift */; };
 		BC1EC81C26E8D05200F28F2D /* AmmInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1EC81B26E8D05200F28F2D /* AmmInfo.swift */; };
 		BC2FFE6E26C4166B0001FDD4 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2FFE6D26C4166B0001FDD4 /* Tab.swift */; };
@@ -31,25 +27,18 @@
 		BC96A4DD26ECAF9F00F8B8B9 /* Market.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC96A4DC26ECAF9F00F8B8B9 /* Market.swift */; };
 		BC96A4DF26ECB41700F8B8B9 /* MarketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC96A4DE26ECB41700F8B8B9 /* MarketViewModel.swift */; };
 		BC96A4E126ECC7FC00F8B8B9 /* MarketDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC96A4E026ECC7FC00F8B8B9 /* MarketDataViewModel.swift */; };
-		BC96A4E726ECCA4000F8B8B9 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = BC96A4E626ECCA4000F8B8B9 /* Resolver */; };
-		BC96A4E926ECCA4000F8B8B9 /* Resolver-Static in Frameworks */ = {isa = PBXBuildFile; productRef = BC96A4E826ECCA4000F8B8B9 /* Resolver-Static */; };
 		BC96A4EB26ECF01800F8B8B9 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC96A4EA26ECF01800F8B8B9 /* AccountView.swift */; };
 		BC96A4F026ECF14000F8B8B9 /* RewardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC96A4EF26ECF14000F8B8B9 /* RewardsView.swift */; };
 		BC96A4F226ECF19B00F8B8B9 /* StakingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC96A4F126ECF19B00F8B8B9 /* StakingView.swift */; };
-		BC96A4F526ED19EE00F8B8B9 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BC96A4F426ED19EE00F8B8B9 /* CryptoSwift */; };
-		BC96A4F826ED1C0700F8B8B9 /* SwiftKeccak in Frameworks */ = {isa = PBXBuildFile; productRef = BC96A4F726ED1C0700F8B8B9 /* SwiftKeccak */; };
 		BC9AF4E926C7B95B006D8887 /* MarketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9AF4E826C7B95B006D8887 /* MarketView.swift */; };
 		BC9AF4EF26C7C777006D8887 /* MarketListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9AF4EE26C7C777006D8887 /* MarketListItem.swift */; };
 		BCB4F8CA26E16CD5006DB5AD /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB4F8C926E16CD5006DB5AD /* OnboardingView.swift */; };
-		BCCCB2AA26E2628000B26878 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = BCCCB2A926E2628000B26878 /* Lottie */; };
 		BCCCB2B026E2640200B26878 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = BCCCB2AF26E2640200B26878 /* .swiftlint.yml */; };
 		BCCCB2B226E26D1500B26878 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCB2B126E26D1500B26878 /* LottieView.swift */; };
 		BCCCB2B526E2754900B26878 /* stake.json in Resources */ = {isa = PBXBuildFile; fileRef = BCCCB2B426E2754900B26878 /* stake.json */; };
 		BCCCB2B726E2759C00B26878 /* leverage.json in Resources */ = {isa = PBXBuildFile; fileRef = BCCCB2B626E2759B00B26878 /* leverage.json */; };
-		BCD07E3C26D14E3500781E28 /* TorusSwiftDirectSDK in Frameworks */ = {isa = PBXBuildFile; productRef = BCD07E3B26D14E3500781E28 /* TorusSwiftDirectSDK */; };
 		BCD07E5126D18E8200781E28 /* PerpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD07E5026D18E8200781E28 /* PerpApp.swift */; };
 		BCD323F126E1652F00B25C4A /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD323F026E1652F00B25C4A /* Globals.swift */; };
-		BCEB911E26FF9E1E00B07936 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = BCEB911D26FF9E1E00B07936 /* SDWebImageSwiftUI */; };
 		BCF250FE2700FD98006D2465 /* AssetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF250FD2700FD98006D2465 /* AssetViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +56,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4C5218F4E22E61046A2EB435 /* Pods-Perp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Perp.debug.xcconfig"; path = "Target Support Files/Pods-Perp/Pods-Perp.debug.xcconfig"; sourceTree = "<group>"; };
+		7A93B030623E7949949B91A0 /* Pods_Perp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Perp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A41D715CA8B6BFB63FB4148 /* Pods-Perp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Perp.release.xcconfig"; path = "Target Support Files/Pods-Perp/Pods-Perp.release.xcconfig"; sourceTree = "<group>"; };
 		BC06C12526F61D3500A47812 /* TokenBalance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenBalance.swift; sourceTree = "<group>"; };
 		BC06C12726F61D7A00A47812 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		BC06C12C26F6203200A47812 /* xDaiTokenBalance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xDaiTokenBalance.swift; sourceTree = "<group>"; };
@@ -108,24 +100,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCEB911E26FF9E1E00B07936 /* SDWebImageSwiftUI in Frameworks */,
-				BC036F9D26E4B78B0028E590 /* ApolloAPI in Frameworks */,
-				BCD07E3C26D14E3500781E28 /* TorusSwiftDirectSDK in Frameworks */,
-				BC96A4F826ED1C0700F8B8B9 /* SwiftKeccak in Frameworks */,
-				BC96A4F526ED19EE00F8B8B9 /* CryptoSwift in Frameworks */,
-				BC96A4E726ECCA4000F8B8B9 /* Resolver in Frameworks */,
-				BC06C12B26F61F0C00A47812 /* Alamofire in Frameworks */,
-				BC036F9B26E4B78B0028E590 /* ApolloUtils in Frameworks */,
-				BC036F9926E4B78B0028E590 /* Apollo in Frameworks */,
-				BC036F9726E4B78B0028E590 /* ApolloWebSocket in Frameworks */,
-				BC96A4E926ECCA4000F8B8B9 /* Resolver-Static in Frameworks */,
-				BCCCB2AA26E2628000B26878 /* Lottie in Frameworks */,
+				3731FD6E71778ED5C74B43BF /* Pods_Perp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8AC0B10BE9BC5ECB1BEBDA5F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A93B030623E7949949B91A0 /* Pods_Perp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BC06D42C26E39DE300169502 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +146,8 @@
 				BCCCB2AF26E2640200B26878 /* .swiftlint.yml */,
 				BC7363CD26C0EF2600C9E753 /* Perp */,
 				BC7363CC26C0EF2600C9E753 /* Products */,
+				C958DEB36F455E87A1DB7F0F /* Pods */,
+				8AC0B10BE9BC5ECB1BEBDA5F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -294,6 +285,15 @@
 			path = Lottie;
 			sourceTree = "<group>";
 		};
+		C958DEB36F455E87A1DB7F0F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4C5218F4E22E61046A2EB435 /* Pods-Perp.debug.xcconfig */,
+				8A41D715CA8B6BFB63FB4148 /* Pods-Perp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -301,31 +301,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BC7363DA26C0EF2F00C9E753 /* Build configuration list for PBXNativeTarget "Perp" */;
 			buildPhases = (
+				17C3CB2AB809228A7B17B4BB /* [CP] Check Pods Manifest.lock */,
 				BC7363C726C0EF2600C9E753 /* Sources */,
 				BC7363C826C0EF2600C9E753 /* Frameworks */,
 				BC7363C926C0EF2600C9E753 /* Resources */,
 				BCCCB2AB26E2639000B26878 /* ShellScript */,
 				BC447FF626E427A900F6357A /* Embed Frameworks */,
+				DD86670EA1117E86F6F4A3B2 /* [CP] Embed Pods Frameworks */,
+				BC4573CB271C55F100A61708 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Perp;
-			packageProductDependencies = (
-				BCD07E3B26D14E3500781E28 /* TorusSwiftDirectSDK */,
-				BCCCB2A926E2628000B26878 /* Lottie */,
-				BC036F9626E4B78B0028E590 /* ApolloWebSocket */,
-				BC036F9826E4B78B0028E590 /* Apollo */,
-				BC036F9A26E4B78B0028E590 /* ApolloUtils */,
-				BC036F9C26E4B78B0028E590 /* ApolloAPI */,
-				BC96A4E626ECCA4000F8B8B9 /* Resolver */,
-				BC96A4E826ECCA4000F8B8B9 /* Resolver-Static */,
-				BC96A4F426ED19EE00F8B8B9 /* CryptoSwift */,
-				BC96A4F726ED1C0700F8B8B9 /* SwiftKeccak */,
-				BC06C12A26F61F0C00A47812 /* Alamofire */,
-				BCEB911D26FF9E1E00B07936 /* SDWebImageSwiftUI */,
-			);
 			productName = Perp;
 			productReference = BC7363CB26C0EF2600C9E753 /* Perp.app */;
 			productType = "com.apple.product-type.application";
@@ -353,16 +342,6 @@
 				Base,
 			);
 			mainGroup = BC7363C226C0EF2600C9E753;
-			packageReferences = (
-				BCD07E3A26D14E3500781E28 /* XCRemoteSwiftPackageReference "torus-direct-swift-sdk" */,
-				BCCCB2A826E2628000B26878 /* XCRemoteSwiftPackageReference "lottie-ios" */,
-				BC036F9526E4B78B0028E590 /* XCRemoteSwiftPackageReference "apollo-ios" */,
-				BC96A4E226ECCA3F00F8B8B9 /* XCRemoteSwiftPackageReference "Resolver" */,
-				BC96A4F326ED19EE00F8B8B9 /* XCRemoteSwiftPackageReference "CryptoSwift" */,
-				BC96A4F626ED1C0700F8B8B9 /* XCRemoteSwiftPackageReference "SwiftKeccak" */,
-				BC06C12926F61F0C00A47812 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				BCEB911C26FF9E1E00B07936 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
-			);
 			productRefGroup = BC7363CC26C0EF2600C9E753 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -390,6 +369,45 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		17C3CB2AB809228A7B17B4BB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Perp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC4573CB271C55F100A61708 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Don't run this during index builds\nif [ $ACTION = \"indexbuild\" ]; then exit 0; fi\n\nSCRIPT_PATH=\"${PODS_ROOT}/Apollo/scripts\"\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"schema.json\" API.swift\n\n";
+		};
 		BCCCB2AB26E2639000B26878 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -406,6 +424,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		DD86670EA1117E86F6F4A3B2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Perp/Pods-Perp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Perp/Pods-Perp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Perp/Pods-Perp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -483,6 +518,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -545,6 +581,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -565,6 +602,7 @@
 		};
 		BC7363DB26C0EF2F00C9E753 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C5218F4E22E61046A2EB435 /* Pods-Perp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -573,6 +611,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Perp/Preview Content\"";
 				DEVELOPMENT_TEAM = FYS9RNAGTV;
 				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = Perp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -589,6 +628,7 @@
 		};
 		BC7363DC26C0EF2F00C9E753 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A41D715CA8B6BFB63FB4148 /* Pods-Perp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -597,6 +637,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Perp/Preview Content\"";
 				DEVELOPMENT_TEAM = FYS9RNAGTV;
 				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = Perp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -633,136 +674,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		BC036F9526E4B78B0028E590 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.48.0;
-			};
-		};
-		BC06C12926F61F0C00A47812 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.4.3;
-			};
-		};
-		BC96A4E226ECCA3F00F8B8B9 /* XCRemoteSwiftPackageReference "Resolver" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/hmlongco/Resolver.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.4.4;
-			};
-		};
-		BC96A4F326ED19EE00F8B8B9 /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.4.1;
-			};
-		};
-		BC96A4F626ED1C0700F8B8B9 /* XCRemoteSwiftPackageReference "SwiftKeccak" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/bitflying/SwiftKeccak.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.2;
-			};
-		};
-		BCCCB2A826E2628000B26878 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.2.3;
-			};
-		};
-		BCD07E3A26D14E3500781E28 /* XCRemoteSwiftPackageReference "torus-direct-swift-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/torusresearch/torus-direct-swift-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.3.1;
-			};
-		};
-		BCEB911C26FF9E1E00B07936 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.2;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		BC036F9626E4B78B0028E590 /* ApolloWebSocket */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BC036F9526E4B78B0028E590 /* XCRemoteSwiftPackageReference "apollo-ios" */;
-			productName = ApolloWebSocket;
-		};
-		BC036F9826E4B78B0028E590 /* Apollo */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BC036F9526E4B78B0028E590 /* XCRemoteSwiftPackageReference "apollo-ios" */;
-			productName = Apollo;
-		};
-		BC036F9A26E4B78B0028E590 /* ApolloUtils */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BC036F9526E4B78B0028E590 /* XCRemoteSwiftPackageReference "apollo-ios" */;
-			productName = ApolloUtils;
-		};
-		BC036F9C26E4B78B0028E590 /* ApolloAPI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BC036F9526E4B78B0028E590 /* XCRemoteSwiftPackageReference "apollo-ios" */;
-			productName = ApolloAPI;
-		};
-		BC06C12A26F61F0C00A47812 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BC06C12926F61F0C00A47812 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-		BC96A4E626ECCA4000F8B8B9 /* Resolver */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BC96A4E226ECCA3F00F8B8B9 /* XCRemoteSwiftPackageReference "Resolver" */;
-			productName = Resolver;
-		};
-		BC96A4E826ECCA4000F8B8B9 /* Resolver-Static */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BC96A4E226ECCA3F00F8B8B9 /* XCRemoteSwiftPackageReference "Resolver" */;
-			productName = "Resolver-Static";
-		};
-		BC96A4F426ED19EE00F8B8B9 /* CryptoSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BC96A4F326ED19EE00F8B8B9 /* XCRemoteSwiftPackageReference "CryptoSwift" */;
-			productName = CryptoSwift;
-		};
-		BC96A4F726ED1C0700F8B8B9 /* SwiftKeccak */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BC96A4F626ED1C0700F8B8B9 /* XCRemoteSwiftPackageReference "SwiftKeccak" */;
-			productName = SwiftKeccak;
-		};
-		BCCCB2A926E2628000B26878 /* Lottie */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BCCCB2A826E2628000B26878 /* XCRemoteSwiftPackageReference "lottie-ios" */;
-			productName = Lottie;
-		};
-		BCD07E3B26D14E3500781E28 /* TorusSwiftDirectSDK */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BCD07E3A26D14E3500781E28 /* XCRemoteSwiftPackageReference "torus-direct-swift-sdk" */;
-			productName = TorusSwiftDirectSDK;
-		};
-		BCEB911D26FF9E1E00B07936 /* SDWebImageSwiftUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BCEB911C26FF9E1E00B07936 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
-			productName = SDWebImageSwiftUI;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BC7363C326C0EF2600C9E753 /* Project object */;
 }

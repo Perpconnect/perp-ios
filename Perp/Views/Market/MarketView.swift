@@ -42,17 +42,11 @@ struct MarketView: View {
                     .padding(.top, 5)
 
                     ScrollView {
-                        ForEach(marketVM.marketDataViewModels, id: /.self) { market in
-                            MarketListItem(market: Market)
+                        ForEach(marketVM.markets) { market in
+                            NavigationLink(destination: SetorderView(market: market)) {
+                                MarketListItem(market: market)
+                            }
                         }
-                        NavigationLink(destination: SetorderView()) {
-                            MarketListItem()
-                        }
-                        MarketListItem()
-                        MarketListItem()
-                        MarketListItem()
-                        MarketListItem()
-                        MarketListItem()
                     }
                 }
             }
@@ -64,7 +58,6 @@ struct MarketView: View {
                         Image(systemName: "person")
                             .resizable()
                             .foregroundColor(.white)
-                            .frame(width: 30, height: 30)
                     }
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -82,4 +75,3 @@ struct MarketView: View {
         })
     }
 }
-

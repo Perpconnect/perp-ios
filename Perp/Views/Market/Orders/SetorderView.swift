@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SetorderView: View {
     
+    var market: Market
+
     var body: some View {
         ZStack {
             backgroundColor
@@ -77,13 +79,7 @@ struct SetorderView: View {
                 
             }
         }
-        .navigationTitle("BTCUSDT")
-    }
-}
-
-struct SetorderView_Previews: PreviewProvider {
-    static var previews: some View {
-        SetorderView()
+        .navigationTitle(market.amm.pair)
     }
 }
 

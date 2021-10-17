@@ -19,8 +19,10 @@ struct AccountView: View {
             backgroundColor
                 .ignoresSafeArea(.all)
             VStack {
+                Text("Hello")
                 HStack {
                     Text("Hi,")
+                        .foregroundColor(.white)
                         .fontWeight(.semibold)
                         .padding(.horizontal)
                         .padding(.top)
@@ -31,6 +33,7 @@ struct AccountView: View {
                 
                 HStack {
                     Text("\(publicKey)")
+                        .foregroundColor(.white)
                         .fontWeight(.semibold)
                         .padding(.leading)
                         .font(.system(size: 18))

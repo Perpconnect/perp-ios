@@ -10,19 +10,18 @@ import Combine
 import Resolver
 
 class MarketViewModel: ObservableObject {
-    @Published var marketRepository: MarketRepository = MarketRepository()
-    @Published var marketDataViewModels = [MarketDataViewModel]()
-    
-    private var cancellables = Set<AnyCancellable>()
-    
+    @Published var markets = [Market]()
+        
     init() {
-        marketRepository.$markets.map { markets in
-            markets.map { market in
-                MarketDataViewModel(market: market)
-            }
+        loadData()
+    }
+    
+    private func loadData() {
+        var tempArray = [Market]()
+        for item in amms {
+            tempArray.append(Market(amm: item, currentPrice: "0", markPrice: "0"))
         }
-        .assign(to: \.marketDataViewModels, on: self)
-        .store(in: &cancellables)
+        markets = tempArray
     }
     
 }

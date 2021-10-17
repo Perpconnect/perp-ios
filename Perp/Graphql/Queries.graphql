@@ -1,0 +1,13 @@
+query GetAmm($address: ID!) {
+  amm(id: $address) {
+    id
+    positionBalance
+    openInterestSize
+    openInterestNotional
+    quoteAssetReserve
+    baseAssetReserve
+    tradingVolume
+    blockNumber
+    timestamp
+  }
+}

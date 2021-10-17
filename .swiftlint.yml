@@ -8,6 +8,10 @@ disabled_rules:
     - opening_brace
     - file_length
     - type_name
+    - force_cast
+    - nesting
+    - trailing_comma
+    - line_length
 opt_in_rules:
     - empty_count
 excluded:
