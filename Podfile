@@ -11,7 +11,6 @@ target 'Perp' do
   pod "Apollo"
   pod 'lottie-ios'
   pod 'SDWebImageSwiftUI'
-  pod "Resolver"
 
 end
 

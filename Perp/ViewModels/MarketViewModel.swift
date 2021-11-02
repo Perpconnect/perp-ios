@@ -7,7 +7,6 @@
 
 import Foundation
 import Combine
-import Resolver
 import Alamofire
 
 class MarketViewModel: ObservableObject {

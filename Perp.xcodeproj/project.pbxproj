@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -40,6 +40,8 @@
 		BCD07E5126D18E8200781E28 /* PerpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD07E5026D18E8200781E28 /* PerpApp.swift */; };
 		BCD323F126E1652F00B25C4A /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD323F026E1652F00B25C4A /* Globals.swift */; };
 		BCF250FE2700FD98006D2465 /* AssetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF250FD2700FD98006D2465 /* AssetViewModel.swift */; };
+		BCF8B517272C295900C54866 /* PerpetualModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF8B516272C295900C54866 /* PerpetualModel.swift */; };
+		BCF8B519272C2DA800C54866 /* PerpetualViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF8B518272C2DA800C54866 /* PerpetualViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -93,6 +95,8 @@
 		BCD07E5026D18E8200781E28 /* PerpApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerpApp.swift; sourceTree = "<group>"; };
 		BCD323F026E1652F00B25C4A /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		BCF250FD2700FD98006D2465 /* AssetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetViewModel.swift; sourceTree = "<group>"; };
+		BCF8B516272C295900C54866 /* PerpetualModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerpetualModel.swift; sourceTree = "<group>"; };
+		BCF8B518272C2DA800C54866 /* PerpetualViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerpetualViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +206,7 @@
 				BC96A4E026ECC7FC00F8B8B9 /* MarketDataViewModel.swift */,
 				BC06C12726F61D7A00A47812 /* AccountViewModel.swift */,
 				BCF250FD2700FD98006D2465 /* AssetViewModel.swift */,
+				BCF8B518272C2DA800C54866 /* PerpetualViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -213,6 +218,7 @@
 				BC96A4DC26ECAF9F00F8B8B9 /* Market.swift */,
 				BC06C12526F61D3500A47812 /* TokenBalance.swift */,
 				BC06C12C26F6203200A47812 /* xDaiTokenBalance.swift */,
+				BCF8B516272C295900C54866 /* PerpetualModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -454,6 +460,7 @@
 				BCB4F8CA26E16CD5006DB5AD /* OnboardingView.swift in Sources */,
 				BC96A4F026ECF14000F8B8B9 /* RewardsView.swift in Sources */,
 				BC96A4F226ECF19B00F8B8B9 /* StakingView.swift in Sources */,
+				BCF8B519272C2DA800C54866 /* PerpetualViewModel.swift in Sources */,
 				BC96A4DF26ECB41700F8B8B9 /* MarketViewModel.swift in Sources */,
 				BC06C12D26F6203200A47812 /* xDaiTokenBalance.swift in Sources */,
 				BC7363E426C0FD8F00C9E753 /* LoginView.swift in Sources */,
@@ -461,6 +468,7 @@
 				BC7363D126C0EF2600C9E753 /* ContentView.swift in Sources */,
 				BC447FFF26E42B5200F6357A /* Apollo.swift in Sources */,
 				BC9AF4E926C7B95B006D8887 /* MarketView.swift in Sources */,
+				BCF8B517272C295900C54866 /* PerpetualModel.swift in Sources */,
 				BC06C12826F61D7A00A47812 /* AccountViewModel.swift in Sources */,
 				BCD07E5126D18E8200781E28 /* PerpApp.swift in Sources */,
 				BC2FFE6E26C4166B0001FDD4 /* Tab.swift in Sources */,
