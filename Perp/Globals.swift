@@ -34,3 +34,5 @@ let amms = [
     AmmInfo(symbol: "ALPHA", name: "Alpha Finance", pair: "ALPHA/USDC", address: "0x26789518695b56e16F14008c35Dc1b281Bd5fc0E"),
     AmmInfo(symbol: "FTT", name: "FTX Token", pair: "FTT/USDC", address: "0x838B322610BD99a449091D3bF3FBA60D794909a9")
 ]
+
+let all_amms = "ETH,BTC,YFI,DOT,SNX,LINK,AAVE,SUSHI,COMP,REN,PERP,UNI,CRV,MKR,CREAM,GRT,ALPHA,FTT"

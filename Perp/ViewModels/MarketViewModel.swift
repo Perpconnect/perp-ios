@@ -34,9 +34,9 @@ class MarketViewModel: ObservableObject {
         
         let req = AF.request(url, method: .get, parameters: params)
         
-        req.responseJSON { res in
-            print(res.value)
-        }
+//        req.responseJSON { res in
+//            print(res.value)
+//        }
     }
     
     private func get_current_date() -> String {

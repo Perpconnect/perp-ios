@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MarketListItem: View {
     
-    var market: Market
+    var market: PerpetualModel.Market
     
     var body: some View {
         HStack {

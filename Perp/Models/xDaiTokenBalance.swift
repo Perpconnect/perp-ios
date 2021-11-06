@@ -17,6 +17,7 @@ struct xDaiTokenBalance: Hashable, Identifiable {
     var symbol: String?
     var type: Type?
     var logo: String?
+    var usd: String?
 }
 
 enum Type {

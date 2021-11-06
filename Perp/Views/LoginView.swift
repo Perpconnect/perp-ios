@@ -12,6 +12,8 @@ struct LoginView: View {
     
     @EnvironmentObject var session: LoginViewModel
     
+    @State private var showingAlert = false
+    
     var body: some View {
         GeometryReader { geo in
             ZStack {
@@ -82,7 +84,10 @@ struct LoginView: View {
                             SocialButton(image: "twitter", height: 25, width: 40)
                         }
                         
-                        Button(action: { session.discordLogin() }) {
+                        Button(action: {
+                            showingAlert = true
+                            // session.discordLogin()
+                        }) {
                             SocialButton(image: "discord", height: 25, width: 40)
                         }
                     
@@ -125,6 +130,9 @@ struct LoginView: View {
             .onOpenURL { url in
                 TorusSwiftDirectSDK.handle(url: url)
             }
+        }
+        .alert(isPresented: $showingAlert) {
+            Alert(title: Text("Disabled!"), message: Text("The functionality in under development!"))
         }
     }
 }

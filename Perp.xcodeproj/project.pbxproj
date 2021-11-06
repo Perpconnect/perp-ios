@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1F2050C5098CDF11C3CBCFD3 /* Pods_Perp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B18323034C452A8D536C24E2 /* Pods_Perp.framework */; };
 		BC06C12626F61D3500A47812 /* TokenBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC06C12526F61D3500A47812 /* TokenBalance.swift */; };
-		BC06C12826F61D7A00A47812 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC06C12726F61D7A00A47812 /* AccountViewModel.swift */; };
 		BC06C12D26F6203200A47812 /* xDaiTokenBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC06C12C26F6203200A47812 /* xDaiTokenBalance.swift */; };
 		BC1EC81C26E8D05200F28F2D /* AmmInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1EC81B26E8D05200F28F2D /* AmmInfo.swift */; };
 		BC2FFE6E26C4166B0001FDD4 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2FFE6D26C4166B0001FDD4 /* Tab.swift */; };
@@ -33,13 +32,14 @@
 		BC9AF4E926C7B95B006D8887 /* MarketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9AF4E826C7B95B006D8887 /* MarketView.swift */; };
 		BC9AF4EF26C7C777006D8887 /* MarketListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9AF4EE26C7C777006D8887 /* MarketListItem.swift */; };
 		BCB4F8CA26E16CD5006DB5AD /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB4F8C926E16CD5006DB5AD /* OnboardingView.swift */; };
+		BCC2C7F527313055001A9C3B /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC2C7F427313055001A9C3B /* API.swift */; };
 		BCCCB2B026E2640200B26878 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = BCCCB2AF26E2640200B26878 /* .swiftlint.yml */; };
 		BCCCB2B226E26D1500B26878 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCB2B126E26D1500B26878 /* LottieView.swift */; };
 		BCCCB2B526E2754900B26878 /* stake.json in Resources */ = {isa = PBXBuildFile; fileRef = BCCCB2B426E2754900B26878 /* stake.json */; };
 		BCCCB2B726E2759C00B26878 /* leverage.json in Resources */ = {isa = PBXBuildFile; fileRef = BCCCB2B626E2759B00B26878 /* leverage.json */; };
 		BCD07E5126D18E8200781E28 /* PerpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD07E5026D18E8200781E28 /* PerpApp.swift */; };
 		BCD323F126E1652F00B25C4A /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD323F026E1652F00B25C4A /* Globals.swift */; };
-		BCF250FE2700FD98006D2465 /* AssetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF250FD2700FD98006D2465 /* AssetViewModel.swift */; };
+		BCD48CBA2733328700D7CF3F /* AssetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD48CB92733328700D7CF3F /* AssetViewModel.swift */; };
 		BCF8B517272C295900C54866 /* PerpetualModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF8B516272C295900C54866 /* PerpetualModel.swift */; };
 		BCF8B519272C2DA800C54866 /* PerpetualViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF8B518272C2DA800C54866 /* PerpetualViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -62,7 +62,6 @@
 		62F5EF98C193CE63DFB17DA1 /* Pods-Perp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Perp.release.xcconfig"; path = "Target Support Files/Pods-Perp/Pods-Perp.release.xcconfig"; sourceTree = "<group>"; };
 		B18323034C452A8D536C24E2 /* Pods_Perp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Perp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC06C12526F61D3500A47812 /* TokenBalance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenBalance.swift; sourceTree = "<group>"; };
-		BC06C12726F61D7A00A47812 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		BC06C12C26F6203200A47812 /* xDaiTokenBalance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xDaiTokenBalance.swift; sourceTree = "<group>"; };
 		BC1EC81B26E8D05200F28F2D /* AmmInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmmInfo.swift; sourceTree = "<group>"; };
 		BC2FFE6D26C4166B0001FDD4 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
@@ -88,13 +87,14 @@
 		BC9AF4E826C7B95B006D8887 /* MarketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketView.swift; sourceTree = "<group>"; };
 		BC9AF4EE26C7C777006D8887 /* MarketListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketListItem.swift; sourceTree = "<group>"; };
 		BCB4F8C926E16CD5006DB5AD /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		BCC2C7F427313055001A9C3B /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = Perp/API.swift; sourceTree = SOURCE_ROOT; };
 		BCCCB2AF26E2640200B26878 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		BCCCB2B126E26D1500B26878 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		BCCCB2B426E2754900B26878 /* stake.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stake.json; sourceTree = "<group>"; };
 		BCCCB2B626E2759B00B26878 /* leverage.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = leverage.json; sourceTree = "<group>"; };
 		BCD07E5026D18E8200781E28 /* PerpApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerpApp.swift; sourceTree = "<group>"; };
 		BCD323F026E1652F00B25C4A /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
-		BCF250FD2700FD98006D2465 /* AssetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetViewModel.swift; sourceTree = "<group>"; };
+		BCD48CB92733328700D7CF3F /* AssetViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetViewModel.swift; sourceTree = "<group>"; };
 		BCF8B516272C295900C54866 /* PerpetualModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerpetualModel.swift; sourceTree = "<group>"; };
 		BCF8B518272C2DA800C54866 /* PerpetualViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerpetualViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,6 +122,7 @@
 		BC447FFD26E42B3C00F6357A /* Graphql */ = {
 			isa = PBXGroup;
 			children = (
+				BCC2C7F427313055001A9C3B /* API.swift */,
 				BC447FFB26E42A8200F6357A /* Queries.graphql */,
 				BC447FFE26E42B5200F6357A /* Apollo.swift */,
 			);
@@ -204,8 +205,7 @@
 				BC2FFE7026C416B10001FDD4 /* LoginViewModel.swift */,
 				BC96A4DE26ECB41700F8B8B9 /* MarketViewModel.swift */,
 				BC96A4E026ECC7FC00F8B8B9 /* MarketDataViewModel.swift */,
-				BC06C12726F61D7A00A47812 /* AccountViewModel.swift */,
-				BCF250FD2700FD98006D2465 /* AssetViewModel.swift */,
+				BCD48CB92733328700D7CF3F /* AssetViewModel.swift */,
 				BCF8B518272C2DA800C54866 /* PerpetualViewModel.swift */,
 			);
 			path = ViewModels;
@@ -313,7 +313,7 @@
 				BC7363C926C0EF2600C9E753 /* Resources */,
 				BCCCB2AB26E2639000B26878 /* ShellScript */,
 				BC447FF626E427A900F6357A /* Embed Frameworks */,
-				BC4573CB271C55F100A61708 /* ShellScript */,
+				BC4573CB271C55F100A61708 /* Generate Apollo GraphQL API */,
 				80C192B96F9ACFCAF6C0E8AC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -414,7 +414,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Perp/Pods-Perp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BC4573CB271C55F100A61708 /* ShellScript */ = {
+		BC4573CB271C55F100A61708 /* Generate Apollo GraphQL API */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -423,13 +423,14 @@
 			);
 			inputPaths = (
 			);
+			name = "Generate Apollo GraphQL API";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Don't run this during index builds\nif [ $ACTION = \"indexbuild\" ]; then exit 0; fi\n\nSCRIPT_PATH=\"${PODS_ROOT}/Apollo/scripts\"\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"schema.json\" API.swift\n\n";
+			shellScript = "# Don't run this during index builds\nif [ $ACTION = \"indexbuild\" ]; then exit 0; fi\n\nSCRIPT_PATH=\"${PODS_ROOT}/Apollo/scripts\"\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"schema.json\" API.swift\n\n\n";
 		};
 		BCCCB2AB26E2639000B26878 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -461,6 +462,7 @@
 				BC96A4F026ECF14000F8B8B9 /* RewardsView.swift in Sources */,
 				BC96A4F226ECF19B00F8B8B9 /* StakingView.swift in Sources */,
 				BCF8B519272C2DA800C54866 /* PerpetualViewModel.swift in Sources */,
+				BCC2C7F527313055001A9C3B /* API.swift in Sources */,
 				BC96A4DF26ECB41700F8B8B9 /* MarketViewModel.swift in Sources */,
 				BC06C12D26F6203200A47812 /* xDaiTokenBalance.swift in Sources */,
 				BC7363E426C0FD8F00C9E753 /* LoginView.swift in Sources */,
@@ -469,7 +471,6 @@
 				BC447FFF26E42B5200F6357A /* Apollo.swift in Sources */,
 				BC9AF4E926C7B95B006D8887 /* MarketView.swift in Sources */,
 				BCF8B517272C295900C54866 /* PerpetualModel.swift in Sources */,
-				BC06C12826F61D7A00A47812 /* AccountViewModel.swift in Sources */,
 				BCD07E5126D18E8200781E28 /* PerpApp.swift in Sources */,
 				BC2FFE6E26C4166B0001FDD4 /* Tab.swift in Sources */,
 				BC2FFE7126C416B10001FDD4 /* LoginViewModel.swift in Sources */,
@@ -477,11 +478,11 @@
 				BC96A4EB26ECF01800F8B8B9 /* AccountView.swift in Sources */,
 				BC96A4DD26ECAF9F00F8B8B9 /* Market.swift in Sources */,
 				BC447FFA26E42A5800F6357A /* MarketRepository.swift in Sources */,
-				BCF250FE2700FD98006D2465 /* AssetViewModel.swift in Sources */,
 				BC06C12626F61D3500A47812 /* TokenBalance.swift in Sources */,
 				BCCCB2B226E26D1500B26878 /* LottieView.swift in Sources */,
 				BC1EC81C26E8D05200F28F2D /* AmmInfo.swift in Sources */,
 				BCD323F126E1652F00B25C4A /* Globals.swift in Sources */,
+				BCD48CBA2733328700D7CF3F /* AssetViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

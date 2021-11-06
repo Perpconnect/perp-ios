@@ -6,10 +6,13 @@
 //
 
 import SwiftUI
+import CryptoSwift
 
 struct SetorderView: View {
     
-    var market: Market
+    var market: PerpetualModel.Market
+    
+    @ObservedObject var perpVM: PerpetualViewModel
 
     var body: some View {
         ZStack {
@@ -39,7 +42,7 @@ struct SetorderView: View {
                 
                 HStack {
                     VStack {
-                        Text("Positions (0)")
+                        Text("Positions (\(perpVM.positionCount))")
                             .fontWeight(.semibold)
                             .foregroundColor(Color(#colorLiteral(red: 0.7254902124, green: 0.4784313738, blue: 0.09803921729, alpha: 1)))
                     }
@@ -65,17 +68,25 @@ struct SetorderView: View {
                     .foregroundColor(.white)
                     .opacity(0.3)
                 
-                Image(systemName: "doc.text.magnifyingglass")
-                    .foregroundColor(.white)
-                    .opacity(0.5)
-                    .font(.system(size: 50))
-                    .padding(.top, 50)
-                
-                Text("You have no open positions")
-                    .foregroundColor(.white)
-                    .opacity(0.5)
-                    .font(.system(size: 14))
-                    .padding(.top, 2)
+                if (perpVM.positionCount != 0) {
+                    ForEach(perpVM.positions) { position in
+                        OpenPosition(position: position)
+                            .padding(.horizontal)
+                            .padding(.vertical, 5)
+                    }
+                } else {
+                    Image(systemName: "doc.text.magnifyingglass")
+                        .foregroundColor(.white)
+                        .opacity(0.5)
+                        .font(.system(size: 50))
+                        .padding(.top, 50)
+                    
+                    Text("You have no open positions")
+                        .foregroundColor(.white)
+                        .opacity(0.5)
+                        .font(.system(size: 14))
+                        .padding(.top, 2)
+                }
                 
             }
         }
@@ -133,6 +144,155 @@ struct OrderBook: View {
                     .foregroundColor(.white)
                     .opacity(0.7)
                     .font(.system(size: 12))
+            }
+        }
+    }
+}
+
+struct OpenPosition: View {
+    var position: PerpetualModel.Position
+    
+    var body: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 10)
+                .fill(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
+                .opacity(0.05)
+
+            VStack {
+                HStack {
+                    Text(position.symbol)
+                        .foregroundColor(.white)
+                        .font(.system(size: 14))
+                        .fontWeight(.medium)
+                        .padding()
+                    
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 5)
+                            .fill(.red)
+                            .opacity(0.05)
+                        Text("Short")
+                            .font(.system(size: 10))
+                            .fontWeight(.medium)
+                            .foregroundColor(.red)
+                    }
+                    .frame(width: 45, height: 25)
+                    
+                    Spacer()
+                    
+                    ZStack {
+                        HStack {
+                            Image(systemName: "xmark.circle")
+                                .foregroundColor(.red)
+                        }
+                        .padding(.trailing)
+                    }
+                    
+                }
+                
+                Rectangle()
+                    .frame(height: 0.4)
+                    .foregroundColor(.white)
+                    .opacity(0.2)
+                
+                HStack {
+                    Text("Quantity")
+                        .font(.system(size: 12))
+                        .fontWeight(.medium)
+                        .foregroundColor(Color(.init(gray: 1, alpha: 0.5)))
+                    Spacer()
+                    Text(position.amount)
+                        .font(.system(size: 12))
+                        .fontWeight(.medium)
+                        .foregroundColor(.white)
+                }
+                .padding(.horizontal)
+                .padding(.vertical, 1)
+                
+                HStack {
+                    Text("Notional")
+                        .font(.system(size: 12))
+                        .fontWeight(.medium)
+                        .foregroundColor(Color(.init(gray: 1, alpha: 0.5)))
+                    Spacer()
+                    Text(position.notional)
+                        .font(.system(size: 12))
+                        .fontWeight(.medium)
+                        .foregroundColor(.white)
+                }
+                .padding(.horizontal)
+                .padding(.vertical, 1)
+                
+                HStack {
+                    Text("Entry price")
+                        .font(.system(size: 12))
+                        .fontWeight(.medium)
+                        .foregroundColor(Color(.init(gray: 1, alpha: 0.5)))
+                    Spacer()
+                    Text(position.entry)
+                        .font(.system(size: 12))
+                        .fontWeight(.medium)
+                        .foregroundColor(.white)
+                }
+                .padding(.horizontal)
+                .padding(.vertical, 1)
+                
+                HStack {
+                    Text("Mark price")
+                        .font(.system(size: 12))
+                        .fontWeight(.medium)
+                        .foregroundColor(Color(.init(gray: 1, alpha: 0.5)))
+                    Spacer()
+                    Text(position.mark)
+                        .font(.system(size: 12))
+                        .fontWeight(.medium)
+                        .foregroundColor(.white)
+                }
+                .padding(.horizontal)
+                .padding(.vertical, 1)
+                
+                HStack {
+                    Text("Liquadation")
+                        .font(.system(size: 12))
+                        .fontWeight(.medium)
+                        .foregroundColor(Color(.init(gray: 1, alpha: 0.5)))
+                    Spacer()
+                    Text(position.liquadation)
+                        .font(.system(size: 12))
+                        .fontWeight(.medium)
+                        .foregroundColor(.white)
+                }
+                .padding(.horizontal)
+                .padding(.vertical, 1)
+                
+                HStack {
+                    Text("Leverage")
+                        .font(.system(size: 12))
+                        .fontWeight(.medium)
+                        .foregroundColor(Color(.init(gray: 1, alpha: 0.5)))
+                    Spacer()
+                    Text(position.leverage)
+                        .font(.system(size: 12))
+                        .fontWeight(.medium)
+                        .foregroundColor(.white)
+                }
+                .padding(.horizontal)
+                .padding(.vertical, 1)
+                
+                HStack {
+                    Text("PnL")
+                        .font(.system(size: 12))
+                        .fontWeight(.medium)
+                        .foregroundColor(Color(.init(gray: 1, alpha: 0.5)))
+                    Spacer()
+                    Text(position.pnl)
+                        .font(.system(size: 12))
+                        .fontWeight(.medium)
+                        .foregroundColor(.white)
+                }
+                .padding(.horizontal)
+                .padding(.vertical, 1)
+                .padding(.bottom)
+                  
             }
         }
     }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MarketView: View {
     
-    @ObservedObject var marketVM: MarketViewModel
+    @ObservedObject var perpVM: PerpetualViewModel
     
     func dataInit() {
         let appearance = UINavigationBarAppearance()
@@ -42,8 +42,8 @@ struct MarketView: View {
                     .padding(.top, 5)
 
                     ScrollView {
-                        ForEach(marketVM.markets) { market in
-                            NavigationLink(destination: SetorderView(market: market)) {
+                        ForEach(perpVM.markets) { market in
+                            NavigationLink(destination: SetorderView(market: market, perpVM: perpVM)) {
                                 MarketListItem(market: market)
                             }
                         }
@@ -72,6 +72,7 @@ struct MarketView: View {
         .accentColor(.white)
         .onAppear(perform: {
             dataInit()
+            perpVM.syncData()
         })
     }
 }

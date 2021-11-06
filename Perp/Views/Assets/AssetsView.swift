@@ -89,10 +89,10 @@ struct AssetsView: View {
                                     
                                     Spacer()
                                     VStack {
-                                        Text("\(String(format: "%.4f", token.balance!))")
+                                        Text("\(String(token.balance!))")
                                             .foregroundColor(.white)
                                             .padding(.bottom, 4)
-                                        Text("\(String(format: "%.4f", token.balance!)) USD")
+                                        Text("\(String(token.usd!)) USD")
                                             .foregroundColor(.gray)
                                             .font(.system(size: 12))
                                     }

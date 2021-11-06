@@ -26,6 +26,7 @@ class AssetViewModel: ObservableObject {
             var totalBalance = 0.0
             
             if let json = res.value as? [[String: Any]] {
+                print(json)
                 for item in json {
                     var token = xDaiTokenBalance()
                     token.balance = item["usd"] as? String
@@ -33,11 +34,11 @@ class AssetViewModel: ObservableObject {
                     token.contractAddress = item["contractAddress"] as? String
                     token.logo = item["logo_url"] as? String
                     token.symbol = item["symbol"] as? String
+                    token.usd = item["usd"] as? String
                     
-                    totalBalance += Double(token.balance ?? "0.0")!
+                    totalBalance += Double(token.usd ?? "0.0")!
                     
                     balances.append(token)
-                    print(token)
                 }
             } else { // if json["data"] == null
                 print("Error retriving balances - \(String(describing: res.value))")
