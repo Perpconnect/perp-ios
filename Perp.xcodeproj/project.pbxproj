@@ -10,6 +10,7 @@
 		1F2050C5098CDF11C3CBCFD3 /* Pods_Perp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B18323034C452A8D536C24E2 /* Pods_Perp.framework */; };
 		BC06C12626F61D3500A47812 /* TokenBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC06C12526F61D3500A47812 /* TokenBalance.swift */; };
 		BC06C12D26F6203200A47812 /* xDaiTokenBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC06C12C26F6203200A47812 /* xDaiTokenBalance.swift */; };
+		BC12EEA327368DDA009237BF /* GetPrivateKeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12EEA227368DDA009237BF /* GetPrivateKeyView.swift */; };
 		BC1EC81C26E8D05200F28F2D /* AmmInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1EC81B26E8D05200F28F2D /* AmmInfo.swift */; };
 		BC2FFE6E26C4166B0001FDD4 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2FFE6D26C4166B0001FDD4 /* Tab.swift */; };
 		BC2FFE7126C416B10001FDD4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2FFE7026C416B10001FDD4 /* LoginViewModel.swift */; };
@@ -63,6 +64,7 @@
 		B18323034C452A8D536C24E2 /* Pods_Perp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Perp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC06C12526F61D3500A47812 /* TokenBalance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenBalance.swift; sourceTree = "<group>"; };
 		BC06C12C26F6203200A47812 /* xDaiTokenBalance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xDaiTokenBalance.swift; sourceTree = "<group>"; };
+		BC12EEA227368DDA009237BF /* GetPrivateKeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPrivateKeyView.swift; sourceTree = "<group>"; };
 		BC1EC81B26E8D05200F28F2D /* AmmInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmmInfo.swift; sourceTree = "<group>"; };
 		BC2FFE6D26C4166B0001FDD4 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		BC2FFE7026C416B10001FDD4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				BC96A4EA26ECF01800F8B8B9 /* AccountView.swift */,
+				BC12EEA227368DDA009237BF /* GetPrivateKeyView.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -465,6 +468,7 @@
 				BCC2C7F527313055001A9C3B /* API.swift in Sources */,
 				BC96A4DF26ECB41700F8B8B9 /* MarketViewModel.swift in Sources */,
 				BC06C12D26F6203200A47812 /* xDaiTokenBalance.swift in Sources */,
+				BC12EEA327368DDA009237BF /* GetPrivateKeyView.swift in Sources */,
 				BC7363E426C0FD8F00C9E753 /* LoginView.swift in Sources */,
 				BC56E96626E4B63300703C64 /* SetorderView.swift in Sources */,
 				BC7363D126C0EF2600C9E753 /* ContentView.swift in Sources */,

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import MobileCoreServices
+import StoreKit
 
 struct AccountView: View {
     
@@ -46,22 +47,26 @@ struct AccountView: View {
                     UIPasteboard.general.setValue(publicKey, forPasteboardType: "public.plain-text")
                 }
                 
-                Button(action: { }) {
+                NavigationLink(destination: GetPrivateKeyView()) {
                     CellView(image: "key", text: "Private key")
                 }
                 .padding(.top, 30)
                 
-                Button(action: { }) {
-                    CellView(image: "eyedropper", text: "Color Theme")
-                }
-                .padding(.top, 30)
+//                Button(action: { }) {
+//                    CellView(image: "eyedropper", text: "Color Theme")
+//                }
+//                .padding(.top, 30)
                 
                 Button(action: { }) {
                     CellView(image: "exclamationmark.circle", text: "About Us")
                 }
                 .padding(.top, 30)
                 
-                Button(action: { }) {
+                Button(action: {
+                    if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
+                        SKStoreReviewController.requestReview(in: scene)
+                    }
+                }) {
                     CellView(image: "hand.thumbsup", text: "Rate Our App")
                 }
                 .padding(.top, 30)

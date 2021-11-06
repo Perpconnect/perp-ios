@@ -13,6 +13,9 @@ struct SetorderView: View {
     var market: PerpetualModel.Market
     
     @ObservedObject var perpVM: PerpetualViewModel
+    
+    @State private var way = "Long"
+    var options = ["Long", "Short"]
 
     var body: some View {
         ZStack {
@@ -30,9 +33,16 @@ struct SetorderView: View {
                 
                 HStack {
                     VStack {
-                        LimitMarketSelection()
-                            .frame(height: 40)
-                        OrderFields()
+                        Picker("What is your favorite color?", selection: $way) {
+                                ForEach(options, id: \.self) {
+                                    Text($0)
+                                        .foregroundColor(.white)
+                                }
+                            }
+                            .pickerStyle(.segmented)
+                            .colorMultiply(.orange)
+                    .frame(height: 40)
+                        OrderFields(isLong: way == "Long" ? true : false, market: market)
                     }
                     VStack {
                         OrderBook()
@@ -362,13 +372,38 @@ struct ContractQtyField: View {
     
     @State var orderPrice = ""
     
+    var symbol: String
+    
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 5)
                 .fill(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
                 .opacity(0.08)
             HStack {
-                TextField("Contract Qty", text: $orderPrice)
+                TextField("Amount", text: $orderPrice)
+                    .foregroundColor(.white)
+                Text(symbol)
+                    .foregroundColor(.white)
+                    .padding(.trailing, 4)
+            }
+            .foregroundColor(.white)
+            .font(.system(size: 14))
+            .padding(9)
+        }
+    }
+}
+
+struct ContractUsdField: View {
+    
+    @State var orderPrice = ""
+    
+    var body: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 5)
+                .fill(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
+                .opacity(0.08)
+            HStack {
+                TextField("Collaetral", text: $orderPrice)
                     .foregroundColor(.white)
                 Text("USD")
                     .foregroundColor(.white)
@@ -412,47 +447,77 @@ struct OrderFields: View {
     
     @State var order = 0
     
+    var isLong: Bool
+    
+    var market: PerpetualModel.Market
+    
     var body: some View {
         VStack {
             OrderPriceField()
                 .frame(height: 40)
-            ContractQtyField()
+            ContractQtyField(symbol: market.amm.symbol)
                 .frame(height: 40)
-            ContractQtyField()
+            ContractUsdField()
                 .frame(height: 40)
             
             HStack {
-                Text("Order Value")
+                Text("Entry Price")
                     .foregroundColor(.white)
                     .opacity(0.5)
                     .font(.system(size: 12))
                 
                 Spacer()
                 
-                Text("0.0000 BTC")
+                Text("0.0000 USDC")
                     .foregroundColor(.white)
                     .font(.system(size: 12))
             }
             .padding(.top, 1)
             
             HStack {
-                Text("Available")
+                Text("Liq. Price")
                     .foregroundColor(.white)
                     .opacity(0.5)
                     .font(.system(size: 12))
                 
                 Spacer()
                 
-                Text("0.0000 BTC")
+                Text("0.0000 USDC")
                     .foregroundColor(.white)
                     .font(.system(size: 12))
             }
             .padding(.top, 1)
             
             HStack {
-                LongShortButton(isLong: true)
-                    .frame(height: 50)
-                LongShortButton(isLong: false)
+                Text("Trnx Fee")
+                    .foregroundColor(.white)
+                    .opacity(0.5)
+                    .font(.system(size: 12))
+                
+                Spacer()
+                
+                Text("0.02 USDC")
+                    .foregroundColor(.white)
+                    .font(.system(size: 12))
+            }
+            .padding(.top, 1)
+            
+            HStack {
+                Text("Total Cost")
+                    .foregroundColor(.white)
+                    .opacity(0.5)
+                    .font(.system(size: 12))
+                
+                Spacer()
+                
+                Text("16.86 USDC")
+                    .foregroundColor(.white)
+                    .font(.system(size: 12))
+            }
+            .padding(.top, 1)
+            
+            HStack {
+                LongShortButton(isLong: isLong)
                     .frame(height: 50)
             }
         }
