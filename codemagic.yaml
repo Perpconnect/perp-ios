@@ -3,7 +3,7 @@ workflows:
       name: iOS Workflow
       environment:
         vars:
-          XCODE_WORKSPACE: "Perp.xcworkspace" # <-- Put the name of your workspace here.
+          XCODE_WORKSPACE: "Perp.project" # <-- Put the name of your workspace here.
           XCODE_SCHEME: "Perp" # <-- Put the name of your scheme here.
           BUNDLE_ID: "com.beauth.perpetual" # <-- Put your Bundle Id here.
           # https://docs.codemagic.io/code-signing-yaml/signing-ios/
@@ -51,7 +51,7 @@ workflows:
             agvtool new-version -all $(($(app-store-connect get-latest-testflight-build-number "$APP_STORE_APP_ID") + 1))
         - name: Build ipa for distribution
           script: |
-            xcode-project build-ipa --workspace "$XCODE_WORKSPACE" --scheme "$XCODE_SCHEME" --verbose
+            xcode-project build-ipa --project "$XCODE_WORKSPACE" --scheme "$XCODE_SCHEME" --verbose
       artifacts:
         - build/ios/ipa/*.ipa
         - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
