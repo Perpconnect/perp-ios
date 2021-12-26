@@ -13,8 +13,12 @@ struct MarketListItem: View {
     
     var body: some View {
         HStack {
+            Image(market.amm.symbol)
+                .resizable()
+                .frame(width: 35, height: 35)
+                .padding(.trailing)
             VStack(alignment: .leading) {
-                Text(market.amm.pair)
+                Text(market.amm.symbol)
                     .font(.system(size: 16))
                     .fontWeight(.semibold)
                     .foregroundColor(.white)
@@ -28,20 +32,9 @@ struct MarketListItem: View {
                     .font(.system(size: 16))
                     .fontWeight(.semibold)
                     .foregroundColor(.white)
-                Text("4.24B USD")
+                Text("")
                     .font(.system(size: 12))
                     .foregroundColor(Color(#colorLiteral(red: 0.482352972, green: 0.482286036, blue: 0.4909058213, alpha: 1)))
-            }
-            Spacer()
-            ZStack {
-                RoundedRectangle(cornerRadius: 5)
-                    .frame(width: 70, height: 35)
-                    .foregroundColor(Color(#colorLiteral(red: 0.1674466133, green: 0.6666144133, blue: 0.3709976077, alpha: 1)))
-                
-                Text("+5.11%")
-                    .foregroundColor(.white)
-                    .fontWeight(.bold)
-                    .font(.system(size: 12))
             }
         }
         .padding(.horizontal)

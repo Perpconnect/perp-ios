@@ -57,33 +57,6 @@ class PerpetualViewModel: ObservableObject {
                 }
             }
         }
-                
-        Network.shared.apollo.fetch(query: GetPositionQuery(address: "0xb99e4a2a0a72cf2f15c29ca4b5a42d9c41cb0f33")) { graphQlResult in
-            switch(graphQlResult) {
-                
-            case .success(let result):
-                if let allPositions = result.data?.position?.ammPositions {
-                    for position in allPositions {
-                        
-                        self.model.sync(position:
-                            PerpetualModel.Position(
-                                symbol: "LINK",
-                                amount: position.margin,
-                                notional: position.openNotional,
-                                entry: position.entryPrice,
-                                mark: "poooo",
-                                liquadation: position.liquidationPenalty,
-                                leverage: position.leverage,
-                                pnl: position.totalPnlAmount
-                            )
-                        )
-                    }
-                }
-                
-            case .failure(let error):
-                print("Error: \(error)")
-            }
-        }
     }
     
 }

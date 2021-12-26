@@ -32,9 +32,8 @@ struct MarketView: View {
                     HStack {
                         Text("Trading Pairs")
                         Spacer()
-                        Text("Price / Vol")
-                        Spacer()
-                        Text("24H Change")
+                        Text("Price")
+                        
                     }
                     .foregroundColor(Color(#colorLiteral(red: 0.482352972, green: 0.482286036, blue: 0.4909058213, alpha: 1)))
                     .font(.system(size: 12))
@@ -45,8 +44,10 @@ struct MarketView: View {
                         ForEach(perpVM.markets) { market in
                             NavigationLink(destination: SetorderView(market: market, perpVM: perpVM)) {
                                 MarketListItem(market: market)
+                                    .padding(.bottom, 5)
                             }
                         }
+                        .padding(.bottom)
                     }
                 }
             }

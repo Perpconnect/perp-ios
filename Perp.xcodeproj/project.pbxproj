@@ -3,13 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F2050C5098CDF11C3CBCFD3 /* Pods_Perp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B18323034C452A8D536C24E2 /* Pods_Perp.framework */; };
 		BC06C12626F61D3500A47812 /* TokenBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC06C12526F61D3500A47812 /* TokenBalance.swift */; };
 		BC06C12D26F6203200A47812 /* xDaiTokenBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC06C12C26F6203200A47812 /* xDaiTokenBalance.swift */; };
+		BC0A9CC32754F7D60000B7C0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BC0A9CC22754F7D60000B7C0 /* Alamofire */; };
+		BC0A9CC62754F8A30000B7C0 /* TorusSwiftDirectSDK in Frameworks */ = {isa = PBXBuildFile; productRef = BC0A9CC52754F8A30000B7C0 /* TorusSwiftDirectSDK */; };
+		BC0A9CC92754FBB70000B7C0 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = BC0A9CC82754FBB70000B7C0 /* Apollo */; };
+		BC0A9CCB2754FBB70000B7C0 /* ApolloAPI in Frameworks */ = {isa = PBXBuildFile; productRef = BC0A9CCA2754FBB70000B7C0 /* ApolloAPI */; };
+		BC0A9CCD2754FBB70000B7C0 /* ApolloWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = BC0A9CCC2754FBB70000B7C0 /* ApolloWebSocket */; };
+		BC0A9CD02754FC930000B7C0 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = BC0A9CCF2754FC930000B7C0 /* Lottie */; };
+		BC0A9CD3275500140000B7C0 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = BC0A9CD2275500140000B7C0 /* SDWebImageSwiftUI */; };
 		BC12EEA327368DDA009237BF /* GetPrivateKeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12EEA227368DDA009237BF /* GetPrivateKeyView.swift */; };
 		BC1EC81C26E8D05200F28F2D /* AmmInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1EC81B26E8D05200F28F2D /* AmmInfo.swift */; };
 		BC2FFE6E26C4166B0001FDD4 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2FFE6D26C4166B0001FDD4 /* Tab.swift */; };
@@ -59,9 +65,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0ABA311F1473FFEC9081163A /* Pods-Perp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Perp.debug.xcconfig"; path = "Target Support Files/Pods-Perp/Pods-Perp.debug.xcconfig"; sourceTree = "<group>"; };
-		62F5EF98C193CE63DFB17DA1 /* Pods-Perp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Perp.release.xcconfig"; path = "Target Support Files/Pods-Perp/Pods-Perp.release.xcconfig"; sourceTree = "<group>"; };
-		B18323034C452A8D536C24E2 /* Pods_Perp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Perp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC06C12526F61D3500A47812 /* TokenBalance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenBalance.swift; sourceTree = "<group>"; };
 		BC06C12C26F6203200A47812 /* xDaiTokenBalance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xDaiTokenBalance.swift; sourceTree = "<group>"; };
 		BC12EEA227368DDA009237BF /* GetPrivateKeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPrivateKeyView.swift; sourceTree = "<group>"; };
@@ -106,7 +109,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F2050C5098CDF11C3CBCFD3 /* Pods_Perp.framework in Frameworks */,
+				BC0A9CD3275500140000B7C0 /* SDWebImageSwiftUI in Frameworks */,
+				BC0A9CC62754F8A30000B7C0 /* TorusSwiftDirectSDK in Frameworks */,
+				BC0A9CC92754FBB70000B7C0 /* Apollo in Frameworks */,
+				BC0A9CCD2754FBB70000B7C0 /* ApolloWebSocket in Frameworks */,
+				BC0A9CCB2754FBB70000B7C0 /* ApolloAPI in Frameworks */,
+				BC0A9CC32754F7D60000B7C0 /* Alamofire in Frameworks */,
+				BC0A9CD02754FC930000B7C0 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,8 +154,6 @@
 				BCCCB2AF26E2640200B26878 /* .swiftlint.yml */,
 				BC7363CD26C0EF2600C9E753 /* Perp */,
 				BC7363CC26C0EF2600C9E753 /* Products */,
-				C958DEB36F455E87A1DB7F0F /* Pods */,
-				C85141BD2035A70C844A5F06 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -286,23 +293,6 @@
 			path = Lottie;
 			sourceTree = "<group>";
 		};
-		C85141BD2035A70C844A5F06 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B18323034C452A8D536C24E2 /* Pods_Perp.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C958DEB36F455E87A1DB7F0F /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				0ABA311F1473FFEC9081163A /* Pods-Perp.debug.xcconfig */,
-				62F5EF98C193CE63DFB17DA1 /* Pods-Perp.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -310,20 +300,26 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BC7363DA26C0EF2F00C9E753 /* Build configuration list for PBXNativeTarget "Perp" */;
 			buildPhases = (
-				083232322BF876F5D4B3C13F /* [CP] Check Pods Manifest.lock */,
 				BC7363C726C0EF2600C9E753 /* Sources */,
 				BC7363C826C0EF2600C9E753 /* Frameworks */,
 				BC7363C926C0EF2600C9E753 /* Resources */,
 				BCCCB2AB26E2639000B26878 /* ShellScript */,
 				BC447FF626E427A900F6357A /* Embed Frameworks */,
-				BC4573CB271C55F100A61708 /* Generate Apollo GraphQL API */,
-				80C192B96F9ACFCAF6C0E8AC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Perp;
+			packageProductDependencies = (
+				BC0A9CC22754F7D60000B7C0 /* Alamofire */,
+				BC0A9CC52754F8A30000B7C0 /* TorusSwiftDirectSDK */,
+				BC0A9CC82754FBB70000B7C0 /* Apollo */,
+				BC0A9CCA2754FBB70000B7C0 /* ApolloAPI */,
+				BC0A9CCC2754FBB70000B7C0 /* ApolloWebSocket */,
+				BC0A9CCF2754FC930000B7C0 /* Lottie */,
+				BC0A9CD2275500140000B7C0 /* SDWebImageSwiftUI */,
+			);
 			productName = Perp;
 			productReference = BC7363CB26C0EF2600C9E753 /* Perp.app */;
 			productType = "com.apple.product-type.application";
@@ -351,6 +347,13 @@
 				Base,
 			);
 			mainGroup = BC7363C226C0EF2600C9E753;
+			packageReferences = (
+				BC0A9CC12754F7D60000B7C0 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				BC0A9CC42754F8A30000B7C0 /* XCRemoteSwiftPackageReference "torus-direct-swift-sdk" */,
+				BC0A9CC72754FBB70000B7C0 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				BC0A9CCE2754FC930000B7C0 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				BC0A9CD1275500140000B7C0 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = BC7363CC26C0EF2600C9E753 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -378,63 +381,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		083232322BF876F5D4B3C13F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Perp-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		80C192B96F9ACFCAF6C0E8AC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Perp/Pods-Perp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Perp/Pods-Perp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Perp/Pods-Perp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BC4573CB271C55F100A61708 /* Generate Apollo GraphQL API */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Generate Apollo GraphQL API";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Don't run this during index builds\nif [ $ACTION = \"indexbuild\" ]; then exit 0; fi\n\nSCRIPT_PATH=\"${PODS_ROOT}/Apollo/scripts\"\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"schema.json\" API.swift\n\n\n";
-		};
 		BCCCB2AB26E2639000B26878 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -546,7 +492,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -603,7 +549,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -615,13 +561,12 @@
 		};
 		BC7363DB26C0EF2F00C9E753 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0ABA311F1473FFEC9081163A /* Pods-Perp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Perp/Preview Content\"";
 				DEVELOPMENT_TEAM = FYS9RNAGTV;
 				ENABLE_PREVIEWS = YES;
@@ -632,7 +577,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.beauth.perpetual;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -643,13 +588,12 @@
 		};
 		BC7363DC26C0EF2F00C9E753 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 62F5EF98C193CE63DFB17DA1 /* Pods-Perp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Perp/Preview Content\"";
 				DEVELOPMENT_TEAM = FYS9RNAGTV;
 				ENABLE_PREVIEWS = YES;
@@ -660,7 +604,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.beauth.perpetual;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -691,6 +635,87 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BC0A9CC12754F7D60000B7C0 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		BC0A9CC42754F8A30000B7C0 /* XCRemoteSwiftPackageReference "torus-direct-swift-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/torusresearch/torus-direct-swift-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		BC0A9CC72754FBB70000B7C0 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.0;
+			};
+		};
+		BC0A9CCE2754FC930000B7C0 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		BC0A9CD1275500140000B7C0 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BC0A9CC22754F7D60000B7C0 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC0A9CC12754F7D60000B7C0 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		BC0A9CC52754F8A30000B7C0 /* TorusSwiftDirectSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC0A9CC42754F8A30000B7C0 /* XCRemoteSwiftPackageReference "torus-direct-swift-sdk" */;
+			productName = TorusSwiftDirectSDK;
+		};
+		BC0A9CC82754FBB70000B7C0 /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC0A9CC72754FBB70000B7C0 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+		BC0A9CCA2754FBB70000B7C0 /* ApolloAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC0A9CC72754FBB70000B7C0 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloAPI;
+		};
+		BC0A9CCC2754FBB70000B7C0 /* ApolloWebSocket */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC0A9CC72754FBB70000B7C0 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloWebSocket;
+		};
+		BC0A9CCF2754FC930000B7C0 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC0A9CCE2754FC930000B7C0 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		BC0A9CD2275500140000B7C0 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC0A9CD1275500140000B7C0 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BC7363C326C0EF2600C9E753 /* Project object */;
 }

@@ -15,7 +15,7 @@ let covalentAPIKey = "ckey_84935203df434b2c99ed14e4d7b"
 let apiURL = "https://lo2iojj675.execute-api.ap-south-1.amazonaws.com/main"
 
 let amms = [
-    AmmInfo(symbol: "ETH", name: "Ethereum", pair: "ETH/USDC", address: "0x8d22F1a9dCe724D8c1B4c688D75f17A2fE2D32df"),
+    AmmInfo(symbol: "PERP", name: "Perpetual Protocol", pair: "PERP/USDC", address: "0xfcAE57DB10356FCf76B6476B21ac14C504a45128"),
     AmmInfo(symbol: "BTC", name: "Bitcoin", pair: "BTC/USDC", address: "0x0f346e19F01471C02485DF1758cfd3d624E399B4"),
     AmmInfo(symbol: "YFI", name: "Fiscus", pair: "YFI/USDC", address: "0xd41025350582674144102B74B8248550580bb869"),
     AmmInfo(symbol: "DOT", name: "Polkadot", pair: "DOT/USDC", address: "0x6de775aaBEEedE8EFdB1a257198d56A3aC18C2FD"),
@@ -25,7 +25,7 @@ let amms = [
     AmmInfo(symbol: "SUSHI", name: "Sushi", pair: "SUSHI/USDC", address: "0xF559668108Ff57745D5e3077B0A7Dd92FFc6300c"),
     AmmInfo(symbol: "COMP", name: "Compound", pair: "COMP/USDC", address: "0x33FbaeFb2dCc3B7e0B80afbB4377C2EB64AF0a3A"),
     AmmInfo(symbol: "REN", name: "Ren", pair: "REN/USDC", address: "0x922F28072BaBe6EA0C0c25cCD367Fda0748a5EC7"),
-    AmmInfo(symbol: "PERP", name: "Perpetual Protocol", pair: "PERP/USDC", address: "0xfcAE57DB10356FCf76B6476B21ac14C504a45128"),
+    AmmInfo(symbol: "ETH", name: "Ethereum", pair: "ETH/USDC", address: "0x8d22F1a9dCe724D8c1B4c688D75f17A2fE2D32df"),
     AmmInfo(symbol: "UNI", name: "Uniswap", pair: "UNI/USDC", address: "0xeaC6CEE594EdD353351BaBc145C624849Bb70b11"),
     AmmInfo(symbol: "CRV", name: "Curve", pair: "CRV/USDC", address: "0xAB08fF2c726F2F333802630EE19F4146385CC343"),
     AmmInfo(symbol: "MKR", name: "Maker", pair: "MKR/USDC", address: "0xb48F7aCcc03a3C64114170291F352b37eEa26c0B"),
