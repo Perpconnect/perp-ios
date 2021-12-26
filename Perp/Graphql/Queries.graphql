@@ -1,0 +1,52 @@
+query GetAmm($address: ID!) {
+  amm(id: $address) {
+    id
+    positionBalance
+    openInterestSize
+    openInterestNotional
+    quoteAssetReserve
+    baseAssetReserve
+    tradingVolume
+    blockNumber
+    timestamp
+  }
+}
+
+query GetPosition ($address: ID!){
+  position(id: $address) {
+    id
+    trader
+    margin
+    openNotional
+    tradingVolume
+    leverage
+    realizedPnl
+    unrealizedPnl
+    fundingPayment
+    fee
+    badDebt
+    liquidationPenalty
+    totalPnlAmount
+    blockNumber
+    timestamp
+    ammPositions {
+      amm
+      margin
+      openNotional
+      tradingVolume
+      leverage
+      entryPrice
+      realizedPnl
+      unrealizedPnl
+      fundingPayment
+      fee
+      badDebt
+      liquidationPenalty
+      totalPnlAmount
+      blockNumber
+      timestamp
+    }
+  }
+}
+
+

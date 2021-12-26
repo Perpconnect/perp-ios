@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct MarketView: View {
-    init() {
+    
+    @ObservedObject var perpVM: PerpetualViewModel
+    
+    func dataInit() {
         let appearance = UINavigationBarAppearance()
         appearance.shadowColor = .clear
         appearance.backgroundColor = UIColor(backgroundColor)
@@ -19,6 +22,7 @@ struct MarketView: View {
         
         UINavigationBar.appearance().isTranslucent = false
     }
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -28,9 +32,8 @@ struct MarketView: View {
                     HStack {
                         Text("Trading Pairs")
                         Spacer()
-                        Text("Price / Vol")
-                        Spacer()
-                        Text("24H Change")
+                        Text("Price")
+                        
                     }
                     .foregroundColor(Color(#colorLiteral(red: 0.482352972, green: 0.482286036, blue: 0.4909058213, alpha: 1)))
                     .font(.system(size: 12))
@@ -38,14 +41,13 @@ struct MarketView: View {
                     .padding(.top, 5)
 
                     ScrollView {
-                        NavigationLink(destination: SetorderView()) {
-                            MarketListItem()
+                        ForEach(perpVM.markets) { market in
+                            NavigationLink(destination: SetorderView(market: market, perpVM: perpVM)) {
+                                MarketListItem(market: market)
+                                    .padding(.bottom, 5)
+                            }
                         }
-                        MarketListItem()
-                        MarketListItem()
-                        MarketListItem()
-                        MarketListItem()
-                        MarketListItem()
+                        .padding(.bottom)
                     }
                 }
             }
@@ -53,15 +55,14 @@ struct MarketView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    NavigationLink(destination: MarketView()) {
+                    NavigationLink(destination: AccountView()) {
                         Image(systemName: "person")
                             .resizable()
                             .foregroundColor(.white)
-                            .frame(width: 30, height: 30)
                     }
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    NavigationLink(destination: MarketView()) {
+                    NavigationLink(destination: AccountView()) {
                         Image(systemName: "envelope")
                             .foregroundColor(.white)
                             .frame(width: 30, height: 30)
@@ -70,11 +71,9 @@ struct MarketView: View {
             }
         }
         .accentColor(.white)
-    }
-}
-
-struct MarketView_Previews: PreviewProvider {
-    static var previews: some View {
-        MarketView()
+        .onAppear(perform: {
+            dataInit()
+            perpVM.syncData()
+        })
     }
 }

@@ -7,10 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BC036F9726E4B78B0028E590 /* ApolloWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = BC036F9626E4B78B0028E590 /* ApolloWebSocket */; };
-		BC036F9926E4B78B0028E590 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = BC036F9826E4B78B0028E590 /* Apollo */; };
-		BC036F9B26E4B78B0028E590 /* ApolloUtils in Frameworks */ = {isa = PBXBuildFile; productRef = BC036F9A26E4B78B0028E590 /* ApolloUtils */; };
-		BC036F9D26E4B78B0028E590 /* ApolloAPI in Frameworks */ = {isa = PBXBuildFile; productRef = BC036F9C26E4B78B0028E590 /* ApolloAPI */; };
+		BC06C12626F61D3500A47812 /* TokenBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC06C12526F61D3500A47812 /* TokenBalance.swift */; };
+		BC06C12D26F6203200A47812 /* xDaiTokenBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC06C12C26F6203200A47812 /* xDaiTokenBalance.swift */; };
+		BC0A9CC32754F7D60000B7C0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BC0A9CC22754F7D60000B7C0 /* Alamofire */; };
+		BC0A9CC62754F8A30000B7C0 /* TorusSwiftDirectSDK in Frameworks */ = {isa = PBXBuildFile; productRef = BC0A9CC52754F8A30000B7C0 /* TorusSwiftDirectSDK */; };
+		BC0A9CC92754FBB70000B7C0 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = BC0A9CC82754FBB70000B7C0 /* Apollo */; };
+		BC0A9CCB2754FBB70000B7C0 /* ApolloAPI in Frameworks */ = {isa = PBXBuildFile; productRef = BC0A9CCA2754FBB70000B7C0 /* ApolloAPI */; };
+		BC0A9CCD2754FBB70000B7C0 /* ApolloWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = BC0A9CCC2754FBB70000B7C0 /* ApolloWebSocket */; };
+		BC0A9CD02754FC930000B7C0 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = BC0A9CCF2754FC930000B7C0 /* Lottie */; };
+		BC0A9CD3275500140000B7C0 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = BC0A9CD2275500140000B7C0 /* SDWebImageSwiftUI */; };
+		BC12EEA327368DDA009237BF /* GetPrivateKeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12EEA227368DDA009237BF /* GetPrivateKeyView.swift */; };
+		BC1EC81C26E8D05200F28F2D /* AmmInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1EC81B26E8D05200F28F2D /* AmmInfo.swift */; };
 		BC2FFE6E26C4166B0001FDD4 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2FFE6D26C4166B0001FDD4 /* Tab.swift */; };
 		BC2FFE7126C416B10001FDD4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2FFE7026C416B10001FDD4 /* LoginViewModel.swift */; };
 		BC447FF826E429E200F6357A /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = BC447FF726E429E200F6357A /* schema.json */; };
@@ -23,17 +30,25 @@
 		BC7363D626C0EF2F00C9E753 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC7363D526C0EF2F00C9E753 /* Preview Assets.xcassets */; };
 		BC7363E426C0FD8F00C9E753 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7363E326C0FD8F00C9E753 /* LoginView.swift */; };
 		BC7477D526DFD2650028CA71 /* AssetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7477D426DFD2650028CA71 /* AssetsView.swift */; };
+		BC96A4DD26ECAF9F00F8B8B9 /* Market.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC96A4DC26ECAF9F00F8B8B9 /* Market.swift */; };
+		BC96A4DF26ECB41700F8B8B9 /* MarketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC96A4DE26ECB41700F8B8B9 /* MarketViewModel.swift */; };
+		BC96A4E126ECC7FC00F8B8B9 /* MarketDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC96A4E026ECC7FC00F8B8B9 /* MarketDataViewModel.swift */; };
+		BC96A4EB26ECF01800F8B8B9 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC96A4EA26ECF01800F8B8B9 /* AccountView.swift */; };
+		BC96A4F026ECF14000F8B8B9 /* RewardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC96A4EF26ECF14000F8B8B9 /* RewardsView.swift */; };
+		BC96A4F226ECF19B00F8B8B9 /* StakingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC96A4F126ECF19B00F8B8B9 /* StakingView.swift */; };
 		BC9AF4E926C7B95B006D8887 /* MarketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9AF4E826C7B95B006D8887 /* MarketView.swift */; };
 		BC9AF4EF26C7C777006D8887 /* MarketListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9AF4EE26C7C777006D8887 /* MarketListItem.swift */; };
 		BCB4F8CA26E16CD5006DB5AD /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB4F8C926E16CD5006DB5AD /* OnboardingView.swift */; };
-		BCCCB2AA26E2628000B26878 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = BCCCB2A926E2628000B26878 /* Lottie */; };
+		BCC2C7F527313055001A9C3B /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC2C7F427313055001A9C3B /* API.swift */; };
 		BCCCB2B026E2640200B26878 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = BCCCB2AF26E2640200B26878 /* .swiftlint.yml */; };
 		BCCCB2B226E26D1500B26878 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCB2B126E26D1500B26878 /* LottieView.swift */; };
 		BCCCB2B526E2754900B26878 /* stake.json in Resources */ = {isa = PBXBuildFile; fileRef = BCCCB2B426E2754900B26878 /* stake.json */; };
 		BCCCB2B726E2759C00B26878 /* leverage.json in Resources */ = {isa = PBXBuildFile; fileRef = BCCCB2B626E2759B00B26878 /* leverage.json */; };
-		BCD07E3C26D14E3500781E28 /* TorusSwiftDirectSDK in Frameworks */ = {isa = PBXBuildFile; productRef = BCD07E3B26D14E3500781E28 /* TorusSwiftDirectSDK */; };
 		BCD07E5126D18E8200781E28 /* PerpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD07E5026D18E8200781E28 /* PerpApp.swift */; };
 		BCD323F126E1652F00B25C4A /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD323F026E1652F00B25C4A /* Globals.swift */; };
+		BCD48CBA2733328700D7CF3F /* AssetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD48CB92733328700D7CF3F /* AssetViewModel.swift */; };
+		BCF8B517272C295900C54866 /* PerpetualModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF8B516272C295900C54866 /* PerpetualModel.swift */; };
+		BCF8B519272C2DA800C54866 /* PerpetualViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF8B518272C2DA800C54866 /* PerpetualViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -50,6 +65,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BC06C12526F61D3500A47812 /* TokenBalance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenBalance.swift; sourceTree = "<group>"; };
+		BC06C12C26F6203200A47812 /* xDaiTokenBalance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xDaiTokenBalance.swift; sourceTree = "<group>"; };
+		BC12EEA227368DDA009237BF /* GetPrivateKeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPrivateKeyView.swift; sourceTree = "<group>"; };
+		BC1EC81B26E8D05200F28F2D /* AmmInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmmInfo.swift; sourceTree = "<group>"; };
 		BC2FFE6D26C4166B0001FDD4 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		BC2FFE7026C416B10001FDD4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		BC447FF726E429E200F6357A /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
@@ -64,15 +83,25 @@
 		BC7363D726C0EF2F00C9E753 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC7363E326C0FD8F00C9E753 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		BC7477D426DFD2650028CA71 /* AssetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsView.swift; sourceTree = "<group>"; };
+		BC96A4DC26ECAF9F00F8B8B9 /* Market.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Market.swift; sourceTree = "<group>"; };
+		BC96A4DE26ECB41700F8B8B9 /* MarketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketViewModel.swift; sourceTree = "<group>"; };
+		BC96A4E026ECC7FC00F8B8B9 /* MarketDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDataViewModel.swift; sourceTree = "<group>"; };
+		BC96A4EA26ECF01800F8B8B9 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		BC96A4EF26ECF14000F8B8B9 /* RewardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsView.swift; sourceTree = "<group>"; };
+		BC96A4F126ECF19B00F8B8B9 /* StakingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StakingView.swift; sourceTree = "<group>"; };
 		BC9AF4E826C7B95B006D8887 /* MarketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketView.swift; sourceTree = "<group>"; };
 		BC9AF4EE26C7C777006D8887 /* MarketListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketListItem.swift; sourceTree = "<group>"; };
 		BCB4F8C926E16CD5006DB5AD /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		BCC2C7F427313055001A9C3B /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = Perp/API.swift; sourceTree = SOURCE_ROOT; };
 		BCCCB2AF26E2640200B26878 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		BCCCB2B126E26D1500B26878 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		BCCCB2B426E2754900B26878 /* stake.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stake.json; sourceTree = "<group>"; };
 		BCCCB2B626E2759B00B26878 /* leverage.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = leverage.json; sourceTree = "<group>"; };
 		BCD07E5026D18E8200781E28 /* PerpApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerpApp.swift; sourceTree = "<group>"; };
 		BCD323F026E1652F00B25C4A /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		BCD48CB92733328700D7CF3F /* AssetViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetViewModel.swift; sourceTree = "<group>"; };
+		BCF8B516272C295900C54866 /* PerpetualModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerpetualModel.swift; sourceTree = "<group>"; };
+		BCF8B518272C2DA800C54866 /* PerpetualViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerpetualViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,12 +109,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC036F9D26E4B78B0028E590 /* ApolloAPI in Frameworks */,
-				BCD07E3C26D14E3500781E28 /* TorusSwiftDirectSDK in Frameworks */,
-				BC036F9B26E4B78B0028E590 /* ApolloUtils in Frameworks */,
-				BC036F9926E4B78B0028E590 /* Apollo in Frameworks */,
-				BC036F9726E4B78B0028E590 /* ApolloWebSocket in Frameworks */,
-				BCCCB2AA26E2628000B26878 /* Lottie in Frameworks */,
+				BC0A9CD3275500140000B7C0 /* SDWebImageSwiftUI in Frameworks */,
+				BC0A9CC62754F8A30000B7C0 /* TorusSwiftDirectSDK in Frameworks */,
+				BC0A9CC92754FBB70000B7C0 /* Apollo in Frameworks */,
+				BC0A9CCD2754FBB70000B7C0 /* ApolloWebSocket in Frameworks */,
+				BC0A9CCB2754FBB70000B7C0 /* ApolloAPI in Frameworks */,
+				BC0A9CC32754F7D60000B7C0 /* Alamofire in Frameworks */,
+				BC0A9CD02754FC930000B7C0 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +133,7 @@
 		BC447FFD26E42B3C00F6357A /* Graphql */ = {
 			isa = PBXGroup;
 			children = (
+				BCC2C7F427313055001A9C3B /* API.swift */,
 				BC447FFB26E42A8200F6357A /* Queries.graphql */,
 				BC447FFE26E42B5200F6357A /* Apollo.swift */,
 			);
@@ -165,8 +196,9 @@
 		BC7363DE26C0FB9500C9E753 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BC96A4EE26ECF13100F8B8B9 /* Rewards */,
+				BC96A4ED26ECF12B00F8B8B9 /* Staking */,
 				BCCCB2B126E26D1500B26878 /* LottieView.swift */,
-				BC56E96426E4B61700703C64 /* Orders */,
 				BC7477D326DFD2530028CA71 /* Assets */,
 				BC9AF4EB26C7C2F3006D8887 /* Market */,
 				BC7363E326C0FD8F00C9E753 /* LoginView.swift */,
@@ -180,6 +212,10 @@
 			isa = PBXGroup;
 			children = (
 				BC2FFE7026C416B10001FDD4 /* LoginViewModel.swift */,
+				BC96A4DE26ECB41700F8B8B9 /* MarketViewModel.swift */,
+				BC96A4E026ECC7FC00F8B8B9 /* MarketDataViewModel.swift */,
+				BCD48CB92733328700D7CF3F /* AssetViewModel.swift */,
+				BCF8B518272C2DA800C54866 /* PerpetualViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -187,6 +223,11 @@
 		BC7363E126C0FBA300C9E753 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BC1EC81B26E8D05200F28F2D /* AmmInfo.swift */,
+				BC96A4DC26ECAF9F00F8B8B9 /* Market.swift */,
+				BC06C12526F61D3500A47812 /* TokenBalance.swift */,
+				BC06C12C26F6203200A47812 /* xDaiTokenBalance.swift */,
+				BCF8B516272C295900C54866 /* PerpetualModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -199,9 +240,36 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		BC96A4EC26ECF02000F8B8B9 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				BC96A4EA26ECF01800F8B8B9 /* AccountView.swift */,
+				BC12EEA227368DDA009237BF /* GetPrivateKeyView.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		BC96A4ED26ECF12B00F8B8B9 /* Staking */ = {
+			isa = PBXGroup;
+			children = (
+				BC96A4F126ECF19B00F8B8B9 /* StakingView.swift */,
+			);
+			path = Staking;
+			sourceTree = "<group>";
+		};
+		BC96A4EE26ECF13100F8B8B9 /* Rewards */ = {
+			isa = PBXGroup;
+			children = (
+				BC96A4EF26ECF14000F8B8B9 /* RewardsView.swift */,
+			);
+			path = Rewards;
+			sourceTree = "<group>";
+		};
 		BC9AF4EB26C7C2F3006D8887 /* Market */ = {
 			isa = PBXGroup;
 			children = (
+				BC96A4EC26ECF02000F8B8B9 /* Account */,
+				BC56E96426E4B61700703C64 /* Orders */,
 				BC9AF4EC26C7C301006D8887 /* Helpers */,
 				BC9AF4E826C7B95B006D8887 /* MarketView.swift */,
 			);
@@ -244,12 +312,13 @@
 			);
 			name = Perp;
 			packageProductDependencies = (
-				BCD07E3B26D14E3500781E28 /* TorusSwiftDirectSDK */,
-				BCCCB2A926E2628000B26878 /* Lottie */,
-				BC036F9626E4B78B0028E590 /* ApolloWebSocket */,
-				BC036F9826E4B78B0028E590 /* Apollo */,
-				BC036F9A26E4B78B0028E590 /* ApolloUtils */,
-				BC036F9C26E4B78B0028E590 /* ApolloAPI */,
+				BC0A9CC22754F7D60000B7C0 /* Alamofire */,
+				BC0A9CC52754F8A30000B7C0 /* TorusSwiftDirectSDK */,
+				BC0A9CC82754FBB70000B7C0 /* Apollo */,
+				BC0A9CCA2754FBB70000B7C0 /* ApolloAPI */,
+				BC0A9CCC2754FBB70000B7C0 /* ApolloWebSocket */,
+				BC0A9CCF2754FC930000B7C0 /* Lottie */,
+				BC0A9CD2275500140000B7C0 /* SDWebImageSwiftUI */,
 			);
 			productName = Perp;
 			productReference = BC7363CB26C0EF2600C9E753 /* Perp.app */;
@@ -279,9 +348,11 @@
 			);
 			mainGroup = BC7363C226C0EF2600C9E753;
 			packageReferences = (
-				BCD07E3A26D14E3500781E28 /* XCRemoteSwiftPackageReference "torus-direct-swift-sdk" */,
-				BCCCB2A826E2628000B26878 /* XCRemoteSwiftPackageReference "lottie-ios" */,
-				BC036F9526E4B78B0028E590 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				BC0A9CC12754F7D60000B7C0 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				BC0A9CC42754F8A30000B7C0 /* XCRemoteSwiftPackageReference "torus-direct-swift-sdk" */,
+				BC0A9CC72754FBB70000B7C0 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				BC0A9CCE2754FC930000B7C0 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				BC0A9CD1275500140000B7C0 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = BC7363CC26C0EF2600C9E753 /* Products */;
 			projectDirPath = "";
@@ -337,17 +408,31 @@
 				BC9AF4EF26C7C777006D8887 /* MarketListItem.swift in Sources */,
 				BC7477D526DFD2650028CA71 /* AssetsView.swift in Sources */,
 				BCB4F8CA26E16CD5006DB5AD /* OnboardingView.swift in Sources */,
+				BC96A4F026ECF14000F8B8B9 /* RewardsView.swift in Sources */,
+				BC96A4F226ECF19B00F8B8B9 /* StakingView.swift in Sources */,
+				BCF8B519272C2DA800C54866 /* PerpetualViewModel.swift in Sources */,
+				BCC2C7F527313055001A9C3B /* API.swift in Sources */,
+				BC96A4DF26ECB41700F8B8B9 /* MarketViewModel.swift in Sources */,
+				BC06C12D26F6203200A47812 /* xDaiTokenBalance.swift in Sources */,
+				BC12EEA327368DDA009237BF /* GetPrivateKeyView.swift in Sources */,
 				BC7363E426C0FD8F00C9E753 /* LoginView.swift in Sources */,
 				BC56E96626E4B63300703C64 /* SetorderView.swift in Sources */,
 				BC7363D126C0EF2600C9E753 /* ContentView.swift in Sources */,
 				BC447FFF26E42B5200F6357A /* Apollo.swift in Sources */,
 				BC9AF4E926C7B95B006D8887 /* MarketView.swift in Sources */,
+				BCF8B517272C295900C54866 /* PerpetualModel.swift in Sources */,
 				BCD07E5126D18E8200781E28 /* PerpApp.swift in Sources */,
 				BC2FFE6E26C4166B0001FDD4 /* Tab.swift in Sources */,
 				BC2FFE7126C416B10001FDD4 /* LoginViewModel.swift in Sources */,
+				BC96A4E126ECC7FC00F8B8B9 /* MarketDataViewModel.swift in Sources */,
+				BC96A4EB26ECF01800F8B8B9 /* AccountView.swift in Sources */,
+				BC96A4DD26ECAF9F00F8B8B9 /* Market.swift in Sources */,
 				BC447FFA26E42A5800F6357A /* MarketRepository.swift in Sources */,
+				BC06C12626F61D3500A47812 /* TokenBalance.swift in Sources */,
 				BCCCB2B226E26D1500B26878 /* LottieView.swift in Sources */,
+				BC1EC81C26E8D05200F28F2D /* AmmInfo.swift in Sources */,
 				BCD323F126E1652F00B25C4A /* Globals.swift in Sources */,
+				BCD48CBA2733328700D7CF3F /* AssetViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +477,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -406,7 +492,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -454,6 +540,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -462,7 +549,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -477,20 +564,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Perp/Preview Content\"";
 				DEVELOPMENT_TEAM = FYS9RNAGTV;
 				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = Perp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.beauth.perpetual;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -501,20 +591,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Perp/Preview Content\"";
 				DEVELOPMENT_TEAM = FYS9RNAGTV;
 				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = Perp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.beauth.perpetual;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -544,62 +637,83 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		BC036F9526E4B78B0028E590 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+		BC0A9CC12754F7D60000B7C0 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.48.0;
+				minimumVersion = 5.0.0;
 			};
 		};
-		BCCCB2A826E2628000B26878 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.2.3;
-			};
-		};
-		BCD07E3A26D14E3500781E28 /* XCRemoteSwiftPackageReference "torus-direct-swift-sdk" */ = {
+		BC0A9CC42754F8A30000B7C0 /* XCRemoteSwiftPackageReference "torus-direct-swift-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/torusresearch/torus-direct-swift-sdk";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.3.1;
+				minimumVersion = 1.0.0;
+			};
+		};
+		BC0A9CC72754FBB70000B7C0 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.0;
+			};
+		};
+		BC0A9CCE2754FC930000B7C0 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		BC0A9CD1275500140000B7C0 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		BC036F9626E4B78B0028E590 /* ApolloWebSocket */ = {
+		BC0A9CC22754F7D60000B7C0 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = BC036F9526E4B78B0028E590 /* XCRemoteSwiftPackageReference "apollo-ios" */;
-			productName = ApolloWebSocket;
+			package = BC0A9CC12754F7D60000B7C0 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
-		BC036F9826E4B78B0028E590 /* Apollo */ = {
+		BC0A9CC52754F8A30000B7C0 /* TorusSwiftDirectSDK */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = BC036F9526E4B78B0028E590 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			package = BC0A9CC42754F8A30000B7C0 /* XCRemoteSwiftPackageReference "torus-direct-swift-sdk" */;
+			productName = TorusSwiftDirectSDK;
+		};
+		BC0A9CC82754FBB70000B7C0 /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC0A9CC72754FBB70000B7C0 /* XCRemoteSwiftPackageReference "apollo-ios" */;
 			productName = Apollo;
 		};
-		BC036F9A26E4B78B0028E590 /* ApolloUtils */ = {
+		BC0A9CCA2754FBB70000B7C0 /* ApolloAPI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = BC036F9526E4B78B0028E590 /* XCRemoteSwiftPackageReference "apollo-ios" */;
-			productName = ApolloUtils;
-		};
-		BC036F9C26E4B78B0028E590 /* ApolloAPI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BC036F9526E4B78B0028E590 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			package = BC0A9CC72754FBB70000B7C0 /* XCRemoteSwiftPackageReference "apollo-ios" */;
 			productName = ApolloAPI;
 		};
-		BCCCB2A926E2628000B26878 /* Lottie */ = {
+		BC0A9CCC2754FBB70000B7C0 /* ApolloWebSocket */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = BCCCB2A826E2628000B26878 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			package = BC0A9CC72754FBB70000B7C0 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloWebSocket;
+		};
+		BC0A9CCF2754FC930000B7C0 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC0A9CCE2754FC930000B7C0 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
 		};
-		BCD07E3B26D14E3500781E28 /* TorusSwiftDirectSDK */ = {
+		BC0A9CD2275500140000B7C0 /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = BCD07E3A26D14E3500781E28 /* XCRemoteSwiftPackageReference "torus-direct-swift-sdk" */;
-			productName = TorusSwiftDirectSDK;
+			package = BC0A9CD1275500140000B7C0 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
