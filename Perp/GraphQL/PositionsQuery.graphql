@@ -1,0 +1,14 @@
+query getPositions($traderAddress: ID!) {
+  trader(id: $traderAddress) {
+    positions {
+      baseToken
+      positionSize
+      openNotional
+      entryPrice
+      realizedPnl
+      fundingPayment
+      tradingFee
+      liquidationFee
+    }
+  }
+}

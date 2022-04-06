@@ -1,18 +1,17 @@
-//
-//  PerpApp.swift
-//  Perp
-//
-//  Created by Shreyas Papinwar on 22/08/21.
-//
-
 import SwiftUI
+import SDWebImage
+import SDWebImageSVGCoder
 
 @main
 struct PerpApp: App {
-
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(Session())
+                .onAppear {
+                    SDImageCodersManager.shared.addCoder(SDImageSVGCoder.shared)
+                }
         }
     }
 }

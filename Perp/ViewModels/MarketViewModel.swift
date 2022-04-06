@@ -1,58 +1,39 @@
-//
-//  MarketViewModel.swift
-//  Perp
-//
-//  Created by Shreyas Papinwar on 11/09/21.
-//
-
 import Foundation
-import Combine
-import Alamofire
 
-class MarketViewModel: ObservableObject {
-    @Published var markets = [Market]()
-        
-    init() {
-        loadData()
+final class MarketViewModel: ObservableObject {
+    @Published var market: Market
+    @Published var toggle: String = "Stats"
+    
+    @Published var position = Position()
+    
+    private let marketRepo: MarketRepositoryProtocol
+    let publicAddress = UserDefaults.standard.string(forKey: "publicAddress")!
+    
+    init(market: Market, marketRepo: MarketRepositoryProtocol = MarketRepository()) {
+        self.market = market
+        self.marketRepo = marketRepo
+        getPosition()
     }
     
-    private func loadData() {
-        var tempArray = [Market]()
-        for item in amms {
-            getPriceData(amm: item)
-            tempArray.append(Market(amm: item, currentPrice: "0", markPrice: "0", dayChange: "-0.1"))
+    func onAppear() {
+        getPosition()
+    }
+    
+    func getPosition() {
+        marketRepo.fetchPositions(traderAddress: publicAddress) { data in
+            guard let positions = data?.data?.trader?.positions else {
+                return
+            }
+
+            positions
+                .first(where: { $0.baseToken.lowercased() == self.market.baseToken.address.lowercased() })
+                .map { position in
+                    self.position.entryPrice = position.entryPrice
+                    self.position.openNotional = position.openNotional
+                    self.position.positionSize = position.positionSize
+                    
+                }
         }
-        markets = tempArray
-    }
-    
-    private func getPriceData(amm: AmmInfo) {
-        let url = covalentAPI + "/v1/pricing/historical/usd/\(amm.symbol)/"
-        
-        let current_date = get_current_date()
-
-        let params: [String: String] = ["key": covalentAPIKey, "from": get_yesterday(), "to": current_date]
-        
-        let req = AF.request(url, method: .get, parameters: params)
-        
-//        req.responseJSON { res in
-//            print(res.value)
-//        }
-    }
-    
-    private func get_current_date() -> String {
-        let dateFormatter = DateFormatter()
-
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-
-        return dateFormatter.string(from: Date())
-    }
-    
-    private func get_yesterday() -> String {
-        let dateFormatter = DateFormatter()
-
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-
-        return dateFormatter.string(from: Date().addingTimeInterval(-86400))
     }
     
 }

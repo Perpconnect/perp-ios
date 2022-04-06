@@ -1,10 +1,3 @@
-//
-//  TabView.swift
-//  Perp
-//
-//  Created by Shreyas Papinwar on 11/08/21.
-//
-
 import SwiftUI
 
 struct Tab: View {
@@ -14,31 +7,27 @@ struct Tab: View {
         UITabBar.appearance().isTranslucent = true
         
     }
-    
+        
     @State var selection = 0
+    @EnvironmentObject var session: Session
     
     let impact = UIImpactFeedbackGenerator(style: .medium)
     
     var body: some View {
         TabView {
-            MarketView(perpVM: PerpetualViewModel())
+            MarketsView()
                 .tabItem {
                     Label("Markets", systemImage: "bitcoinsign.circle.fill")
                 }
             
-//            StakingView()
-//                .tabItem {
-//                    Label("Staking", systemImage: "infinity.circle.fill")
-//                }
-//
-//            RewardsView()
-//                .tabItem {
-//                    Label("Rewards", systemImage: "gift.fill")
-//                }
-            
-            AssetsView(tokenVM: AssetViewModel())
+            AssetsView(viewModel: AssetsViewModel(publicAddress: session.publicAddress, privateKey: session.privateKey))
                 .tabItem {
-                    Label("Assets", systemImage: "creditcard.fill")
+                    Label("Account", systemImage: "creditcard.fill")
+                }
+            
+            SettingView()
+                .tabItem {
+                    Label("Setting", systemImage: "gearshape.fill")
                 }
         }
         .accentColor(Color(#colorLiteral(red: 0.9977523685, green: 0.6921175718, blue: 0.09948458523, alpha: 1)))

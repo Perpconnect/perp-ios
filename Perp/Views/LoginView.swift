@@ -1,16 +1,8 @@
-//
-//  ContentView.swift
-//  Perp
-//
-//  Created by Shreyas Papinwar on 09/08/21.
-//
-
 import SwiftUI
-import TorusSwiftDirectSDK
 
 struct LoginView: View {
     
-    @EnvironmentObject var session: LoginViewModel
+    @EnvironmentObject private var session: Session
     
     @State private var showingAlert = false
     
@@ -55,7 +47,7 @@ struct LoginView: View {
                     }
                     .padding(.top, geo.size.width * 0.08)
                     
-                    Button(action: { session.googleLogin() }) {
+                    Button(action: { session.socialLogin(provider: .GOOGLE) }) {
                         ZStack {
                             RoundedRectangle(cornerRadius: 10)
                                 .stroke(Color(#colorLiteral(red: 0.6480259299, green: 0.6540077329, blue: 0.6690028906, alpha: 1)), lineWidth: 0.5)
@@ -76,63 +68,63 @@ struct LoginView: View {
                     
                     HStack {
                         
-                        Button(action: { session.appleLogin() }) {
+                        Button(action: { session.socialLogin(provider: .APPLE) }) {
                             SocialButton(image: "applelogo", height: 30, width: 25, systemImage: true)
                         }
                         
-                        Button(action: { session.twitterLogin() }) {
+                        Button(action: { session.socialLogin(provider: .TWITTER) }) {
                             SocialButton(image: "twitter", height: 25, width: 40)
                         }
                         
-                        Button(action: {
-                            showingAlert = true
-                            // session.discordLogin()
-                        }) {
+                        Button(action: { session.socialLogin(provider: .DISCORD) }) {
                             SocialButton(image: "discord", height: 25, width: 40)
                         }
                     
                     }
                     .frame(width: geo.size.width * 0.90)
                     
-                    HStack {
-                        Spacer()
-                        Text("Powered by")
-                            .font(.body)
-                            .foregroundColor(Color(#colorLiteral(red: 0.3615116477, green: 0.4246198237, blue: 0.4969069362, alpha: 1)))
-                        Image("torus_wallet")
-                            .resizable()
-                            .frame(width: 150, height: 16)
+                    Group {
+                        HStack {
+                            Spacer()
+                            Text("Powered by")
+                                .font(.body)
+                                .foregroundColor(Color(#colorLiteral(red: 0.3615116477, green: 0.4246198237, blue: 0.4969069362, alpha: 1)))
+                            Image("web3auth")
+                                .resizable()
+                                .frame(width: 100, height: 16)
+                                .foregroundColor(.white)
+                        }
+                        .padding(.trailing, geo.size.width * 0.05)
+                        
+                        Text("OR")
                             .foregroundColor(.white)
+                            .padding(.top)
+                        
+                        SecureField("Enter Private Key", text: $session.privateKeyTextField)
+                            .padding(.horizontal)
+                        
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color(#colorLiteral(red: 0.6480259299, green: 0.6540077329, blue: 0.6690028906, alpha: 1)), lineWidth: 0.5)
+                                .foregroundColor(.white)
+                                .frame(width: geo.size.width * 0.90, height: 55)
+                            Text("Continue with private key")
+                                .foregroundColor(.white)
+                                .onTapGesture(perform: {
+                                    session.login()
+                                })
+                        }
+                        .padding()
+                        
                     }
-                    .padding(.trailing, geo.size.width * 0.05)
-                    
-                    Text("OR")
-                        .foregroundColor(.white)
-                        .padding(.top)
-                    
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color(#colorLiteral(red: 0.6480259299, green: 0.6540077329, blue: 0.6690028906, alpha: 1)), lineWidth: 0.5)
-                            .foregroundColor(.white)
-                            .frame(width: geo.size.width * 0.90, height: 55)
-                        Text("Continue with private key")
-                            .foregroundColor(.white)
-                            .onTapGesture(perform: {
-                                session.login(privateKey: "0xfc8b2690f66b46fec8b3ceeb95ff4ac35a0054bc", publicKey: "0xfc8b2690f66b46fec8b3ceeb95ff4ac35a0054bc")
-                            })
-                    }
-                    .padding()
                     
                     Spacer()
                 }
                 .opacity(session.isLoading ? 0.1 : 1)
             }
-            .onOpenURL { url in
-                TorusSwiftDirectSDK.handle(url: url)
+            .alert(isPresented: $session.isShowingError) {
+                Alert(title: Text("Error!"), message: Text(session.error))
             }
-        }
-        .alert(isPresented: $showingAlert) {
-            Alert(title: Text("Disabled!"), message: Text("The functionality in under development!"))
         }
     }
 }

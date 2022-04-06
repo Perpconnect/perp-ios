@@ -1,15 +1,9 @@
-//
-//  Onboarding.swift
-//  Perp
-//
-//  Created by Shreyas Papinwar on 03/09/21.
-//
-
 import SwiftUI
 
 struct OnboardingView: View {
-    @Binding var showOnboarding: Bool
     @State var currentTab = 0
+    
+    @EnvironmentObject var session: Session
     
     var body: some View {
         GeometryReader { geo in
@@ -20,7 +14,7 @@ struct OnboardingView: View {
                     TabView(selection: $currentTab) {
                         OnboardingData(title: "Made for perpetual protocol", line1: "Completely decentralized")
                             .tag(0)
-                        OnboardingData(title: "Long & Short with leverage", line1: "on xDai chain")
+                        OnboardingData(title: "Long & Short with leverage", line1: "on Optimism")
                             .tag(1)
                         OnboardingData(title: "Stake & Earn rewards", line1: "PERP")
                             .tag(2)
@@ -32,7 +26,7 @@ struct OnboardingView: View {
                         Spacer()
                         
                         Button("Skip") {
-                            showOnboarding.toggle()
+                            session.contentState = .Login
                         }
                             .font(.system(size: 16))
                             .foregroundColor(.white)
@@ -53,7 +47,7 @@ struct OnboardingView: View {
                             .frame(width: 300, height: 300)
                             .padding(.bottom, geo.size.height * 0.30)
                         
-                        Button(action: { showOnboarding.toggle() }) {
+                        Button(action: { session.contentState = .Login }) {
                             ZStack {
                                 RoundedRectangle(cornerRadius: 5)
                                     .foregroundColor(Color(#colorLiteral(red: 0.9294958115, green: 0.6169720888, blue: 0.01945868507, alpha: 1)))
