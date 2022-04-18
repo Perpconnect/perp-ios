@@ -1,0 +1,18 @@
+query ListCancleSticks($query: TableCandleStickQueryInput!, $limit: Int!) {
+  listCandleSticks(query: $query, limit: $limit) {
+    items {
+      market
+      resolution
+      startTime
+      open
+      high
+      low
+      close
+      volume
+      baseAssetVol
+      txCount
+      version
+      blockNumber
+    }
+  }
+}

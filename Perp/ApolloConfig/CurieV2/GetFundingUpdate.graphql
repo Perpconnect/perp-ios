@@ -1,0 +1,18 @@
+
+query GetFundingUpdate($baseToken: Bytes) {
+  fundingUpdateds(
+    first: 1,
+    where: { baseToken: $baseToken },
+    orderBy: blockNumberLogIndex,
+    orderDirection: desc
+  ) {
+    id
+    baseToken
+    markTwap
+    indexTwap
+    dailyFundingRate
+    txHash
+  }
+}
+
+

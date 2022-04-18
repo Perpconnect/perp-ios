@@ -1,0 +1,13 @@
+query GetStatistics($ammAddr: String!) {
+    getStatistics(ammAddr: $ammAddr) {
+        priceHigh24h
+        priceChangeRate24h
+        lastTradePriceUsd
+        ammAddr
+        volume24h
+        priceLow24h
+        timestamp
+        blockNumber
+    }
+}
+

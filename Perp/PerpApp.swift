@@ -5,13 +5,15 @@ import SDWebImageSVGCoder
 @main
 struct PerpApp: App {
     
+    init() {
+        SDImageCodersManager.shared.addCoder(SDImageSVGCoder.shared)
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(Session())
-                .onAppear {
-                    SDImageCodersManager.shared.addCoder(SDImageSVGCoder.shared)
-                }
+                .preferredColorScheme(.dark)
         }
     }
 }

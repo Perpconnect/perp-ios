@@ -7,72 +7,61 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B127235B27F9FAB500EB35BE /* MarketHeadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B127235A27F9FAB500EB35BE /* MarketHeadingView.swift */; };
+		B124335027FE013F00E21B90 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = B124334627FE013F00E21B90 /* Date.swift */; };
+		B124335127FE013F00E21B90 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B124334727FE013F00E21B90 /* PreviewProvider.swift */; };
+		B124335227FE013F00E21B90 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = B124334827FE013F00E21B90 /* Double.swift */; };
+		B124335327FE013F00E21B90 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = B124334927FE013F00E21B90 /* UIApplication.swift */; };
+		B124335427FE013F00E21B90 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B124334A27FE013F00E21B90 /* Color.swift */; };
+		B124336427FE016700E21B90 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B124335D27FE016700E21B90 /* LottieView.swift */; };
+		B124336527FE016700E21B90 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B124336027FE016700E21B90 /* LoginView.swift */; };
+		B124336627FE016700E21B90 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B124336227FE016700E21B90 /* OnboardingView.swift */; };
+		B124336A27FE049000E21B90 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = B124336927FE049000E21B90 /* Session.swift */; };
+		B124A3B32808B570003DFA1B /* ListCandleSticks.graphql in Resources */ = {isa = PBXBuildFile; fileRef = B124A3B22808B570003DFA1B /* ListCandleSticks.graphql */; };
 		B127235E27F9FCC000EB35BE /* LightweightCharts in Frameworks */ = {isa = PBXBuildFile; productRef = B127235D27F9FCC000EB35BE /* LightweightCharts */; };
-		B127236027FA006700EB35BE /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B127235F27FA006700EB35BE /* ChartView.swift */; };
-		B127236227FA028C00EB35BE /* MarketButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B127236127FA028C00EB35BE /* MarketButtonView.swift */; };
-		B143E32D27F7A5F20018114E /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = B143E32C27F7A5F20018114E /* Address.swift */; };
-		B143E33127F7A8D40018114E /* PriceFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = B143E33027F7A8D40018114E /* PriceFeed.swift */; };
-		B143E33327F7A9FC0018114E /* PerpMetadataAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B143E33227F7A9FC0018114E /* PerpMetadataAPIModel.swift */; };
-		B143E33527F7AAD00018114E /* Pool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B143E33427F7AAD00018114E /* Pool.swift */; };
-		B143E33927F7ABAC0018114E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B143E33827F7ABAC0018114E /* Alamofire */; };
+		B143E2042801E3B000FBE040 /* schemaStats.json in Resources */ = {isa = PBXBuildFile; fileRef = B143E2032801E3B000FBE040 /* schemaStats.json */; };
+		B143E2082801E54200FBE040 /* GetStatistics.graphql in Resources */ = {isa = PBXBuildFile; fileRef = B143E2072801E54200FBE040 /* GetStatistics.graphql */; };
+		B143E20C2801E90400FBE040 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = B143E20B2801E90400FBE040 /* Network.swift */; };
+		B143E20E28021B4400FBE040 /* MarketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B143E20D28021B4400FBE040 /* MarketView.swift */; };
 		B143E33B27F7C71B0018114E /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B143E33A27F7C71B0018114E /* Endpoints.swift */; };
-		B143E33E27F7CAE30018114E /* MarketError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B143E33D27F7CAE30018114E /* MarketError.swift */; };
 		B143E34427F7E3330018114E /* SDWebImageSVGCoder in Frameworks */ = {isa = PBXBuildFile; productRef = B143E34327F7E3330018114E /* SDWebImageSVGCoder */; };
 		B143E35127F7F6700018114E /* Web3Auth in Frameworks */ = {isa = PBXBuildFile; productRef = B143E35027F7F6700018114E /* Web3Auth */; };
 		B143E35427F7F6B70018114E /* web3swift in Frameworks */ = {isa = PBXBuildFile; productRef = B143E35327F7F6B70018114E /* web3swift */; };
-		B143E35627F7FB910018114E /* Web3Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B143E35527F7FB910018114E /* Web3Models.swift */; };
 		B14EBB1627F240810091621E /* Web3Auth.plist in Resources */ = {isa = PBXBuildFile; fileRef = B14EBB1527F240810091621E /* Web3Auth.plist */; };
-		B14EBB1827F247110091621E /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14EBB1727F247110091621E /* Session.swift */; };
-		B14EBB1C27F24F780091621E /* MarketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14EBB1B27F24F780091621E /* MarketViewModel.swift */; };
-		B160610427FB6E6400730D3D /* PositionsQuery.graphql in Resources */ = {isa = PBXBuildFile; fileRef = B160610327FB6E6400730D3D /* PositionsQuery.graphql */; };
-		B160610627FB72F000730D3D /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B160610527FB72EF00730D3D /* API.swift */; };
-		B160610827FB818100730D3D /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = B160610727FB818100730D3D /* Network.swift */; };
-		B160610A27FB8A9F00730D3D /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = B160610927FB8A9F00730D3D /* Position.swift */; };
-		B1702E1E27F8D0E800A6F748 /* ABI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1702E1D27F8D0E800A6F748 /* ABI.swift */; };
-		B1702E2027F8F67100A6F748 /* Web3Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1702E1F27F8F67100A6F748 /* Web3Service.swift */; };
-		B1702E2227F9158900A6F748 /* MarketListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1702E2127F9158900A6F748 /* MarketListCellViewModel.swift */; };
-		B1702E2427F915E300A6F748 /* Web3Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1702E2327F915E300A6F748 /* Web3Repository.swift */; };
-		B1AD305327FA0D25000CFB35 /* MarketStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AD305227FA0D25000CFB35 /* MarketStatsView.swift */; };
-		B1AD305527FA1173000CFB35 /* ChartToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AD305427FA1173000CFB35 /* ChartToggleView.swift */; };
-		B1AD305727FA1787000CFB35 /* MarketDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AD305627FA1787000CFB35 /* MarketDetailsView.swift */; };
-		B1AD305927FA256D000CFB35 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AD305827FA256D000CFB35 /* SettingView.swift */; };
-		B1AD305B27FA25CD000CFB35 /* GetPrivateKeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AD305A27FA25CD000CFB35 /* GetPrivateKeyView.swift */; };
+		B16618012804B4F800EA9C37 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = B16618002804B4F800EA9C37 /* schema.json */; };
+		B16618092804B87B00EA9C37 /* GetTrader.graphql in Resources */ = {isa = PBXBuildFile; fileRef = B16618082804B87B00EA9C37 /* GetTrader.graphql */; };
+		B16618102804C28100EA9C37 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B166180F2804C28100EA9C37 /* ChartView.swift */; };
+		B16A4F3A27FE6340001F6798 /* PerpMetadataAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16A4F3927FE6340001F6798 /* PerpMetadataAPIModel.swift */; };
+		B16A4F3D27FE661A001F6798 /* Market.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16A4F3C27FE661A001F6798 /* Market.swift */; };
+		B16A4F3F27FE6A9E001F6798 /* MarketsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16A4F3E27FE6A9E001F6798 /* MarketsViewModel.swift */; };
+		B16A4F4127FE7018001F6798 /* PerpMetadataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16A4F4027FE7018001F6798 /* PerpMetadataService.swift */; };
+		B16A4F4327FE76AE001F6798 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16A4F4227FE76AE001F6798 /* NetworkingManager.swift */; };
+		B16D941A2800BE35003FF2B0 /* MarketDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16D94192800BE35003FF2B0 /* MarketDataService.swift */; };
+		B16D941C2800C3E7003FF2B0 /* Web3Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16D941B2800C3E7003FF2B0 /* Web3Manager.swift */; };
+		B16D941E2800CCF7003FF2B0 /* ABI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16D941D2800CCF7003FF2B0 /* ABI.swift */; };
+		B16D9420280101D6003FF2B0 /* MarketRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16D941F280101D6003FF2B0 /* MarketRowViewModel.swift */; };
+		B19203152809CD1200582020 /* MarketStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19203142809CD1200582020 /* MarketStatistics.swift */; };
+		B19203172809D14E00582020 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19203162809D14E00582020 /* Position.swift */; };
+		B19203192809DB3300582020 /* GetPosition.graphql in Resources */ = {isa = PBXBuildFile; fileRef = B19203182809DB3300582020 /* GetPosition.graphql */; };
+		B192031D2809DCAC00582020 /* APIStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = B192031C2809DCAB00582020 /* APIStats.swift */; };
+		B19203272809ED0200582020 /* GetFundingUpdate.graphql in Resources */ = {isa = PBXBuildFile; fileRef = B19203262809ED0200582020 /* GetFundingUpdate.graphql */; };
+		B19203292809EF4200582020 /* APICurie.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19203282809EF4200582020 /* APICurie.swift */; };
 		B1AD305E27FA2D73000CFB35 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = B1AD305D27FA2D73000CFB35 /* Apollo */; };
 		B1AD306027FA2D73000CFB35 /* ApolloUtils in Frameworks */ = {isa = PBXBuildFile; productRef = B1AD305F27FA2D73000CFB35 /* ApolloUtils */; };
 		B1AD306227FA2D73000CFB35 /* ApolloWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = B1AD306127FA2D73000CFB35 /* ApolloWebSocket */; };
-		B1AD306727FA2FB8000CFB35 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = B1AD306627FA2FB8000CFB35 /* schema.json */; };
-		B1D0E9A227F4CD690062A278 /* AssetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D0E9A127F4CD690062A278 /* AssetsView.swift */; };
-		B1D0E9A427F4D9230062A278 /* AssetHeadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D0E9A327F4D9230062A278 /* AssetHeadingView.swift */; };
-		B1D0E9A627F4DC540062A278 /* AssetsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D0E9A527F4DC540062A278 /* AssetsViewModel.swift */; };
-		B1D0E9A827F4DF890062A278 /* AssetRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D0E9A727F4DF890062A278 /* AssetRepository.swift */; };
-		B1D0E9AA27F4DFAC0062A278 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D0E9A927F4DFAC0062A278 /* Account.swift */; };
-		B1D0E9AC27F4E0AE0062A278 /* AssetApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D0E9AB27F4E0AE0062A278 /* AssetApiService.swift */; };
-		B1D0E9AE27F4E47C0062A278 /* AccountCarosalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D0E9AD27F4E47C0062A278 /* AccountCarosalView.swift */; };
-		B1E54DF427F35BDC00CCD0AD /* MarketsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E54DF327F35BDC00CCD0AD /* MarketsView.swift */; };
-		B1E54DF727F35D6200CCD0AD /* MarketListHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E54DF627F35D6200CCD0AD /* MarketListHeader.swift */; };
-		B1E54DF927F35E3600CCD0AD /* MarketListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E54DF827F35E3600CCD0AD /* MarketListView.swift */; };
-		B1E54DFB27F35EE300CCD0AD /* MarketListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E54DFA27F35EE300CCD0AD /* MarketListViewModel.swift */; };
-		B1E54DFD27F35FD400CCD0AD /* MarketRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E54DFC27F35FD400CCD0AD /* MarketRepository.swift */; };
-		B1E54DFF27F3603F00CCD0AD /* Market.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E54DFE27F3603F00CCD0AD /* Market.swift */; };
-		B1E54E0127F361B900CCD0AD /* MarketApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E54E0027F361B800CCD0AD /* MarketApiService.swift */; };
-		B1E54E0327F3679500CCD0AD /* MarketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E54E0227F3679500CCD0AD /* MarketView.swift */; };
-		B1E54E0527F3684700CCD0AD /* MarketListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E54E0427F3684700CCD0AD /* MarketListCellView.swift */; };
-		BC0A9CC32754F7D60000B7C0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BC0A9CC22754F7D60000B7C0 /* Alamofire */; };
+		B1B3970027FE07A10079A4AE /* Web3AuthModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B396FF27FE07A10079A4AE /* Web3AuthModels.swift */; };
+		B1B3970427FE08D30079A4AE /* MarketsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B3970327FE08D30079A4AE /* MarketsView.swift */; };
+		B1B3970627FE0E600079A4AE /* MarketRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B3970527FE0E600079A4AE /* MarketRowView.swift */; };
+		B1CD86C928034A1800A15765 /* MarketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CD86C828034A1800A15765 /* MarketViewModel.swift */; };
+		B1CD86CD2803740700A15765 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CD86CC2803740700A15765 /* Globals.swift */; };
+		B1CD86CF28037D0D00A15765 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CD86CE28037D0D00A15765 /* String.swift */; };
+		B1CD86D128038E8D00A15765 /* OrderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CD86D028038E8D00A15765 /* OrderButton.swift */; };
 		BC0A9CD02754FC930000B7C0 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = BC0A9CCF2754FC930000B7C0 /* Lottie */; };
 		BC0A9CD3275500140000B7C0 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = BC0A9CD2275500140000B7C0 /* SDWebImageSwiftUI */; };
-		BC2FFE6E26C4166B0001FDD4 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2FFE6D26C4166B0001FDD4 /* Tab.swift */; };
 		BC7363D126C0EF2600C9E753 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7363D026C0EF2600C9E753 /* ContentView.swift */; };
 		BC7363D326C0EF2F00C9E753 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC7363D226C0EF2F00C9E753 /* Assets.xcassets */; };
 		BC7363D626C0EF2F00C9E753 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC7363D526C0EF2F00C9E753 /* Preview Assets.xcassets */; };
-		BC7363E426C0FD8F00C9E753 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7363E326C0FD8F00C9E753 /* LoginView.swift */; };
-		BCB4F8CA26E16CD5006DB5AD /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB4F8C926E16CD5006DB5AD /* OnboardingView.swift */; };
 		BCCCB2B026E2640200B26878 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = BCCCB2AF26E2640200B26878 /* .swiftlint.yml */; };
-		BCCCB2B226E26D1500B26878 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCB2B126E26D1500B26878 /* LottieView.swift */; };
-		BCCCB2B526E2754900B26878 /* stake.json in Resources */ = {isa = PBXBuildFile; fileRef = BCCCB2B426E2754900B26878 /* stake.json */; };
-		BCCCB2B726E2759C00B26878 /* leverage.json in Resources */ = {isa = PBXBuildFile; fileRef = BCCCB2B626E2759B00B26878 /* leverage.json */; };
 		BCD07E5126D18E8200781E28 /* PerpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD07E5026D18E8200781E28 /* PerpApp.swift */; };
-		BCD323F126E1652F00B25C4A /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD323F026E1652F00B25C4A /* Globals.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -89,63 +78,54 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B127235A27F9FAB500EB35BE /* MarketHeadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketHeadingView.swift; sourceTree = "<group>"; };
-		B127235F27FA006700EB35BE /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
-		B127236127FA028C00EB35BE /* MarketButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketButtonView.swift; sourceTree = "<group>"; };
-		B143E32C27F7A5F20018114E /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
-		B143E33027F7A8D40018114E /* PriceFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceFeed.swift; sourceTree = "<group>"; };
-		B143E33227F7A9FC0018114E /* PerpMetadataAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerpMetadataAPIModel.swift; sourceTree = "<group>"; };
-		B143E33427F7AAD00018114E /* Pool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pool.swift; sourceTree = "<group>"; };
+		B124334627FE013F00E21B90 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		B124334727FE013F00E21B90 /* PreviewProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
+		B124334827FE013F00E21B90 /* Double.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		B124334927FE013F00E21B90 /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		B124334A27FE013F00E21B90 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		B124335D27FE016700E21B90 /* LottieView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		B124336027FE016700E21B90 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		B124336227FE016700E21B90 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		B124336927FE049000E21B90 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		B124A3B22808B570003DFA1B /* ListCandleSticks.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = ListCandleSticks.graphql; sourceTree = "<group>"; };
+		B143E2032801E3B000FBE040 /* schemaStats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schemaStats.json; sourceTree = "<group>"; };
+		B143E2072801E54200FBE040 /* GetStatistics.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = GetStatistics.graphql; sourceTree = "<group>"; };
+		B143E20B2801E90400FBE040 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		B143E20D28021B4400FBE040 /* MarketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketView.swift; sourceTree = "<group>"; };
 		B143E33A27F7C71B0018114E /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
-		B143E33D27F7CAE30018114E /* MarketError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketError.swift; sourceTree = "<group>"; };
-		B143E35527F7FB910018114E /* Web3Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Web3Models.swift; sourceTree = "<group>"; };
 		B14EBB1527F240810091621E /* Web3Auth.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Web3Auth.plist; sourceTree = "<group>"; };
-		B14EBB1727F247110091621E /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
-		B14EBB1B27F24F780091621E /* MarketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketViewModel.swift; sourceTree = "<group>"; };
-		B160610327FB6E6400730D3D /* PositionsQuery.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = PositionsQuery.graphql; sourceTree = "<group>"; };
-		B160610527FB72EF00730D3D /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = Perp/API.swift; sourceTree = SOURCE_ROOT; };
-		B160610727FB818100730D3D /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
-		B160610927FB8A9F00730D3D /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
-		B1702E1D27F8D0E800A6F748 /* ABI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABI.swift; sourceTree = "<group>"; };
-		B1702E1F27F8F67100A6F748 /* Web3Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Web3Service.swift; sourceTree = "<group>"; };
-		B1702E2127F9158900A6F748 /* MarketListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketListCellViewModel.swift; sourceTree = "<group>"; };
-		B1702E2327F915E300A6F748 /* Web3Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Web3Repository.swift; sourceTree = "<group>"; };
-		B1AD305227FA0D25000CFB35 /* MarketStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketStatsView.swift; sourceTree = "<group>"; };
-		B1AD305427FA1173000CFB35 /* ChartToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartToggleView.swift; sourceTree = "<group>"; };
-		B1AD305627FA1787000CFB35 /* MarketDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDetailsView.swift; sourceTree = "<group>"; };
-		B1AD305827FA256D000CFB35 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
-		B1AD305A27FA25CD000CFB35 /* GetPrivateKeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPrivateKeyView.swift; sourceTree = "<group>"; };
-		B1AD306627FA2FB8000CFB35 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
-		B1D0E9A127F4CD690062A278 /* AssetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsView.swift; sourceTree = "<group>"; };
-		B1D0E9A327F4D9230062A278 /* AssetHeadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetHeadingView.swift; sourceTree = "<group>"; };
-		B1D0E9A527F4DC540062A278 /* AssetsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsViewModel.swift; sourceTree = "<group>"; };
-		B1D0E9A727F4DF890062A278 /* AssetRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetRepository.swift; sourceTree = "<group>"; };
-		B1D0E9A927F4DFAC0062A278 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
-		B1D0E9AB27F4E0AE0062A278 /* AssetApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetApiService.swift; sourceTree = "<group>"; };
-		B1D0E9AD27F4E47C0062A278 /* AccountCarosalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCarosalView.swift; sourceTree = "<group>"; };
-		B1E54DF327F35BDC00CCD0AD /* MarketsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketsView.swift; sourceTree = "<group>"; };
-		B1E54DF627F35D6200CCD0AD /* MarketListHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketListHeader.swift; sourceTree = "<group>"; };
-		B1E54DF827F35E3600CCD0AD /* MarketListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketListView.swift; sourceTree = "<group>"; };
-		B1E54DFA27F35EE300CCD0AD /* MarketListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketListViewModel.swift; sourceTree = "<group>"; };
-		B1E54DFC27F35FD400CCD0AD /* MarketRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketRepository.swift; sourceTree = "<group>"; };
-		B1E54DFE27F3603F00CCD0AD /* Market.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Market.swift; sourceTree = "<group>"; };
-		B1E54E0027F361B800CCD0AD /* MarketApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketApiService.swift; sourceTree = "<group>"; };
-		B1E54E0227F3679500CCD0AD /* MarketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketView.swift; sourceTree = "<group>"; };
-		B1E54E0427F3684700CCD0AD /* MarketListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketListCellView.swift; sourceTree = "<group>"; };
-		BC2FFE6D26C4166B0001FDD4 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		B16618002804B4F800EA9C37 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = schema.json; path = Perp/schema.json; sourceTree = SOURCE_ROOT; };
+		B16618082804B87B00EA9C37 /* GetTrader.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = GetTrader.graphql; sourceTree = "<group>"; };
+		B166180F2804C28100EA9C37 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		B16A4F3927FE6340001F6798 /* PerpMetadataAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerpMetadataAPIModel.swift; sourceTree = "<group>"; };
+		B16A4F3C27FE661A001F6798 /* Market.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Market.swift; sourceTree = "<group>"; };
+		B16A4F3E27FE6A9E001F6798 /* MarketsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketsViewModel.swift; sourceTree = "<group>"; };
+		B16A4F4027FE7018001F6798 /* PerpMetadataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerpMetadataService.swift; sourceTree = "<group>"; };
+		B16A4F4227FE76AE001F6798 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		B16D94192800BE35003FF2B0 /* MarketDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDataService.swift; sourceTree = "<group>"; };
+		B16D941B2800C3E7003FF2B0 /* Web3Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Web3Manager.swift; sourceTree = "<group>"; };
+		B16D941D2800CCF7003FF2B0 /* ABI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABI.swift; sourceTree = "<group>"; };
+		B16D941F280101D6003FF2B0 /* MarketRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketRowViewModel.swift; sourceTree = "<group>"; };
+		B19203142809CD1200582020 /* MarketStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketStatistics.swift; sourceTree = "<group>"; };
+		B19203162809D14E00582020 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
+		B19203182809DB3300582020 /* GetPosition.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = GetPosition.graphql; sourceTree = "<group>"; };
+		B192031C2809DCAB00582020 /* APIStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIStats.swift; sourceTree = "<group>"; };
+		B19203262809ED0200582020 /* GetFundingUpdate.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = GetFundingUpdate.graphql; sourceTree = "<group>"; };
+		B19203282809EF4200582020 /* APICurie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APICurie.swift; path = Perp/APICurie.swift; sourceTree = SOURCE_ROOT; };
+		B1B396FF27FE07A10079A4AE /* Web3AuthModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Web3AuthModels.swift; sourceTree = "<group>"; };
+		B1B3970327FE08D30079A4AE /* MarketsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketsView.swift; sourceTree = "<group>"; };
+		B1B3970527FE0E600079A4AE /* MarketRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketRowView.swift; sourceTree = "<group>"; };
+		B1CD86C828034A1800A15765 /* MarketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketViewModel.swift; sourceTree = "<group>"; };
+		B1CD86CC2803740700A15765 /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		B1CD86CE28037D0D00A15765 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		B1CD86D028038E8D00A15765 /* OrderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderButton.swift; sourceTree = "<group>"; };
 		BC7363CB26C0EF2600C9E753 /* Perp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Perp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC7363D026C0EF2600C9E753 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BC7363D226C0EF2F00C9E753 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC7363D526C0EF2F00C9E753 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BC7363D726C0EF2F00C9E753 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BC7363E326C0FD8F00C9E753 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		BCB4F8C926E16CD5006DB5AD /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		BCCCB2AF26E2640200B26878 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
-		BCCCB2B126E26D1500B26878 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
-		BCCCB2B426E2754900B26878 /* stake.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stake.json; sourceTree = "<group>"; };
-		BCCCB2B626E2759B00B26878 /* leverage.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = leverage.json; sourceTree = "<group>"; };
 		BCD07E5026D18E8200781E28 /* PerpApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerpApp.swift; sourceTree = "<group>"; };
-		BCD323F026E1652F00B25C4A /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +133,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B143E33927F7ABAC0018114E /* Alamofire in Frameworks */,
 				B1AD306227FA2D73000CFB35 /* ApolloWebSocket in Frameworks */,
 				B1AD306027FA2D73000CFB35 /* ApolloUtils in Frameworks */,
 				B143E35427F7F6B70018114E /* web3swift in Frameworks */,
@@ -161,7 +140,6 @@
 				BC0A9CD3275500140000B7C0 /* SDWebImageSwiftUI in Frameworks */,
 				B1AD305E27FA2D73000CFB35 /* Apollo in Frameworks */,
 				B143E34427F7E3330018114E /* SDWebImageSVGCoder in Frameworks */,
-				BC0A9CC32754F7D60000B7C0 /* Alamofire in Frameworks */,
 				B127235E27F9FCC000EB35BE /* LightweightCharts in Frameworks */,
 				BC0A9CD02754FC930000B7C0 /* Lottie in Frameworks */,
 			);
@@ -170,20 +148,107 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B143E33627F7AB7A0018114E /* APIModels */ = {
+		B124334427FE013F00E21B90 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B143E33227F7A9FC0018114E /* PerpMetadataAPIModel.swift */,
+				B16A4F3827FE6324001F6798 /* APIModels */,
+				B1B396FF27FE07A10079A4AE /* Web3AuthModels.swift */,
+				B16A4F3C27FE661A001F6798 /* Market.swift */,
+				B19203162809D14E00582020 /* Position.swift */,
+				B19203142809CD1200582020 /* MarketStatistics.swift */,
 			);
-			path = APIModels;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		B143E33C27F7CABF0018114E /* Errors */ = {
+		B124334527FE013F00E21B90 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				B143E33D27F7CAE30018114E /* MarketError.swift */,
+				B124334627FE013F00E21B90 /* Date.swift */,
+				B124334727FE013F00E21B90 /* PreviewProvider.swift */,
+				B124334827FE013F00E21B90 /* Double.swift */,
+				B1CD86CE28037D0D00A15765 /* String.swift */,
+				B124334927FE013F00E21B90 /* UIApplication.swift */,
+				B124334A27FE013F00E21B90 /* Color.swift */,
 			);
-			path = Errors;
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B124334B27FE013F00E21B90 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B16D941B2800C3E7003FF2B0 /* Web3Manager.swift */,
+				B16A4F4227FE76AE001F6798 /* NetworkingManager.swift */,
+				B16D941D2800CCF7003FF2B0 /* ABI.swift */,
+				B143E20B2801E90400FBE040 /* Network.swift */,
+				B1CD86CC2803740700A15765 /* Globals.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		B124334F27FE013F00E21B90 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B16A4F4027FE7018001F6798 /* PerpMetadataService.swift */,
+				B16D94192800BE35003FF2B0 /* MarketDataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B124335827FE015300E21B90 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B124336927FE049000E21B90 /* Session.swift */,
+				BC7363D026C0EF2600C9E753 /* ContentView.swift */,
+				B124335C27FE016700E21B90 /* Components */,
+				B124335E27FE016700E21B90 /* Login */,
+				B124336127FE016700E21B90 /* Onboarding */,
+				B1CD86C4280349DE00A15765 /* Market */,
+				B166180C2804C15A00EA9C37 /* OpenPostion */,
+				B124335B27FE016700E21B90 /* AllMarkets */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		B124335B27FE016700E21B90 /* AllMarkets */ = {
+			isa = PBXGroup;
+			children = (
+				B1CD86C5280349F100A15765 /* Views */,
+				B16A4F3B27FE659A001F6798 /* ViewModels */,
+			);
+			path = AllMarkets;
+			sourceTree = "<group>";
+		};
+		B124335C27FE016700E21B90 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B124335D27FE016700E21B90 /* LottieView.swift */,
+				B1CD86D028038E8D00A15765 /* OrderButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		B124335E27FE016700E21B90 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B124335F27FE016700E21B90 /* ViewModels */,
+				B124336027FE016700E21B90 /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		B124335F27FE016700E21B90 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B124336127FE016700E21B90 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				B124336227FE016700E21B90 /* OnboardingView.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		B143E34E27F7F6570018114E /* Frameworks */ = {
@@ -193,90 +258,109 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B14EBB0C27F23DB20091621E /* ViewModels */ = {
+		B16617FC2804909000EA9C37 /* ApolloConfig */ = {
 			isa = PBXGroup;
 			children = (
-				B14EBB1B27F24F780091621E /* MarketViewModel.swift */,
-				B1702E2127F9158900A6F748 /* MarketListCellViewModel.swift */,
-				B14EBB1727F247110091621E /* Session.swift */,
-				B1E54DFA27F35EE300CCD0AD /* MarketListViewModel.swift */,
-				B1D0E9A527F4DC540062A278 /* AssetsViewModel.swift */,
+				B16617FE280490B400EA9C37 /* CurieV2 */,
+				B16617FD280490A300EA9C37 /* PerpStats */,
+			);
+			path = ApolloConfig;
+			sourceTree = "<group>";
+		};
+		B16617FD280490A300EA9C37 /* PerpStats */ = {
+			isa = PBXGroup;
+			children = (
+				B192031C2809DCAB00582020 /* APIStats.swift */,
+				B124A3B22808B570003DFA1B /* ListCandleSticks.graphql */,
+				B143E2072801E54200FBE040 /* GetStatistics.graphql */,
+			);
+			path = PerpStats;
+			sourceTree = "<group>";
+		};
+		B16617FE280490B400EA9C37 /* CurieV2 */ = {
+			isa = PBXGroup;
+			children = (
+				B19203282809EF4200582020 /* APICurie.swift */,
+				B16618082804B87B00EA9C37 /* GetTrader.graphql */,
+				B19203182809DB3300582020 /* GetPosition.graphql */,
+				B19203262809ED0200582020 /* GetFundingUpdate.graphql */,
+			);
+			path = CurieV2;
+			sourceTree = "<group>";
+		};
+		B166180C2804C15A00EA9C37 /* OpenPostion */ = {
+			isa = PBXGroup;
+			children = (
+				B166180E2804C18E00EA9C37 /* ViewModels */,
+				B166180D2804C18900EA9C37 /* Views */,
+			);
+			path = OpenPostion;
+			sourceTree = "<group>";
+		};
+		B166180D2804C18900EA9C37 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B166180E2804C18E00EA9C37 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		B14EBB0D27F23DBE0091621E /* Models */ = {
+		B16A4F3827FE6324001F6798 /* APIModels */ = {
 			isa = PBXGroup;
 			children = (
-				B1702E1C27F8CFDE00A6F748 /* Abi */,
-				B143E33C27F7CABF0018114E /* Errors */,
-				B143E33627F7AB7A0018114E /* APIModels */,
-				B1E54DFE27F3603F00CCD0AD /* Market.swift */,
-				B143E35527F7FB910018114E /* Web3Models.swift */,
-				B143E32C27F7A5F20018114E /* Address.swift */,
-				B143E33027F7A8D40018114E /* PriceFeed.swift */,
-				B1D0E9A927F4DFAC0062A278 /* Account.swift */,
-				B143E33427F7AAD00018114E /* Pool.swift */,
-				B160610927FB8A9F00730D3D /* Position.swift */,
+				B16A4F3927FE6340001F6798 /* PerpMetadataAPIModel.swift */,
 			);
-			path = Models;
+			path = APIModels;
 			sourceTree = "<group>";
 		};
-		B14EBB0E27F23DC40091621E /* Repositories */ = {
+		B16A4F3B27FE659A001F6798 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				B1E54DFC27F35FD400CCD0AD /* MarketRepository.swift */,
-				B1D0E9A727F4DF890062A278 /* AssetRepository.swift */,
-				B1702E2327F915E300A6F748 /* Web3Repository.swift */,
+				B16A4F3E27FE6A9E001F6798 /* MarketsViewModel.swift */,
+				B16D941F280101D6003FF2B0 /* MarketRowViewModel.swift */,
 			);
-			path = Repositories;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		B14EBB0F27F23DD00091621E /* Services */ = {
+		B1CD86C4280349DE00A15765 /* Market */ = {
 			isa = PBXGroup;
 			children = (
-				B1E54E0027F361B800CCD0AD /* MarketApiService.swift */,
-				B1702E1F27F8F67100A6F748 /* Web3Service.swift */,
-				B1D0E9AB27F4E0AE0062A278 /* AssetApiService.swift */,
+				B1CD86C728034A0600A15765 /* ViewModels */,
+				B1CD86C628034A0100A15765 /* Views */,
 			);
-			path = Services;
+			path = Market;
 			sourceTree = "<group>";
 		};
-		B160610227FB6C3200730D3D /* GraphQL */ = {
+		B1CD86C5280349F100A15765 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B160610327FB6E6400730D3D /* PositionsQuery.graphql */,
-				B160610527FB72EF00730D3D /* API.swift */,
-				B160610727FB818100730D3D /* Network.swift */,
+				B1B3970327FE08D30079A4AE /* MarketsView.swift */,
+				B1B3970527FE0E600079A4AE /* MarketRowView.swift */,
 			);
-			path = GraphQL;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		B1702E1C27F8CFDE00A6F748 /* Abi */ = {
+		B1CD86C628034A0100A15765 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B1702E1D27F8D0E800A6F748 /* ABI.swift */,
+				B143E20D28021B4400FBE040 /* MarketView.swift */,
+				B166180F2804C28100EA9C37 /* ChartView.swift */,
 			);
-			path = Abi;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		B1E54DF527F35D4900CCD0AD /* Helpers */ = {
+		B1CD86C728034A0600A15765 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				B1E54DF627F35D6200CCD0AD /* MarketListHeader.swift */,
-				B1E54DF827F35E3600CCD0AD /* MarketListView.swift */,
-				B1E54E0427F3684700CCD0AD /* MarketListCellView.swift */,
-				B1AD305427FA1173000CFB35 /* ChartToggleView.swift */,
-				B1AD305227FA0D25000CFB35 /* MarketStatsView.swift */,
-				BCCCB2B126E26D1500B26878 /* LottieView.swift */,
-				B1AD305627FA1787000CFB35 /* MarketDetailsView.swift */,
-				B1D0E9A327F4D9230062A278 /* AssetHeadingView.swift */,
-				B1D0E9AD27F4E47C0062A278 /* AccountCarosalView.swift */,
-				B127236127FA028C00EB35BE /* MarketButtonView.swift */,
-				B127235A27F9FAB500EB35BE /* MarketHeadingView.swift */,
-				B127235F27FA006700EB35BE /* ChartView.swift */,
+				B1CD86C828034A1800A15765 /* MarketViewModel.swift */,
 			);
-			path = Helpers;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		BC7363C226C0EF2600C9E753 = {
@@ -300,16 +384,14 @@
 		BC7363CD26C0EF2600C9E753 /* Perp */ = {
 			isa = PBXGroup;
 			children = (
-				B1AD306627FA2FB8000CFB35 /* schema.json */,
-				B160610227FB6C3200730D3D /* GraphQL */,
-				B14EBB0F27F23DD00091621E /* Services */,
-				B14EBB0E27F23DC40091621E /* Repositories */,
-				B14EBB0D27F23DBE0091621E /* Models */,
-				B14EBB0C27F23DB20091621E /* ViewModels */,
-				BCCCB2B326E2754000B26878 /* Lottie */,
-				BC7363DE26C0FB9500C9E753 /* Views */,
-				BC7363D026C0EF2600C9E753 /* ContentView.swift */,
-				BCD323F026E1652F00B25C4A /* Globals.swift */,
+				B143E2032801E3B000FBE040 /* schemaStats.json */,
+				B16618002804B4F800EA9C37 /* schema.json */,
+				B16617FC2804909000EA9C37 /* ApolloConfig */,
+				B124334527FE013F00E21B90 /* Extensions */,
+				B124334427FE013F00E21B90 /* Models */,
+				B124334F27FE013F00E21B90 /* Services */,
+				B124334B27FE013F00E21B90 /* Utilities */,
+				B124335827FE015300E21B90 /* Core */,
 				BCD07E5026D18E8200781E28 /* PerpApp.swift */,
 				B143E33A27F7C71B0018114E /* Endpoints.swift */,
 				BC7363D226C0EF2F00C9E753 /* Assets.xcassets */,
@@ -328,31 +410,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		BC7363DE26C0FB9500C9E753 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				B1E54DF527F35D4900CCD0AD /* Helpers */,
-				BC7363E326C0FD8F00C9E753 /* LoginView.swift */,
-				BC2FFE6D26C4166B0001FDD4 /* Tab.swift */,
-				BCB4F8C926E16CD5006DB5AD /* OnboardingView.swift */,
-				B1E54DF327F35BDC00CCD0AD /* MarketsView.swift */,
-				B1E54E0227F3679500CCD0AD /* MarketView.swift */,
-				B1D0E9A127F4CD690062A278 /* AssetsView.swift */,
-				B1AD305827FA256D000CFB35 /* SettingView.swift */,
-				B1AD305A27FA25CD000CFB35 /* GetPrivateKeyView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		BCCCB2B326E2754000B26878 /* Lottie */ = {
-			isa = PBXGroup;
-			children = (
-				BCCCB2B426E2754900B26878 /* stake.json */,
-				BCCCB2B626E2759B00B26878 /* leverage.json */,
-			);
-			path = Lottie;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -364,6 +421,7 @@
 				BC7363C826C0EF2600C9E753 /* Frameworks */,
 				BC7363C926C0EF2600C9E753 /* Resources */,
 				BCCCB2AB26E2639000B26878 /* Apollo */,
+				B16617FF2804B46E00EA9C37 /* Apollo Curie v2 */,
 				BC447FF626E427A900F6357A /* Embed Frameworks */,
 				B1AD306327FA2E7C000CFB35 /* ShellScript */,
 			);
@@ -373,10 +431,8 @@
 			);
 			name = Perp;
 			packageProductDependencies = (
-				BC0A9CC22754F7D60000B7C0 /* Alamofire */,
 				BC0A9CCF2754FC930000B7C0 /* Lottie */,
 				BC0A9CD2275500140000B7C0 /* SDWebImageSwiftUI */,
-				B143E33827F7ABAC0018114E /* Alamofire */,
 				B143E34327F7E3330018114E /* SDWebImageSVGCoder */,
 				B143E35027F7F6700018114E /* Web3Auth */,
 				B143E35327F7F6B70018114E /* web3swift */,
@@ -416,7 +472,6 @@
 				BC0A9CC12754F7D60000B7C0 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				BC0A9CCE2754FC930000B7C0 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				BC0A9CD1275500140000B7C0 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
-				B143E33727F7ABAC0018114E /* XCRemoteSwiftPackageReference "Alamofire" */,
 				B143E34227F7E3330018114E /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder" */,
 				B143E34F27F7F6700018114E /* XCRemoteSwiftPackageReference "web3auth-swift-sdk" */,
 				B143E35227F7F6B70018114E /* XCRemoteSwiftPackageReference "web3swift" */,
@@ -437,20 +492,41 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1AD306727FA2FB8000CFB35 /* schema.json in Resources */,
-				BCCCB2B726E2759C00B26878 /* leverage.json in Resources */,
+				B16618092804B87B00EA9C37 /* GetTrader.graphql in Resources */,
+				B16618012804B4F800EA9C37 /* schema.json in Resources */,
 				BCCCB2B026E2640200B26878 /* .swiftlint.yml in Resources */,
+				B143E2082801E54200FBE040 /* GetStatistics.graphql in Resources */,
+				B143E2042801E3B000FBE040 /* schemaStats.json in Resources */,
+				B19203272809ED0200582020 /* GetFundingUpdate.graphql in Resources */,
 				B14EBB1627F240810091621E /* Web3Auth.plist in Resources */,
+				B19203192809DB3300582020 /* GetPosition.graphql in Resources */,
+				B124A3B32808B570003DFA1B /* ListCandleSticks.graphql in Resources */,
 				BC7363D626C0EF2F00C9E753 /* Preview Assets.xcassets in Resources */,
 				BC7363D326C0EF2F00C9E753 /* Assets.xcassets in Resources */,
-				B160610427FB6E6400730D3D /* PositionsQuery.graphql in Resources */,
-				BCCCB2B526E2754900B26878 /* stake.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		B16617FF2804B46E00EA9C37 /* Apollo Curie v2 */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Apollo Curie v2";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Don't run this during index builds\nif [ $ACTION = \"indexbuild\" ]; then exit 0; fi\n\n# Go to the build root and search up the chain to find the Derived Data Path where the source packages are checked out.\nDERIVED_DATA_CANDIDATE=\"${BUILD_ROOT}\"\n\nwhile ! [ -d \"${DERIVED_DATA_CANDIDATE}/SourcePackages\" ]; do\n  if [ \"${DERIVED_DATA_CANDIDATE}\" = / ]; then\n    echo >&2 \"error: Unable to locate SourcePackages directory from BUILD_ROOT: '${BUILD_ROOT}'\"\n    exit 1\n  fi\n\n  DERIVED_DATA_CANDIDATE=\"$(dirname \"${DERIVED_DATA_CANDIDATE}\")\"\ndone\n\n# Grab a reference to the directory where scripts are checked out\nSCRIPT_PATH=\"${DERIVED_DATA_CANDIDATE}/SourcePackages/checkouts/apollo-ios/scripts\"\n\nif [ -z \"${SCRIPT_PATH}\" ]; then\n    echo >&2 \"error: Couldn't find the CLI script in your checked out SPM packages; make sure to add the framework to your project.\"\n    exit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./ApolloConfig/CurieV2/*.graphql --localSchemaFile=\"schema.json\" APICurie.swift\n#\"${SCRIPT_PATH}\"/run-bundled-codegen.sh schema:download --endpoint=\"https://api.thegraph.com/subgraphs/name/perpetual-protocol/perpetual-v2-optimism\"\n";
+		};
 		B1AD306327FA2E7C000CFB35 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -484,7 +560,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Don't run this during index builds\nif [ $ACTION = \"indexbuild\" ]; then exit 0; fi\n\n# Go to the build root and search up the chain to find the Derived Data Path where the source packages are checked out.\nDERIVED_DATA_CANDIDATE=\"${BUILD_ROOT}\"\n\nwhile ! [ -d \"${DERIVED_DATA_CANDIDATE}/SourcePackages\" ]; do\n  if [ \"${DERIVED_DATA_CANDIDATE}\" = / ]; then\n    echo >&2 \"error: Unable to locate SourcePackages directory from BUILD_ROOT: '${BUILD_ROOT}'\"\n    exit 1\n  fi\n\n  DERIVED_DATA_CANDIDATE=\"$(dirname \"${DERIVED_DATA_CANDIDATE}\")\"\ndone\n\n# Grab a reference to the directory where scripts are checked out\nSCRIPT_PATH=\"${DERIVED_DATA_CANDIDATE}/SourcePackages/checkouts/apollo-ios/scripts\"\n\nif [ -z \"${SCRIPT_PATH}\" ]; then\n    echo >&2 \"error: Couldn't find the CLI script in your checked out SPM packages; make sure to add the framework to your project.\"\n    exit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"schema.json\" API.swift\n#\"${SCRIPT_PATH}\"/run-bundled-codegen.sh schema:download --endpoint=\"https://api.thegraph.com/subgraphs/name/perpetual-protocol/perpetual-v2-optimism\"\n";
+			shellScript = "# Don't run this during index builds\nif [ $ACTION = \"indexbuild\" ]; then exit 0; fi\n\n# Go to the build root and search up the chain to find the Derived Data Path where the source packages are checked out.\nDERIVED_DATA_CANDIDATE=\"${BUILD_ROOT}\"\n\nwhile ! [ -d \"${DERIVED_DATA_CANDIDATE}/SourcePackages\" ]; do\n  if [ \"${DERIVED_DATA_CANDIDATE}\" = / ]; then\n    echo >&2 \"error: Unable to locate SourcePackages directory from BUILD_ROOT: '${BUILD_ROOT}'\"\n    exit 1\n  fi\n\n  DERIVED_DATA_CANDIDATE=\"$(dirname \"${DERIVED_DATA_CANDIDATE}\")\"\ndone\n\n# Grab a reference to the directory where scripts are checked out\nSCRIPT_PATH=\"${DERIVED_DATA_CANDIDATE}/SourcePackages/checkouts/apollo-ios/scripts\"\n\nif [ -z \"${SCRIPT_PATH}\" ]; then\n    echo >&2 \"error: Couldn't find the CLI script in your checked out SPM packages; make sure to add the framework to your project.\"\n    exit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./ApolloConfig/PerpStats/*.graphql --localSchemaFile=\"schemaStats.json\" APIStats.swift\n#\"${SCRIPT_PATH}\"/run-bundled-codegen.sh schemaStats:download --endpoint=\"https://4b3vdz2hdjho7gzuo4wl2jgsoe.appsync-api.ap-southeast-1.amazonaws.com/graphql\" --header \"X-Api-Key: da2-6pzuogcgvvamdnv6sglgjnvk2a\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -493,53 +569,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B143E35627F7FB910018114E /* Web3Models.swift in Sources */,
-				B1AD305927FA256D000CFB35 /* SettingView.swift in Sources */,
-				B143E33327F7A9FC0018114E /* PerpMetadataAPIModel.swift in Sources */,
-				B1E54E0127F361B900CCD0AD /* MarketApiService.swift in Sources */,
-				BCB4F8CA26E16CD5006DB5AD /* OnboardingView.swift in Sources */,
-				B143E32D27F7A5F20018114E /* Address.swift in Sources */,
+				B124336A27FE049000E21B90 /* Session.swift in Sources */,
+				B16D941C2800C3E7003FF2B0 /* Web3Manager.swift in Sources */,
 				B143E33B27F7C71B0018114E /* Endpoints.swift in Sources */,
-				BC7363E426C0FD8F00C9E753 /* LoginView.swift in Sources */,
-				B1AD305727FA1787000CFB35 /* MarketDetailsView.swift in Sources */,
+				B19203292809EF4200582020 /* APICurie.swift in Sources */,
+				B124335327FE013F00E21B90 /* UIApplication.swift in Sources */,
+				B1CD86D128038E8D00A15765 /* OrderButton.swift in Sources */,
+				B1CD86CF28037D0D00A15765 /* String.swift in Sources */,
+				B16A4F3D27FE661A001F6798 /* Market.swift in Sources */,
+				B16A4F4127FE7018001F6798 /* PerpMetadataService.swift in Sources */,
+				B143E20E28021B4400FBE040 /* MarketView.swift in Sources */,
+				B16D941A2800BE35003FF2B0 /* MarketDataService.swift in Sources */,
+				B1CD86CD2803740700A15765 /* Globals.swift in Sources */,
 				BC7363D126C0EF2600C9E753 /* ContentView.swift in Sources */,
-				B1E54DFB27F35EE300CCD0AD /* MarketListViewModel.swift in Sources */,
-				B1D0E9AC27F4E0AE0062A278 /* AssetApiService.swift in Sources */,
-				B1D0E9A227F4CD690062A278 /* AssetsView.swift in Sources */,
-				B1D0E9A627F4DC540062A278 /* AssetsViewModel.swift in Sources */,
-				B143E33E27F7CAE30018114E /* MarketError.swift in Sources */,
 				BCD07E5126D18E8200781E28 /* PerpApp.swift in Sources */,
-				B1AD305327FA0D25000CFB35 /* MarketStatsView.swift in Sources */,
-				B1AD305527FA1173000CFB35 /* ChartToggleView.swift in Sources */,
-				B1D0E9AA27F4DFAC0062A278 /* Account.swift in Sources */,
-				B1E54DF427F35BDC00CCD0AD /* MarketsView.swift in Sources */,
-				B1702E2427F915E300A6F748 /* Web3Repository.swift in Sources */,
-				B1E54DF727F35D6200CCD0AD /* MarketListHeader.swift in Sources */,
-				B160610827FB818100730D3D /* Network.swift in Sources */,
-				B160610A27FB8A9F00730D3D /* Position.swift in Sources */,
-				B1D0E9AE27F4E47C0062A278 /* AccountCarosalView.swift in Sources */,
-				B1702E2027F8F67100A6F748 /* Web3Service.swift in Sources */,
-				B1E54DF927F35E3600CCD0AD /* MarketListView.swift in Sources */,
-				B14EBB1C27F24F780091621E /* MarketViewModel.swift in Sources */,
-				BC2FFE6E26C4166B0001FDD4 /* Tab.swift in Sources */,
-				B14EBB1827F247110091621E /* Session.swift in Sources */,
-				BCCCB2B226E26D1500B26878 /* LottieView.swift in Sources */,
-				B1AD305B27FA25CD000CFB35 /* GetPrivateKeyView.swift in Sources */,
-				BCD323F126E1652F00B25C4A /* Globals.swift in Sources */,
-				B1702E1E27F8D0E800A6F748 /* ABI.swift in Sources */,
-				B1D0E9A827F4DF890062A278 /* AssetRepository.swift in Sources */,
-				B1E54E0527F3684700CCD0AD /* MarketListCellView.swift in Sources */,
-				B160610627FB72F000730D3D /* API.swift in Sources */,
-				B127236027FA006700EB35BE /* ChartView.swift in Sources */,
-				B1702E2227F9158900A6F748 /* MarketListCellViewModel.swift in Sources */,
-				B143E33127F7A8D40018114E /* PriceFeed.swift in Sources */,
-				B1E54DFD27F35FD400CCD0AD /* MarketRepository.swift in Sources */,
-				B143E33527F7AAD00018114E /* Pool.swift in Sources */,
-				B127235B27F9FAB500EB35BE /* MarketHeadingView.swift in Sources */,
-				B1E54DFF27F3603F00CCD0AD /* Market.swift in Sources */,
-				B1E54E0327F3679500CCD0AD /* MarketView.swift in Sources */,
-				B127236227FA028C00EB35BE /* MarketButtonView.swift in Sources */,
-				B1D0E9A427F4D9230062A278 /* AssetHeadingView.swift in Sources */,
+				B16A4F4327FE76AE001F6798 /* NetworkingManager.swift in Sources */,
+				B1B3970027FE07A10079A4AE /* Web3AuthModels.swift in Sources */,
+				B19203152809CD1200582020 /* MarketStatistics.swift in Sources */,
+				B192031D2809DCAC00582020 /* APIStats.swift in Sources */,
+				B16A4F3F27FE6A9E001F6798 /* MarketsViewModel.swift in Sources */,
+				B124335027FE013F00E21B90 /* Date.swift in Sources */,
+				B1B3970427FE08D30079A4AE /* MarketsView.swift in Sources */,
+				B124335427FE013F00E21B90 /* Color.swift in Sources */,
+				B16D941E2800CCF7003FF2B0 /* ABI.swift in Sources */,
+				B16D9420280101D6003FF2B0 /* MarketRowViewModel.swift in Sources */,
+				B124335227FE013F00E21B90 /* Double.swift in Sources */,
+				B124336527FE016700E21B90 /* LoginView.swift in Sources */,
+				B1B3970627FE0E600079A4AE /* MarketRowView.swift in Sources */,
+				B16618102804C28100EA9C37 /* ChartView.swift in Sources */,
+				B19203172809D14E00582020 /* Position.swift in Sources */,
+				B124335127FE013F00E21B90 /* PreviewProvider.swift in Sources */,
+				B143E20C2801E90400FBE040 /* Network.swift in Sources */,
+				B1CD86C928034A1800A15765 /* MarketViewModel.swift in Sources */,
+				B124336427FE016700E21B90 /* LottieView.swift in Sources */,
+				B16A4F3A27FE6340001F6798 /* PerpMetadataAPIModel.swift in Sources */,
+				B124336627FE016700E21B90 /* OnboardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -679,7 +743,7 @@
 				ENABLE_PREVIEWS = YES;
 				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = Perp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -689,7 +753,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -706,7 +770,7 @@
 				ENABLE_PREVIEWS = YES;
 				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = Perp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -716,7 +780,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -750,14 +814,6 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 3.0.0;
-			};
-		};
-		B143E33727F7ABAC0018114E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
 			};
 		};
 		B143E34227F7E3330018114E /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder" */ = {
@@ -824,11 +880,6 @@
 			package = B127235C27F9FCC000EB35BE /* XCRemoteSwiftPackageReference "LightweightChartsIOS" */;
 			productName = LightweightCharts;
 		};
-		B143E33827F7ABAC0018114E /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BC0A9CC12754F7D60000B7C0 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
 		B143E34327F7E3330018114E /* SDWebImageSVGCoder */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B143E34227F7E3330018114E /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder" */;
@@ -858,11 +909,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B1AD305C27FA2D73000CFB35 /* XCRemoteSwiftPackageReference "apollo-ios" */;
 			productName = ApolloWebSocket;
-		};
-		BC0A9CC22754F7D60000B7C0 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BC0A9CC12754F7D60000B7C0 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
 		};
 		BC0A9CCF2754FC930000B7C0 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
