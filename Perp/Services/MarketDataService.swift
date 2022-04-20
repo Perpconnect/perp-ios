@@ -26,8 +26,7 @@ class MarketDataService {
     let publicAddress: String?
     
     init(market: Market, perpMetaData: PerpMetadataAPIModel) {
-        self.publicAddress = "0x6879f97a6a9e2c050e38fcb90ca97aaccd189eac"
-        // UserDefaults.standard.string(forKey: "publicAddress") ?? "0x0000000000000000000000000000000000000000"
+        self.publicAddress = UserDefaults.standard.string(forKey: "publicAddress") ?? "0x0000000000000000000000000000000000000000"
         self.market = market
         self.metadata = perpMetaData
         getMarket(metadata: perpMetaData)

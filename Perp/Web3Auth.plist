@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Network</key>
-	<string>testnet</string>
+	<string>mainnet</string>
 	<key>ClientId</key>
 	<string>BOvNza5MboMpffFH1UsOt17IaSoE0qm7aniuWsPzC1RzBUk4Co6P5zpBAhXSK7rUg4HGaBiJz4sTkdFqQb3Ry9k</string>
 </dict>
