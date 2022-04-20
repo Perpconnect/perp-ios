@@ -51,6 +51,8 @@
 		B19203292809EF4200582020 /* APICurie.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19203282809EF4200582020 /* APICurie.swift */; };
 		B192E6BD281090E500530984 /* ClosePositionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B192E6BC281090E500530984 /* ClosePositionView.swift */; };
 		B192E6C12810960200530984 /* ClosePositionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B192E6C02810960200530984 /* ClosePositionViewModel.swift */; };
+		B192E6C32810D4B900530984 /* stake.json in Resources */ = {isa = PBXBuildFile; fileRef = B192E6C22810D4B900530984 /* stake.json */; };
+		B192E6C52810D4BE00530984 /* leverage.json in Resources */ = {isa = PBXBuildFile; fileRef = B192E6C42810D4BE00530984 /* leverage.json */; };
 		B1AD305E27FA2D73000CFB35 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = B1AD305D27FA2D73000CFB35 /* Apollo */; };
 		B1AD306027FA2D73000CFB35 /* ApolloUtils in Frameworks */ = {isa = PBXBuildFile; productRef = B1AD305F27FA2D73000CFB35 /* ApolloUtils */; };
 		B1AD306227FA2D73000CFB35 /* ApolloWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = B1AD306127FA2D73000CFB35 /* ApolloWebSocket */; };
@@ -124,6 +126,8 @@
 		B19203282809EF4200582020 /* APICurie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APICurie.swift; path = Perp/APICurie.swift; sourceTree = SOURCE_ROOT; };
 		B192E6BC281090E500530984 /* ClosePositionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosePositionView.swift; sourceTree = "<group>"; };
 		B192E6C02810960200530984 /* ClosePositionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosePositionViewModel.swift; sourceTree = "<group>"; };
+		B192E6C22810D4B900530984 /* stake.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stake.json; sourceTree = "<group>"; };
+		B192E6C42810D4BE00530984 /* leverage.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = leverage.json; sourceTree = "<group>"; };
 		B1B396FF27FE07A10079A4AE /* Web3AuthModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Web3AuthModels.swift; sourceTree = "<group>"; };
 		B1B3970327FE08D30079A4AE /* MarketsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketsView.swift; sourceTree = "<group>"; };
 		B1B3970527FE0E600079A4AE /* MarketRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketRowView.swift; sourceTree = "<group>"; };
@@ -236,6 +240,8 @@
 		B124335C27FE016700E21B90 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				B192E6C42810D4BE00530984 /* leverage.json */,
+				B192E6C22810D4B900530984 /* stake.json */,
 				B124335D27FE016700E21B90 /* LottieView.swift */,
 				B1CD86D028038E8D00A15765 /* OrderButton.swift */,
 			);
@@ -576,6 +582,8 @@
 				B19203192809DB3300582020 /* GetPosition.graphql in Resources */,
 				B124A3B32808B570003DFA1B /* ListCandleSticks.graphql in Resources */,
 				BC7363D626C0EF2F00C9E753 /* Preview Assets.xcassets in Resources */,
+				B192E6C32810D4B900530984 /* stake.json in Resources */,
+				B192E6C52810D4BE00530984 /* leverage.json in Resources */,
 				BC7363D326C0EF2F00C9E753 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
