@@ -25,9 +25,6 @@ workflows:
           - pattern: 'main'
             include: true
             source: true
-          - pattern: 'market-data'
-            include: true
-            source: true
       scripts:
         - name: Set up keychain to be used for codesigning using Codemagic CLI 'keychain' command
           script: |
