@@ -25,4 +25,24 @@ extension Globals.Variables {
         "ONE": "Harmony",
         "AAVE": "Aave Protocol"
     ]
+    
+    static let priceFeedDecimals = [
+        "ATOM": 8,
+        "AVAX": 18,
+        "BNB": 8,
+        "BTC": 8,
+        "CRV": 18,
+        "ETH": 8,
+        "FLOW": 8,
+        "FTM": 8,
+        "LINK": 8,
+        "LUNA": 18,
+        "MATIC": 8,
+        "NEAR": 8,
+        "PERP": 18,
+        "SAND": 18,
+        "SOL": 18,
+        "ONE": 8,
+        "AAVE": 8
+    ]
 }

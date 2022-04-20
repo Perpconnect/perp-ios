@@ -6,7 +6,7 @@ struct MarketsView: View {
     
     @State private var selectedMarket: Market? = nil
     @State private var showMarketDetailView: Bool = false
-
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -27,24 +27,17 @@ struct MarketsView: View {
                     label: { EmptyView() }
                 )
             )
+            .sheet(isPresented: $marketsViewModel.showingAccountView) {
+                AccountViewLoader(metadata: $marketsViewModel.perpMetadata)
+            }
             .navigationTitle("Markets")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: { }) {
+                    Button(action: { marketsViewModel.showingAccountView.toggle() }) {
                         Image(systemName: "person.circle")
                             .foregroundColor(.gray)
                     }
                 }
-//                ToolbarItem(placement: .bottomBar) {
-//                    HStack {
-//                        Image("perp_full_black")
-//                            .renderingMode(.template)
-//                            .aspectRatio(contentMode: .fill)
-//                            .foregroundColor(.gray)
-//                        
-//                        Spacer()
-//                    }
-//                }
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())

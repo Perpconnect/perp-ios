@@ -32,7 +32,7 @@ extension Double {
             formatter.minimumFractionDigits = 0
             formatter.maximumFractionDigits = 2
         } else if (self < 10) {
-            formatter.minimumFractionDigits = 0
+            formatter.minimumFractionDigits = 2
             formatter.maximumFractionDigits = 4
         } else {
             formatter.minimumFractionDigits = 0

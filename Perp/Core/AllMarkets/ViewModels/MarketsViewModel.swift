@@ -6,6 +6,7 @@ class MarketsViewModel: ObservableObject {
     @Published var filteredMarkets: [Market] = []
     @Published var perpMetadata: PerpMetadataAPIModel?
     @Published var search = ""
+    @Published var showingAccountView: Bool = false
 
     private let metadataService = PerpMetadataService()
     

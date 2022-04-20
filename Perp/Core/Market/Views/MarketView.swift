@@ -43,9 +43,11 @@ struct MarketView: View {
             
             PositionDetails
             
-            
         }
         .padding(.horizontal, 10)
+        .sheet(isPresented: $vm.showPosition) {
+            ClosePositionView(vm: .init(market: self.vm.market, metadata: self.vm.metadata))
+        }
         .toolbar {
             ToolbarItem(placement: .principal) {
                 HStack {
@@ -59,6 +61,7 @@ struct MarketView: View {
             }
         }
         .navigationBarTitleDisplayMode(.inline)
+        
     }
     
     private var PositionDetails: some View {
@@ -112,12 +115,12 @@ struct MarketView: View {
                     .foregroundColor(.gray)
                     .fontWeight(.medium)
                 Spacer()
-                Text("\(vm.position?.pnl?.asNumberWithoutDecimals() ?? "-")")
+                Text("\(vm.marketStats?.unRealisedPnl?.asNumberWithoutDecimals() ?? "-")")
                     .font(.system(size: 16))
                     .fontWeight(.bold)
                     .foregroundColor(
-                        ((vm.position?.pnl ?? 0.0) > 0) ?
-                            .green: .red
+                        ((vm.marketStats?.unRealisedPnl ?? 0.0) > 0) ?
+                            .green : .red
                     )
                 
             }
@@ -149,7 +152,7 @@ struct MarketView: View {
                         .foregroundColor(.gray)
                         .fontWeight(.medium)
                     Spacer()
-                    Text("\(vm.position?.liqPrice ?? 0.0)")
+                    Text("-") // \(vm.position?.liqPrice ?? 0.0)
                         .font(.system(size: 14))
                         .fontWeight(.bold)
                         .foregroundColor(.white)
@@ -164,7 +167,7 @@ struct MarketView: View {
                         .foregroundColor(.gray)
                         .fontWeight(.medium)
                     Spacer()
-                    Text("\(vm.position?.accMarginRatio ?? 0.0)%")
+                    Text("\(( ((vm.accountValue ?? 0.0) / (vm.position?.allPosValues ?? 0.0)) ).asNumberWithoutDecimals() )%")
                         .font(.system(size: 14))
                         .fontWeight(.bold)
                         .foregroundColor(.white)
@@ -179,7 +182,7 @@ struct MarketView: View {
                         .foregroundColor(.gray)
                         .fontWeight(.medium)
                     Spacer()
-                    Text("\(vm.position?.accLeverage ?? 0.0)x")
+                    Text("\(( ((vm.position?.allPosValues ?? 0.0) / (vm.accountValue ?? 0.0))).asNumberWithoutDecimals() )x")
                         .font(.system(size: 14))
                         .fontWeight(.bold)
                         .foregroundColor(.white)
@@ -191,15 +194,17 @@ struct MarketView: View {
             
             HorizontalDivider
             
-            ZStack {
-                RoundedRectangle(cornerRadius: 8)
-                    .foregroundColor(.blue)
-                
-                Text("Close")
+            Button(action: {  }) { // vm.showPosition.toggle()
+                ZStack {
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(.white)
+                        .opacity(0.07)
+                    Text("Close")
+                }
+                .padding()
+                .frame(height: 80)
+                .padding(.bottom, 15)
             }
-            .frame(height: 50)
-            .padding(.bottom)
-            
         }
     }
     
@@ -229,11 +234,11 @@ struct MarketView: View {
         var body: some View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
-                    StatColumn(keys: ["Mark", "Index", "Funding Rate"],
+                    StatColumn(keys: ["Mark", "Index", "Funding Rate (24H)"],
                                values: [
-                                    "\((Double(stats?.lastTradePriceUsd ?? "0.0") ?? 0.0).asCurrencyWith2Decimals())",
-                                    "\((Double(stats?.lastTradePriceUsd ?? "0.0") ?? 0.0).asCurrencyWith2Decimals())",
-                                    "\(marketStats?.fundingRate?.asNumberWithoutDecimals() ?? "--")%"
+                                    "\(marketStats?.markPrice?.asCurrencyWith6Decimals() ?? "-")",
+                                    "\(marketStats?.indexPrice?.asCurrencyWith6Decimals() ?? "-")",
+                                    "\(marketStats?.fundingRate?.asCurrencyWith6Decimals() ?? "--")%"
                                ]
                     )
                     .padding(.leading)
@@ -267,7 +272,7 @@ struct MarketView: View {
                     StatRow(key: keys[pos], value: values[pos])
                 }
             }
-            .frame(width: 160)
+            .frame(minWidth: 140, maxWidth: 230)
         }
     }
     
@@ -302,7 +307,7 @@ struct MarketView: View {
             Divider()
 
             HStack {
-                Text("\(Double(vm.stats?.lastTradePriceUsd ?? "0.0")?.asCurrencyWith2Decimals() ?? "0.0")")
+                Text("\(vm.marketStats?.indexPrice?.asCurrencyWith6Decimals() ?? "-")")
                     .font(.system(size: 18))
                     .fontWeight(.semibold)
                     .padding(.trailing, 5)

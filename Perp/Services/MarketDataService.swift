@@ -1,6 +1,8 @@
 import Foundation
 import Combine
 import Apollo
+import web3swift
+import BigInt
 
 class MarketDataService {
     
@@ -14,19 +16,98 @@ class MarketDataService {
     
     @Published var marketStats: MarketStatistics?
     
+    @Published var accountValue: Double?
+    
+    
     var marketSubscripiton: AnyCancellable?
     
     let metadata: PerpMetadataAPIModel
     
+    let publicAddress: String?
+    
     init(market: Market, perpMetaData: PerpMetadataAPIModel) {
-        let publicAddress = "0x6879f97a6a9e2c050e38fcb90ca97aaccd189eac"
+        self.publicAddress = "0x6879f97a6a9e2c050e38fcb90ca97aaccd189eac"
         // UserDefaults.standard.string(forKey: "publicAddress") ?? "0x0000000000000000000000000000000000000000"
         self.market = market
         self.metadata = perpMetaData
         getMarket(metadata: perpMetaData)
         getChartData(metadata: perpMetaData)
-        getPosition(address: publicAddress, metadata: perpMetaData)
+        getPosition(metadata: perpMetaData)
         getFunding(metadata: perpMetaData)
+        getIndexPrice()
+        getMarketPrice()
+        getAccountValue(metadata: perpMetaData)
+        getAllPositionValues()
+    }
+    
+    func getIndexPrice() {
+        _ = metadata.contracts
+            .first(where: {(($0.key.contains("PriceFeed") == false) && $0.key.contains("\(market.name)")) })
+            .map { market in
+                Web3Manager.shared.getIndexPrice(indexAddress: market.value.address)?
+                .done { response in
+                    
+                    guard let valueResponse = response["_success"] as? Bool else {
+                        print("Didnt get any response \(response)")
+                        return
+                    }
+                    
+                    guard let indexPrice = response["0"].underlying as? BigUInt else {
+                        print("Unable to index price \(response)")
+                        return
+                    }
+                    
+                    if (valueResponse) {
+                        if (self.marketStats == nil) {
+                            self.marketStats = MarketStatistics(
+                                indexPrice: Double(indexPrice) / (pow(10.0, 18))
+                            )
+                        } else {
+                            self.marketStats = self.marketStats?.updateIndexPrice(indexPrice: Double(indexPrice) / (pow(10.0, 18.0)))
+                        }
+        
+                    } else {
+                        print("Error with index response value \(response)")
+                    }
+                }
+            }
+    }
+    
+    func getMarketPrice() {
+        _ = metadata.contracts
+            .first(where: {(($0.key.contains("PriceFeed") == true) && $0.key.contains("\(market.name)")) })
+            .map { market in
+                Web3Manager.shared.getMarketPrice(
+                    priceFeedAddress: market.value.address,
+                    type: market.key.contains("Band") ? .band : .chainlink
+                )?
+                .done { response in
+                    
+                    guard let valueResponse = response["_success"] as? Bool else {
+                        print("Didnt get any response in market price \(response)")
+                        return
+                    }
+                    
+                    guard let marketPrice = response["0"].underlying as? BigUInt else {
+                        print("Unable to market price \(response)")
+                        return
+                    }
+                    
+                    if (valueResponse) {
+                        if (self.marketStats == nil) {
+                            self.marketStats = MarketStatistics(
+                                markPrice: Double(marketPrice) / (pow(10.0, Double(Globals.Variables.priceFeedDecimals[self.market.name] ?? 18)))
+                            )
+                        } else {
+                            self.marketStats = self.marketStats?.updateMarkPrice(markPrice: Double(marketPrice) / (pow(10.0, Double(Globals.Variables.priceFeedDecimals[self.market.name] ?? 18))))
+                        }
+                        
+                    } else {
+                        print("Error with market response value \(response)")
+                    }
+                }
+            }
+        
     }
     
     func getFunding(metadata: PerpMetadataAPIModel) {
@@ -144,7 +225,11 @@ class MarketDataService {
         }
     }
     
-    func getPosition(address: String, metadata: PerpMetadataAPIModel) {
+    func getPosition(metadata: PerpMetadataAPIModel) {
+        guard let address = self.publicAddress else {
+            print("Unable to get address.")
+            return
+        }
         _ = metadata.contracts
             .first(where: {(($0.key.contains("PriceFeed") == false) && $0.key.contains("\(market.name)")) })
             .map { contract in
@@ -166,7 +251,8 @@ class MarketDataService {
                                     accLeverage: nil,
                                     side: (size < 0 ) ?
                                         .short : .long,
-                                    avgOpenPrice: nil
+                                    avgOpenPrice: Double(position?.entryPrice ?? "0.0"),
+                                    allPosValues: nil
                                 )
                                 
                             }
@@ -176,5 +262,63 @@ class MarketDataService {
                     }
                 }
         }
+    
+    func getAllPositionValues() {
+        guard let address = self.publicAddress else {
+            print("Unable to get address.")
+            return
+        }
+        
+        Network
+            .shared
+            .apolloCurie
+            .fetch(query: GetTraderQuery(address: address)) { result in
+                switch result {
+                case .success(let graphQLResult):
+                    DispatchQueue.main.async {
+                        let positions = graphQLResult.data?.trader?.positions
+                        
+                        var posValue = 0.0
+                        
+                        positions?.compactMap { position in
+                            posValue += Double(position.openNotional) ?? 0.0
+                        }
+                        .map { _ in
+                            self.position = self.position?.updateAllPositionValue(allPosValues: posValue)
+                        }
+                    }
+                case .failure(let error):
+                    print("Failure in getTrader! Error: \(error)")
+                }
+            }
     }
+    
+    func getAccountValue(metadata: PerpMetadataAPIModel) {
+        guard let address = self.publicAddress else {
+            print("Unable to find address.")
+            return
+        }
+        Web3Manager.shared
+            .getAccountValue(accountAddress: address, metadata: metadata)?
+            .done { response in
+                
+                guard let valueResponse = response["_success"] as? Bool else {
+                    print("Didnt get any response \(response)")
+                    return
+                }
+                
+                guard let accountValue = response["0"].underlying as? BigInt else {
+                    print("Unable to unwrap account value \(response)")
+                    return
+                }
+                
+                if (valueResponse) {
+                    self.accountValue = Double(accountValue) / (pow(10.0, 18.0))
+                } else {
+                    print("Error with account value \(response)")
+                }
+            }
+    }
+    
+}
 

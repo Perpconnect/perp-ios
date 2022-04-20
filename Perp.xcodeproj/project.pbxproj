@@ -39,12 +39,18 @@
 		B16D941C2800C3E7003FF2B0 /* Web3Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16D941B2800C3E7003FF2B0 /* Web3Manager.swift */; };
 		B16D941E2800CCF7003FF2B0 /* ABI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16D941D2800CCF7003FF2B0 /* ABI.swift */; };
 		B16D9420280101D6003FF2B0 /* MarketRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16D941F280101D6003FF2B0 /* MarketRowViewModel.swift */; };
+		B179C471280F203B000D605F /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B179C470280F203B000D605F /* AccountView.swift */; };
+		B179C473280F20EB000D605F /* PrivateKeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B179C472280F20EB000D605F /* PrivateKeyView.swift */; };
+		B179C475280F2922000D605F /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B179C474280F2922000D605F /* AccountViewModel.swift */; };
+		B179C477280F30A4000D605F /* AccountDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B179C476280F30A4000D605F /* AccountDataService.swift */; };
 		B19203152809CD1200582020 /* MarketStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19203142809CD1200582020 /* MarketStatistics.swift */; };
 		B19203172809D14E00582020 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19203162809D14E00582020 /* Position.swift */; };
 		B19203192809DB3300582020 /* GetPosition.graphql in Resources */ = {isa = PBXBuildFile; fileRef = B19203182809DB3300582020 /* GetPosition.graphql */; };
 		B192031D2809DCAC00582020 /* APIStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = B192031C2809DCAB00582020 /* APIStats.swift */; };
 		B19203272809ED0200582020 /* GetFundingUpdate.graphql in Resources */ = {isa = PBXBuildFile; fileRef = B19203262809ED0200582020 /* GetFundingUpdate.graphql */; };
 		B19203292809EF4200582020 /* APICurie.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19203282809EF4200582020 /* APICurie.swift */; };
+		B192E6BD281090E500530984 /* ClosePositionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B192E6BC281090E500530984 /* ClosePositionView.swift */; };
+		B192E6C12810960200530984 /* ClosePositionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B192E6C02810960200530984 /* ClosePositionViewModel.swift */; };
 		B1AD305E27FA2D73000CFB35 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = B1AD305D27FA2D73000CFB35 /* Apollo */; };
 		B1AD306027FA2D73000CFB35 /* ApolloUtils in Frameworks */ = {isa = PBXBuildFile; productRef = B1AD305F27FA2D73000CFB35 /* ApolloUtils */; };
 		B1AD306227FA2D73000CFB35 /* ApolloWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = B1AD306127FA2D73000CFB35 /* ApolloWebSocket */; };
@@ -106,12 +112,18 @@
 		B16D941B2800C3E7003FF2B0 /* Web3Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Web3Manager.swift; sourceTree = "<group>"; };
 		B16D941D2800CCF7003FF2B0 /* ABI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABI.swift; sourceTree = "<group>"; };
 		B16D941F280101D6003FF2B0 /* MarketRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketRowViewModel.swift; sourceTree = "<group>"; };
+		B179C470280F203B000D605F /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		B179C472280F20EB000D605F /* PrivateKeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateKeyView.swift; sourceTree = "<group>"; };
+		B179C474280F2922000D605F /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		B179C476280F30A4000D605F /* AccountDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDataService.swift; sourceTree = "<group>"; };
 		B19203142809CD1200582020 /* MarketStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketStatistics.swift; sourceTree = "<group>"; };
 		B19203162809D14E00582020 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		B19203182809DB3300582020 /* GetPosition.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = GetPosition.graphql; sourceTree = "<group>"; };
 		B192031C2809DCAB00582020 /* APIStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIStats.swift; sourceTree = "<group>"; };
 		B19203262809ED0200582020 /* GetFundingUpdate.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = GetFundingUpdate.graphql; sourceTree = "<group>"; };
 		B19203282809EF4200582020 /* APICurie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APICurie.swift; path = Perp/APICurie.swift; sourceTree = SOURCE_ROOT; };
+		B192E6BC281090E500530984 /* ClosePositionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosePositionView.swift; sourceTree = "<group>"; };
+		B192E6C02810960200530984 /* ClosePositionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosePositionViewModel.swift; sourceTree = "<group>"; };
 		B1B396FF27FE07A10079A4AE /* Web3AuthModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Web3AuthModels.swift; sourceTree = "<group>"; };
 		B1B3970327FE08D30079A4AE /* MarketsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketsView.swift; sourceTree = "<group>"; };
 		B1B3970527FE0E600079A4AE /* MarketRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketRowView.swift; sourceTree = "<group>"; };
@@ -190,6 +202,7 @@
 			children = (
 				B16A4F4027FE7018001F6798 /* PerpMetadataService.swift */,
 				B16D94192800BE35003FF2B0 /* MarketDataService.swift */,
+				B179C476280F30A4000D605F /* AccountDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -199,7 +212,9 @@
 			children = (
 				B124336927FE049000E21B90 /* Session.swift */,
 				BC7363D026C0EF2600C9E753 /* ContentView.swift */,
+				B179C46D280F201C000D605F /* Account */,
 				B124335C27FE016700E21B90 /* Components */,
+				B192E6BA281090C700530984 /* Position */,
 				B124335E27FE016700E21B90 /* Login */,
 				B124336127FE016700E21B90 /* Onboarding */,
 				B1CD86C4280349DE00A15765 /* Market */,
@@ -324,6 +339,65 @@
 			children = (
 				B16A4F3E27FE6A9E001F6798 /* MarketsViewModel.swift */,
 				B16D941F280101D6003FF2B0 /* MarketRowViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B179C46D280F201C000D605F /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				B179C46F280F202F000D605F /* ViewModels */,
+				B179C46E280F202A000D605F /* Views */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		B179C46E280F202A000D605F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B179C470280F203B000D605F /* AccountView.swift */,
+				B179C472280F20EB000D605F /* PrivateKeyView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B179C46F280F202F000D605F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B179C474280F2922000D605F /* AccountViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B192E6BA281090C700530984 /* Position */ = {
+			isa = PBXGroup;
+			children = (
+				B192E6BB281090D100530984 /* Close */,
+			);
+			path = Position;
+			sourceTree = "<group>";
+		};
+		B192E6BB281090D100530984 /* Close */ = {
+			isa = PBXGroup;
+			children = (
+				B192E6BF281095F300530984 /* ViewModels */,
+				B192E6BE281095EB00530984 /* Views */,
+			);
+			path = Close;
+			sourceTree = "<group>";
+		};
+		B192E6BE281095EB00530984 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B192E6BC281090E500530984 /* ClosePositionView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B192E6BF281095F300530984 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B192E6C02810960200530984 /* ClosePositionViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -570,14 +644,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				B124336A27FE049000E21B90 /* Session.swift in Sources */,
+				B192E6BD281090E500530984 /* ClosePositionView.swift in Sources */,
 				B16D941C2800C3E7003FF2B0 /* Web3Manager.swift in Sources */,
 				B143E33B27F7C71B0018114E /* Endpoints.swift in Sources */,
+				B179C473280F20EB000D605F /* PrivateKeyView.swift in Sources */,
 				B19203292809EF4200582020 /* APICurie.swift in Sources */,
 				B124335327FE013F00E21B90 /* UIApplication.swift in Sources */,
 				B1CD86D128038E8D00A15765 /* OrderButton.swift in Sources */,
 				B1CD86CF28037D0D00A15765 /* String.swift in Sources */,
 				B16A4F3D27FE661A001F6798 /* Market.swift in Sources */,
 				B16A4F4127FE7018001F6798 /* PerpMetadataService.swift in Sources */,
+				B179C477280F30A4000D605F /* AccountDataService.swift in Sources */,
+				B179C475280F2922000D605F /* AccountViewModel.swift in Sources */,
 				B143E20E28021B4400FBE040 /* MarketView.swift in Sources */,
 				B16D941A2800BE35003FF2B0 /* MarketDataService.swift in Sources */,
 				B1CD86CD2803740700A15765 /* Globals.swift in Sources */,
@@ -593,6 +671,8 @@
 				B124335427FE013F00E21B90 /* Color.swift in Sources */,
 				B16D941E2800CCF7003FF2B0 /* ABI.swift in Sources */,
 				B16D9420280101D6003FF2B0 /* MarketRowViewModel.swift in Sources */,
+				B192E6C12810960200530984 /* ClosePositionViewModel.swift in Sources */,
+				B179C471280F203B000D605F /* AccountView.swift in Sources */,
 				B124335227FE013F00E21B90 /* Double.swift in Sources */,
 				B124336527FE016700E21B90 /* LoginView.swift in Sources */,
 				B1B3970627FE0E600079A4AE /* MarketRowView.swift in Sources */,
