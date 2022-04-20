@@ -1,0 +1,19 @@
+query GetPosition($address: ID!, $baseToken: Bytes) {
+  trader(id: $address) {
+    collateral
+    badDebt
+    totalPnl
+    blockNumber
+    timestamp
+    positions(where: { baseToken: $baseToken }) {
+      baseToken
+      positionSize
+      openNotional
+      entryPrice
+      realizedPnl
+      fundingPayment
+      tradingFee
+      liquidationFee
+    }
+  }
+}
